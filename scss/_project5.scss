@@ -1,0 +1,233 @@
+/* project5.css 復興支援*/
+@charset "utf-8";
+
+//復興支援
+$Sawarabi_Gothic: "Sawarabi Mincho",
+sans-serif;
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 760px) {
+    @content;
+  }
+}
+
+@mixin s_sp {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+.project5-header,
+.project5-section {
+  font-family: $Sawarabi_Gothic;
+}
+
+.project5-header {
+  background: url(../images/project5-bgi1.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 170px 30px 30px;
+
+  @include tablet {
+    padding: 170px 60px 60px;
+  }
+
+  @include tablet {
+    padding: 250px 60px 60px;
+  }
+
+  &__wrapper {
+    @include tablet {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @include pc {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+  }
+
+  &__head {
+    font-size: 6vw;
+
+    @include tablet {
+      font-size: 2.8rem;
+    }
+
+    @include pc {
+      padding-bottom: 5px;
+    }
+
+    &_title {
+      font-size: 5vw;
+      text-align: center;
+      padding: 4% 0 2% 0;
+
+      @include tablet {
+        font-size: 2.5rem;
+        padding: 4% 0 0;
+      }
+    }
+
+    &_subtitle {
+      font-size: 5vw;
+      text-align: center;
+      padding: 2% 0 4% 0;
+
+      @include tablet {
+        font-size: 2.5rem;
+        padding: 3% 0 4% 0;
+      }
+
+      @include pc {
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  &__paragraph {
+    line-height: 1.6;
+    padding-bottom: 7%;
+    font-feature-settings: "palt";
+
+    @include tablet {
+      font-size: 1.6rem;
+      line-height: 1.9;
+      padding: 0 2% 2.5%;
+    }
+  }
+}
+
+.project5-section {
+  &__block:nth-child(2) {
+    background: url(../images/project5-bgi_2.png);
+  }
+
+  &__wrapper {
+    padding: 30px;
+
+    @include tablet {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @include pc {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title-outer {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 5vw;
+    text-align: center;
+    padding: 4% 0 0 0;
+
+    @include tablet {
+      font-size: 2.5rem;
+      padding: 4% 0 0;
+    }
+  }
+
+  &__title:first-of-type {
+    margin-right: 10px;
+  }
+
+  &__paragraph {
+    line-height: 1.6;
+    padding-bottom: 7%;
+    font-feature-settings: "palt";
+
+    @include tablet {
+      font-size: 1.6rem;
+      line-height: 1.9;
+      padding: 0 2% 2.5%;
+    }
+  }
+
+  &__paragraph-inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__paragraph-item {
+    flex: 0 0 62%;
+  }
+
+  &__subText {
+    font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 7%;
+    line-height: 1.6;
+  }
+
+  &__img {
+    padding: 0 4%;
+    padding-bottom: 7%;
+    text-align: center;
+  }
+
+  &__logo-outer {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  &__logo {
+    padding: 0 3%;
+
+    @include tablet {
+      width: 20%;
+    }
+  }
+
+  &__logo:first-of-type {
+    margin-right: 5px;
+
+  }
+
+  &__img-outer {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img-inner {
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+  }
+
+  &__img-item {
+    @include tablet {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__pc-text-center::before {
+    @include tablet {
+      content: "/";
+      margin-left: 5px;
+      margin-right: 6px;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+/* step3.css */
+@charset "utf-8";
+
+//変数
+$themeRed: #a83333;
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 750px) {
+    @content;
+  }
+}
+
+@mixin s_sp {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+.page-3-wrapper {
+  padding: 7% 7%;
+  max-width: 850px;
+  margin: 0 auto;
+
+  @include pc {
+    padding: 3% 7%;
+  }
+}
+
+.page3-article {
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.6;
+    padding: 10px 0 22px 0;
+
+    @include pc {
+      font-size: 2.5rem;
+      padding: 0;
+      margin-bottom: 4%;
+    }
+
+  }
+
+  &__img {
+    text-align: center;
+    padding-bottom: 8%;
+
+    @include pc {
+      max-width: 500px;
+      margin: 0 auto;
+      padding-bottom: 5%;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 6%;
+    padding: 2%;
+    line-height: 1.9;
+    font-feature-settings: "palt";
+
+    @include pc {
+      padding: 0;
+      margin-bottom: 2%;
+    }
+  }
+
+}
+
+.page3-nav {
+
+  &__item-wrapper {
+    padding: 4% 0;
+  }
+
+  &__outer {
+    @include pc {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 4% 0;
+    margin-left: 10px;
+
+    @include pc {
+      font-size: 2rem;
+      padding: 1% 1% 2%;
+    }
+  }
+
+  &__thumb {
+    text-align: center;
+
+    @include pc {
+      flex: 0 0 45%;
+    }
+
+    img {
+      width: 95%;
+    }
+
+    &_pc-img {
+      display: none;
+
+      @include pc {
+        display: block;
+        width: 130px;
+        margin: 0 0 0 250px;
+        padding-top: 3%;
+      }
+    }
+
+    &__outer {
+      @include pc {
+        display: flex;
+      }
+    }
+
+  }
+
+  &__caption {
+    padding: 4% 3%;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-feature-settings: "palt";
+
+    @include pc {
+      font-size: 1.5rem;
+      padding: 2% 0 0 4%;
+      line-height: 1.9;
+    }
+  }
+}
+
+.img-big {
+  @include pc {
+    display: block;
+    width: 220px;
+    margin: 0 0 0 40%;
+    padding-top: 10%;
+  }
+}

@@ -1,0 +1,203 @@
+/* step1.css */
+@charset "utf-8";
+
+//変数
+$themeRed: #a83333;
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 750px) {
+    @content;
+  }
+}
+
+
+@mixin s_sp {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+.page1-section {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &__block {
+    margin-bottom: 20%;
+    padding: 7% 7%;
+
+    @include pc {
+      margin-bottom: 10%;
+      padding: 5% 5% 0;
+    }
+
+    &_wrapper {
+      @include pc {
+        max-width: 890px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__block:nth-child(2) {
+    background: url(../images/step1-bgi.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1.9rem;
+    line-height: 1.6;
+    padding: 10px 0 22px 0;
+
+    @include pc {
+      font-size: 2.5rem;
+    }
+
+    &_quote {
+      text-align: center;
+      font-size: 1.8rem;
+      padding-bottom: 4%;
+      line-height: 1.8;
+      font-family: 'Sawarabi Mincho',
+        sans-serif;
+      quotes: '“''”';
+
+      @include pc {
+        font-size: 2.4rem;
+        margin-top: 80px;
+        margin-left: 68px;
+        display: grid;
+        grid-auto-flow: column;
+      }
+    }
+
+    &_quote::before {
+      content: open-quote;
+    }
+
+    &_quote::after {
+      content: close-quote;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 6%;
+    padding: 2%;
+    line-height: 1.6;
+
+    @include pc {
+      padding: 0 2%;
+      margin-bottom: 1%;
+      line-height: 1.9;
+    }
+
+    &_outer {
+      @include pc {
+        max-width: 890px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+    }
+
+    &_size {
+      @include pc {
+        flex: 0 0 59%;
+        margin-bottom: 80px;
+      }
+    }
+
+    &_change-line {
+      margin-bottom: 6%;
+      padding: 0 2%;
+      line-height: 1.9;
+    }
+  }
+
+  &__title-outer {
+    @include pc {
+      padding: 0 10%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__paragraph-outer {
+    @include pc {
+      padding: 0 8%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__img {
+    text-align: center;
+    padding: 0 2% 8%;
+
+    &_padding_right {
+      text-align: center;
+      padding: 0 2% 8%;
+
+      @include pc {
+        text-align: center;
+        padding: 0 0 8%;
+      }
+    }
+
+    &_padding-top {
+      text-align: center;
+      padding: 0 2% 8%;
+
+      @include pc {
+        text-align: center;
+        padding: 15% 0 0 8%;
+      }
+    }
+
+    &_logo {
+      text-align: center;
+      padding: 0 2% 8%;
+
+      @include pc {
+        padding: 0;
+        margin: 0 auto 20px;
+        width: 320px;
+      }
+    }
+
+    &_figure {
+      text-align: center;
+      padding: 0 2% 8%;
+
+      @include pc {
+        width: 700px;
+        margin: 0 auto;
+        padding-bottom: 5%;
+      }
+    }
+  }
+
+  &__caption {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    padding: 10px 0 20px 0;
+
+    @include pc {
+      font-size: 3rem;
+      padding: 7% 0;
+    }
+  }
+
+  &__subText {
+    font-size: 0.8em;
+    line-height: 1.6;
+
+    @include pc {
+      padding: 1% 2% 0;
+      line-height: 2.1;
+    }
+  }
+}

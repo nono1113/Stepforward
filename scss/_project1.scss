@@ -1,0 +1,311 @@
+/* project1.css makuchari*/
+@charset "utf-8";
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 750px) {
+    @content;
+  }
+}
+
+@mixin s_sp {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+.project1-header {
+  background: url(../images/header_project1.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  text-align: center;
+  margin-bottom: 5%;
+
+  @include pc {
+    height: 600px;
+  }
+
+  &__outer {
+    transform: translate(0, 100px);
+
+    @include pc {
+      transform: translate(0, 160px);
+    }
+  }
+
+
+  &__head {
+    font-size: 3vw;
+    padding: 2%;
+
+    @include pc {
+      font-size: 2rem;
+    }
+  }
+
+  &__logo {
+    width: 45%;
+    margin: 0 auto;
+
+    @include pc {
+      width: 35%;
+      margin: 0 auto;
+    }
+  }
+
+  &__note {
+    color: #fff;
+    text-shadow: 0 0 1em rgba(0, 0, 0, 0.9);
+    font-size: 1vw;
+    padding: 2%;
+    font-feature-settings: "palt";
+    letter-spacing: 0.09em;
+
+    @include pc {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.project1-section {
+  &__block {
+    margin-bottom: 3%;
+    padding: 7% 7% 7%;
+
+    @include pc {
+      padding: 0 3%;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item-inner {
+    @include pc {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3%;
+    }
+
+    &_reverse {
+      @include pc {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__item {
+    @include pc {
+      flex: 0 0 55%;
+    }
+  }
+
+  &__item2 {
+    @include pc {
+      flex: 0 0 54%;
+      margin-top: 55px;
+      margin-left: 3%;
+    }
+  }
+
+  &__item3 {
+    @include pc {
+      flex: 0 0 40%;
+      margin-top: 50px;
+    }
+  }
+
+
+  &__item-cover {
+    flex: 0 0 60%;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.6;
+    padding: 10px 0 22px 0;
+
+    &_huge {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    &_small {
+      text-align: center;
+      font-size: 1.9rem;
+      margin: 5%;
+
+      @include pc {
+        margin: 0 0 3%;
+      }
+    }
+
+    &_bold {
+      text-align: center;
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin: 5%;
+    }
+
+    &_pc {
+      @include pc {
+        font-size: 2.3rem;
+        padding: 30px 0 40px;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include pc {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 0 30px 60px;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 6%;
+    padding: 1%;
+    line-height: 1.7;
+    font-feature-settings: "palt";
+
+    @include pc {
+      margin-bottom: 3%;
+      padding: 0;
+    }
+
+    &_small {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      padding: 5% 5% 0;
+
+      @include pc {
+        padding: 5% 4%;
+      }
+
+    }
+  }
+
+  &__img {
+    text-align: center;
+    padding: 0 3% 8%;
+
+    @include pc {
+      margin-left: 5%;
+      padding: 0;
+    }
+
+    &_small {
+      text-align: center;
+      margin-bottom: 7%;
+      padding: 0 8%;
+
+      @include pc {
+        padding: 0;
+        width: 250px;
+        margin: 0 auto;
+      }
+    }
+
+    &_thumb {
+      text-align: center;
+    }
+
+    &_normal {
+      text-align: center;
+      margin-bottom: 8%;
+    }
+
+    &_poster {
+      text-align: center;
+      padding: 0 3% 8%;
+
+      @include pc {
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 1% 0 0;
+      }
+    }
+  }
+
+  &__outer {
+    background-color: #fff;
+    padding: 4% 0;
+    margin: 10% 0;
+
+    @include pc {
+      flex: 0 0 30%;
+      margin: 5% 1%;
+      padding: 0;
+    }
+
+  }
+
+  &__outer:last-child {
+    margin-bottom: 0;
+
+    @include pc {
+      flex: 0 0 30%;
+      margin: 5% 2%;
+      padding: 0;
+    }
+  }
+
+  &__bgi {
+    background: url(../images/project2-bgi.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__bgi2 {
+    background: url(../images/project2-bgi2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include pc {
+      padding: 6% 0;
+    }
+  }
+
+  &__logo {
+    width: 70%;
+    margin: 0 auto;
+    padding: 7%;
+
+    @include pc {
+      width: 40%;
+      margin: 0 auto;
+      padding: 7% 0 3%;
+    }
+
+  }
+
+  &__subText {
+    font-size: 0.8em;
+    line-height: 1.6;
+    margin-bottom: 5%;
+
+    @include pc {
+      margin: 1% 0;
+      text-align: center;
+    }
+  }
+
+  &__icon-grid {
+    margin: 8% 0;
+    display: flex;
+    justify-content: center;
+
+    @include pc {
+      margin: 0;
+    }
+
+    &_icon {
+      margin-left: 5%;
+    }
+  }
+}
