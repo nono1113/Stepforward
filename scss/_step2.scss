@@ -1,0 +1,294 @@
+/* step2.css */
+@charset "utf-8";
+
+//変数
+$themeRed: #a83333;
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 750px) {
+    @content;
+  }
+}
+
+@mixin s_sp {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+.page2-section {
+  padding: 7% 7%;
+
+  @include pc {
+    padding: 3% 7%;
+  }
+
+  &__block {
+    margin-bottom: 20%;
+
+    @include pc {
+      max-width: 850px;
+      margin: 0 auto;
+      margin-bottom: 10%;
+    }
+
+    &_back-yellow {
+      background-color: #FFFDE8;
+      padding: 2% 1% 10%;
+      margin-bottom: 10%;
+
+      @include pc {
+        max-width: 690px;
+        margin: 0 auto;
+        margin-bottom: 10%;
+        padding: 5% 5%;
+      }
+    }
+
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.6;
+    padding: 10px 0 22px 0;
+
+    @include pc {
+      font-size: 2.5rem;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__paragraph {
+    margin-bottom: 6%;
+    padding: 1px;
+    line-height: 1.9;
+    font-feature-settings: "palt";
+
+    @include pc {
+      margin-bottom: 10px;
+      line-height: 1.9;
+      padding: 2px 0;
+    }
+
+    &_line-hight {
+      margin-bottom: 3%;
+      line-height: 1.9;
+      padding: 1px;
+
+      @include pc {
+        padding: 2px 0;
+      }
+    }
+  }
+
+  &__img {
+    text-align: center;
+    padding-bottom: 8%;
+
+    @include pc {
+      padding-bottom: 2%;
+    }
+  }
+
+  &__img-outer {
+    @include pc {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+  }
+
+  &__caption {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    padding: 10px 0 20px 0;
+  }
+
+  &__subText {
+    font-size: 0.8em;
+    line-height: 1.6;
+
+    @include pc {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      padding: 3%;
+    }
+  }
+
+  &__item-wrapper {
+    @include pc {
+      padding: 4%;
+    }
+  }
+
+  &__item-outer {
+    @include pc {
+      display: flex;
+      margin-bottom: 2%;
+    }
+  }
+
+  &__label {
+    color: #fff;
+    font-weight: 600;
+    background-color: $themeRed;
+    display: inline;
+    padding: 4px 8px;
+
+    @include pc {
+      padding: 2% 2.5%;
+    }
+  }
+
+  &__description {
+    font-size: 0.9em;
+    padding: 5% 0 2%;
+    line-height: 1.2;
+
+    @include pc {
+      padding: 2% 0 0 4%;
+      font-size: 1.7rem;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: 6%;
+
+    @include pc {
+      margin-bottom: 2%;
+    }
+  }
+
+  &__figure {
+    text-align: center;
+    padding: 0 5% 5%;
+
+    @include pc {
+      flex: 0 0 35%;
+      padding: 0;
+      margin-left: 10px;
+    }
+  }
+
+  &__thumb {
+    text-align: center;
+    margin-bottom: 5%;
+
+    &_title {
+      padding-left: 4%;
+
+      @include pc {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 1% 0 0;
+      }
+    }
+
+    &_small {
+      text-align: center;
+      padding: 0 6% 5%;
+
+      @include pc {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 4% 0 0;
+      }
+    }
+
+    &_logo {
+      text-align: center;
+      padding: 0 10% 5%;
+
+      @include pc {
+        flex: 0 0 35%;
+        padding: 0;
+      }
+    }
+
+    &_paragraph {
+      padding: 6%;
+      line-height: 1.6;
+
+      @include pc {
+        margin-left: 50px;
+        padding: 0;
+
+      }
+    }
+  }
+
+  &__outer {
+    padding: 4%;
+
+    @include pc {
+      padding: 2%;
+    }
+
+    &_note {
+      font-size: 0.9em;
+      line-height: 1.2;
+      font-feature-settings: "palt";
+
+      @include pc {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0 4%;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  &__thumb-outer {
+    @include pc {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2%;
+      padding: 6% 10%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    >p:last-child {
+      padding-left: 4%;
+    }
+
+    @include pc {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1% 1% 0;
+    }
+  }
+
+  &__cover {
+    padding: 6% 10%;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 500;
+
+    @include pc {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    background: #f7f738;
+    border-radius: 84px;
+    padding: 4%;
+    font-weight: 500;
+
+    >a {
+      display: block;
+    }
+  }
+}

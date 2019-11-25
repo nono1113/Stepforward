@@ -1,0 +1,204 @@
+/* project4.css tft*/
+@charset "utf-8";
+
+//TFT
+$tftBackground: #8ED2F4;
+$tftWhite: #fff;
+$m_Gothic: "M PLUS Rounded 1c",
+sans-serif;
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 760px) {
+    @content;
+  }
+}
+
+@mixin s_sp {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+.global-page-project4 {
+  background-color: $tftBackground;
+  font-family: $m_Gothic;
+  padding-top: 8%;
+
+  @include tablet {
+    padding-top: 3%;
+  }
+}
+
+.project4-header-img {
+  margin-bottom: 7%;
+
+  @include tablet {
+    padding: 0 2%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.project4-section {
+  padding: 0 7% 5%;
+
+  @include tablet {
+    padding: 0 5%;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  &__block {
+    padding-bottom: 20%;
+
+    @include tablet {
+      padding-bottom: 5%;
+    }
+  }
+
+  &__block:nth-child(2) {
+    padding-bottom: 7%;
+  }
+
+  &__block:last-child {
+    padding-bottom: 5%;
+  }
+
+  &__head {
+    text-align: center;
+    font-size: 5.6vw;
+    line-height: 1.6;
+    margin-bottom: 2%;
+    color: $tftWhite;
+
+    @include tablet {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+
+    &_huge {
+      text-align: center;
+      font-size: 7vw;
+      margin: 5% 0 4%;
+      color: $tftWhite;
+
+      @include tablet {
+        font-size: 3rem;
+        margin: 5% 0 0;
+      }
+    }
+  }
+
+  &__paragraph {
+    font-size: 4.3vw;
+    margin-bottom: 5%;
+    padding: 2%;
+    line-height: 1.8;
+
+    @include tablet {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &_bottom {
+      @include tablet {
+        margin-top: 140px;
+      }
+    }
+  }
+
+  &__img {
+    text-align: center;
+    padding: 0 7%;
+    margin-bottom: 5%;
+
+    @include tablet {
+      margin-top: 50px;
+      padding: 0;
+    }
+  }
+
+  &__poster {
+    @include tablet {
+      width: 28%;
+    }
+  }
+
+  &__outer {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__subText {
+    color: $tftWhite;
+    font-size: 0.9em;
+    line-height: 1.6;
+    padding: 2%;
+    text-align: center;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    &_right {
+      @include tablet {
+        padding-right: 97px;
+      }
+    }
+
+    &_left {
+      color: $tftWhite;
+      font-size: 0.9em;
+      line-height: 1.6;
+      padding: 0 2% 8%;
+
+      @include tablet {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__text-inner {
+    margin-bottom: 8%;
+  }
+
+  &__item-outer {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      padding-top: 40px;
+    }
+  }
+
+  &__item-outer2 {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    @include tablet {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__item2 {
+    @include tablet {
+      flex: 0 0 50%;
+      margin-top: 45px;
+      margin-left: 40px;
+
+    }
+  }
+}

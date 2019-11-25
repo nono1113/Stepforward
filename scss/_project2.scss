@@ -1,0 +1,321 @@
+/* project2.css baton*/
+@charset "utf-8";
+
+//Baton
+$batonRed: #d8222b;
+$batonPink: #ffebeb;
+$m_Gothic: "M PLUS Rounded 1c",
+sans-serif;
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 760px) {
+    @content;
+  }
+}
+
+@mixin s_sp {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+.global-division1 {
+  background-color: $batonPink;
+
+  &__wrapper {
+    padding: 0 4% 17%;
+
+    @include tablet {
+      padding: 3%;
+    }
+  }
+
+  &__outer {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 36px;
+    padding: 35% 6% 1%;
+
+    @include tablet {
+      padding: 100px 6% 1%;
+    }
+  }
+}
+
+.project2-header {
+  background-color: $batonRed;
+  padding: 1% 6%;
+  border-radius: 6px;
+  transform: translate(0, 80px);
+
+
+  @include tablet {
+    transform: translate(0, 80px);
+  }
+
+  &__head {
+    font-size: 5.2vw;
+    color: #fff;
+    text-shadow: 0 0 1em rgba(237, 237, 237, 0.9);
+    text-align: right;
+
+    @include tablet {
+      font-size: 2.6vw;
+      font-feature-settings: "palt";
+      letter-spacing: 0.07em;
+      line-height: 1.6;
+    }
+  }
+}
+
+.project2-article {
+  &__head {
+    text-align: center;
+    font-size: 5vw;
+    line-height: 1.6;
+    margin-bottom: 4%;
+
+    @include tablet {
+      font-size: 2.5rem;
+      font-feature-settings: "palt";
+      letter-spacing: 0.07em;
+    }
+
+    &_huge {
+      text-align: center;
+      font-size: 6.4vw;
+      line-height: 1.6;
+      margin-bottom: 4%;
+
+      @include tablet {
+        font-size: 4vw;
+      }
+    }
+  }
+
+  &__logo {
+    text-align: center;
+    padding: 10% 18%;
+
+    @include tablet {
+      width: 270px;
+      margin: 0 auto 30px;
+      padding: 0;
+    }
+  }
+
+  &__block {
+    margin-bottom: 20%;
+
+    @include tablet {
+      margin-bottom: 5%;
+    }
+  }
+
+  &__block:last-child {
+    margin-bottom: 17%;
+  }
+
+  &__paragraph {
+    margin-bottom: 7%;
+    padding: 2%;
+    line-height: 1.6;
+
+    @include tablet {
+      margin: 0;
+      padding: 1% 3%;
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.9;
+    }
+  }
+
+  &__img {
+    text-align: center;
+    padding-bottom: 1%;
+
+    &_item {
+      margin-left: 2%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__subText {
+    font-size: 0.8em;
+    line-height: 1.6;
+    padding: 2%;
+
+    &_bold {
+      font-weight: 500;
+    }
+  }
+
+  &__outer-reverse {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  &__outer {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+  }
+}
+
+.global-division2 {
+  background-color: $batonRed;
+  color: #fff;
+  font-family: $m_Gothic;
+
+  &__all-wrapper {
+    padding: 0 7%;
+  }
+
+  &__logo {
+    text-align: center;
+    padding: 10% 0;
+
+    @include tablet {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 5% 0;
+    }
+  }
+
+  &__block {
+    padding-bottom: 5%;
+
+    // @include tablet {
+    //   padding: 2%;
+    // }
+  }
+
+  &__head {
+    text-align: center;
+    font-size: 5vw;
+    line-height: 1.6;
+    margin-bottom: 3%;
+
+    @include tablet {
+      padding: 0 2%;
+      font-size: 3rem;
+      margin: 3%;
+    }
+
+    &_huge {
+      text-align: center;
+      font-size: 6.4vw;
+      line-height: 1.6;
+      margin-bottom: 4%;
+
+      @include tablet {
+        padding: 0 2%;
+        font-size: 4rem;
+        margin: 0;
+      }
+    }
+
+    &_small {
+      padding: 2%;
+      font-size: 4.8vw;
+      font-weight: 400;
+
+      @include tablet {
+        padding: 0 2%;
+        font-size: 3rem;
+        max-width: 750px;
+        margin: 20px auto 0;
+        text-align: center;
+      }
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 6%;
+    padding: 2%;
+    line-height: 1.6;
+
+    @include tablet {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 1%;
+    }
+
+  }
+
+  &__img {
+    text-align: center;
+    padding-bottom: 10%;
+
+    @include tablet {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    &_item {
+      margin-left: 1%;
+    }
+
+    &_pc-img {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
+    &_inner {
+      @include tablet {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    &_stretch {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__subText {
+    font-size: 0.8em;
+    line-height: 1.6;
+    padding: 2%;
+
+    @include tablet {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 1%;
+    }
+  }
+}

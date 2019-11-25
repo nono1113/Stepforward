@@ -1,0 +1,197 @@
+/* project3.css ft*/
+@charset "utf-8";
+
+//Baton
+$ftBackground: #fefbed;
+$ftBrown: #362626;
+$m_Gothic: "M PLUS Rounded 1c",
+sans-serif;
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 750px) {
+    @content;
+  }
+}
+
+@mixin s_sp {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+.page-project3 {
+  background-color: $ftBackground;
+  color: $ftBrown;
+  font-family: $m_Gothic;
+  padding: 20% 7% 20%;
+
+  @include pc {
+    padding: 5% 7% 5%;
+  }
+
+  &__wrapper {
+    @include pc {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  &__head {
+    font-size: 4.3vw;
+    line-height: 1.6;
+    margin-bottom: 10%;
+
+    @include pc {
+      font-size: 2rem;
+    }
+
+    &_huge {
+      font-size: 5.6vw;
+      margin-bottom: 3%;
+      font-weight: 500;
+
+
+      @include pc {
+        font-size: 3rem;
+      }
+    }
+
+    &_letter {
+      font-size: 5.6vw;
+      margin-bottom: 3%;
+      font-weight: 500;
+      font-family: 'Sacramento',
+        cursive;
+    }
+
+
+    &_img {
+      text-align: center;
+      padding: 0 5%;
+      margin-bottom: 8%;
+    }
+
+  }
+
+  &__paragraph {
+    font-size: 4vw;
+    margin-bottom: 18%;
+    padding: 2%;
+    line-height: 1.6;
+
+    @include pc {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+
+    &_notーbtn-margin {
+      font-size: 4vw;
+      padding: 2%;
+      line-height: 1.6;
+
+      @include pc {
+        font-size: 2rem;
+      }
+
+    }
+  }
+
+  &__img {
+    text-align: center;
+    padding: 0 10%;
+    margin-bottom: 5%;
+
+    @include pc {
+      padding: 0;
+    }
+
+    &_huge {
+      text-align: center;
+      padding: 0%;
+      margin-bottom: 5%;
+    }
+
+    &_top {
+      @include pc {
+        margin: 100px 0;
+      }
+    }
+
+    &_left {
+      @include pc {
+        margin-top: 40px;
+      }
+    }
+
+    &_right {
+      @include pc {
+        margin-top: 250px;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__subText {
+    font-size: 3vw;
+    line-height: 1.6;
+    padding: 2%;
+    margin-bottom: 14%;
+    font-weight: 500;
+
+    @include pc {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__auto {
+    position: relative;
+  }
+
+  &__caption {
+    font-size: 2vw;
+    text-align: center;
+    font-weight: 500;
+    z-index: 1;
+    position: absolute;
+    top: 21%;
+    right: 0;
+
+    @include pc {
+      top: 35%;
+      right: 0;
+    }
+
+    &_item {
+      margin-bottom: 4%;
+    }
+  }
+
+  &__item-outer-reverse {
+    @include pc {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      padding: 5%;
+    }
+  }
+
+  &__item-outer {
+    @include pc {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 5%;
+    }
+  }
+
+  &__item {
+    @include pc {
+      flex: 0 0 45%;
+    }
+  }
+}
