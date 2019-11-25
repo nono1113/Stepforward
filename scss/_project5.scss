@@ -164,8 +164,10 @@ sans-serif;
   }
 
   &__paragraph-inner {
-    display: flex;
-    justify-content: center;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__paragraph-item {
@@ -218,6 +220,7 @@ sans-serif;
   }
 
   &__img-item {
+
     @include tablet {
       flex: 0 0 50%;
     }

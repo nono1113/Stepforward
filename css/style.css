@@ -3002,13 +3002,15 @@ img {
   }
 }
 
-.project5-section__paragraph-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+@media (min-width: 760px) {
+  .project5-section__paragraph-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 .project5-section__paragraph-item {
