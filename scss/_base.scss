@@ -338,9 +338,37 @@ img {
     }
 
     &_title {
+      text-align: center;
       font-size: 1.4rem;
       font-weight: 500;
-      padding-bottom: 2%;
+      padding: 10px;
+
+      @include tablet {
+        font-size: 1.9rem;
+      }
+    }
+
+    &_item2 {
+      width: 400px;
+      margin: 0 auto;
+      transition: all .2s;
+
+      @include sp {
+        width: 58%;
+      }
+    }
+
+    &_item2:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+      z-index: 20;
+      opacity: 0.9;
+    }
+
+    &_title2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      padding: 2%;
 
       @include tablet {
         font-size: 1.9rem;
