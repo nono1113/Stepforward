@@ -47,14 +47,14 @@ $(".btn-pageTop>a").on("click", function () {
   $("html,body").animate({
       scrollTop: 0
     },
-    1000
+    2000
   );
 });
 
-
+// Step forwardボタン
 $('#trigger-btn').on("click", function () {
   $("html,body").animate({
-      scrollTop: 1500
+      scrollTop: 1400
     },
     1000
   );
