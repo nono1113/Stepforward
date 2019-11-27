@@ -93,8 +93,17 @@ $themeRed: #a83333;
     }
   }
 
+
+  &__add-arrow::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    position: relative;
+    left: 8px;
+  }
+
   &__thumb {
     text-align: center;
+
 
     @include pc {
       flex: 0 0 45%;
@@ -102,6 +111,14 @@ $themeRed: #a83333;
 
     img {
       width: 95%;
+      transition: all .2s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+      z-index: 20;
+      opacity: 0.9;
     }
 
     &_pc-img {
@@ -122,6 +139,7 @@ $themeRed: #a83333;
     }
 
   }
+
 
   &__caption {
     padding: 4% 3%;
