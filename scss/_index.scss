@@ -182,8 +182,11 @@ $themeRed: #a83333;
   }
 }
 
-.page-section {
+.section-wrapper {
   display: none;
+}
+
+.page-section {
   max-width: 1000px;
   margin: 0 auto;
   padding: 5% 7%;

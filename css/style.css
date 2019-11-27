@@ -340,8 +340,11 @@ button {
   transition: background-color 0.3s;
 }
 
-.page-section {
+.section-wrapper {
   display: none;
+}
+
+.page-section {
   max-width: 1000px;
   margin: 0 auto;
   padding: 5% 7%;
@@ -542,18 +545,33 @@ html {
 }
 
 body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Safari: 勝手にフォントサイズを大きくしない */
+  -webkit-text-size-adjust: 100%;
+  /* Safari: ゴシック体にする */
+  font-family: sans-serif;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F4F3F2;
   margin: 0 auto;
   max-width: 1500px;
+}
+
+@media (min-width: 760px) {
+  body {
+    padding: 3rem;
+  }
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.global-wrapper {
+  background-color: #F4F3F2;
 }
 
 .text-center {
