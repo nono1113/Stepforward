@@ -9,6 +9,9 @@ $(function () {
         src: "images/header_index-2.png"
       },
       {
+        src: "images/header_index.png"
+      },
+      {
         src: "images/header_index-3.png"
       }
     ],
@@ -20,6 +23,8 @@ $(function () {
     transitionDuration: 6000 //エフェクト時間をミリ秒単位で設定
   });
 });
+
+
 // lazyload
 $(function () {
   $('img.lazy').lazyload({
@@ -32,7 +37,7 @@ $(function () {
 // アコーディオン
 $(function () {
   $('#trigger-btn').click(function () {
-    $('.page-section').fadeIn();
+    $('.section-wrapper').fadeIn();
   })
 })
 
@@ -41,6 +46,15 @@ $(function () {
 $(".btn-pageTop>a").on("click", function () {
   $("html,body").animate({
       scrollTop: 0
+    },
+    1000
+  );
+});
+
+
+$('#trigger-btn').on("click", function () {
+  $("html,body").animate({
+      scrollTop: 1500
     },
     1000
   );

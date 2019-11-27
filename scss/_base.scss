@@ -31,15 +31,22 @@ html {
 }
 
 body {
+  box-sizing: border-box;
+  /* Safari: 勝手にフォントサイズを大きくしない */
+  -webkit-text-size-adjust: 100%;
+  /* Safari: ゴシック体にする */
+  font-family: sans-serif;
+
+  @include tablet {
+    padding: 3rem;
+  }
+
   font-family: 'Noto Sans JP',
-    sans-serif;
+  sans-serif;
   font-size: 1.6rem;
-  // font-feature-settings: "palt";
-  // letter-spacing: 0.09em;
-  // line-height: 1.85;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F4F3F2;
+
   margin: 0 auto;
   max-width: 1500px;
 }
@@ -47,6 +54,10 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.global-wrapper {
+  background-color: #F4F3F2;
 }
 
 .text-center {
