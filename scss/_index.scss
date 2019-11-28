@@ -48,7 +48,6 @@ $themeRed: #a83333;
 
 /* index */
 .page-header {
-
   &__logo {
     font-size: 5vw;
     padding-left: 8%;
@@ -157,22 +156,21 @@ $themeRed: #a83333;
 
     &_text {
       width: 200px;
-      display: inline-block;
+      // display: inline-block;
       padding: 15px 10px;
       margin: 30px 0 80px 0;
       border: rgb(213, 213, 213) solid 1px;
       color: rgb(133, 133, 133);
       font-size: 1.8rem;
       border-radius: 3rem;
-      transition: all .2s;
-      backface-visibility: hidden;
+      transition: all 0.2s;
     }
 
     &_text::after {
-      content: "\f105";
+      content: "\f107";
       font-family: FontAwesome;
       position: relative;
-      left: 16px;
+      left: 10px;
     }
 
     &_text:hover {
@@ -180,7 +178,7 @@ $themeRed: #a83333;
       background-color: $themeRed;
       color: #fff;
       transform: translateY(-0.3rem);
-      box-shadow: 0 1rem 2rem rgba(#343434, .2);
+      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
     }
   }
 }
@@ -188,7 +186,6 @@ $themeRed: #a83333;
 .section-wrapper {
   display: none;
 }
-
 
 .page-section {
   max-width: 1000px;
@@ -204,6 +201,7 @@ $themeRed: #a83333;
 
   &__item {
     margin-bottom: 15%;
+    cursor: pointer;
 
     @include pc {
       margin-bottom: 7%;
@@ -272,6 +270,13 @@ $themeRed: #a83333;
         color: #2b2b2b;
       }
     }
+
+    &_arrow::after {
+      content: "\f107";
+      font-family: FontAwesome;
+      position: relative;
+      left: 10px;
+    }
   }
 
   &__paragraph {
@@ -304,8 +309,7 @@ $themeRed: #a83333;
 
     &_item {
       text-align: center;
-      transition: all .2s;
-      border-radius: 100px;
+      transition: all 0.2s;
 
       @include pc {
         padding: 0;
@@ -315,23 +319,23 @@ $themeRed: #a83333;
 
     &_item:hover {
       transform: scale(1.05);
-      box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+      box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
       z-index: 20;
       opacity: 0.9;
     }
 
     &_item2 {
+      transition: all 0.2s;
+
       @include pc {
         text-align: center;
-        padding: 0 4%;
-        transition: all .2s;
-        border-radius: 900px;
+        transition: all 0.2s;
       }
     }
 
     &_item2:hover {
       transform: scale(1.05);
-      box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+      box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
       z-index: 20;
       opacity: 0.9;
     }
@@ -351,7 +355,7 @@ $themeRed: #a83333;
       color: rgb(255, 255, 255);
       font-size: 1.8rem;
       border-radius: 3rem;
-      transition: all .2s;
+      transition: all 0.2s;
       backface-visibility: hidden;
     }
 

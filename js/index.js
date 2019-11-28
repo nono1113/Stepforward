@@ -1,16 +1,15 @@
 //  スライドショー
-$(function() {
+$(function () {
   $("header").vegas({
     //背景画像でスライドショーしたい場所の設定
-    slides: [
-      {
+    slides: [{
         src: "images/header_index.png"
       }, //スライドする画像を配列で設定
       {
         src: "images/header_index-2.png"
       },
       {
-        src: "images/header_index.png"
+        src: "images/header_index-3.png"
       },
       {
         src: "images/header_index-3.png"
@@ -26,25 +25,24 @@ $(function() {
 });
 
 // lazyload
-$(function() {
+$(function () {
   $("img.lazy").lazyload({
     threshold: 100, // 100pxの距離まで近づいたら表示する
     effect: "fadeIn", // じわじわっと表示させる
-    effect_speed: 3500 // 3.5秒かけて表示させる
+    effect_speed: 2000 // 3秒かけて表示させる
   });
 });
 
 // アコーディオン
-$(function() {
-  $("#trigger-btn").click(function() {
+$(function () {
+  $("#trigger-btn").click(function () {
     $(".section-wrapper").fadeIn();
   });
 });
 
 // ページトップボタン
-$(".btn-pageTop>a").on("click", function() {
-  $("html,body").animate(
-    {
+$(".btn-pageTop>a").on("click", function () {
+  $("html,body").animate({
       scrollTop: 0
     },
     2000
@@ -52,9 +50,8 @@ $(".btn-pageTop>a").on("click", function() {
 });
 
 // Step forwardボタン
-$("#trigger-btn").on("click", function() {
-  $("html,body").animate(
-    {
+$("#trigger-btn").on("click", function () {
+  $("html,body").animate({
       scrollTop: 1400
     },
     1000
