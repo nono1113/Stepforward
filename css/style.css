@@ -679,8 +679,8 @@ img {
 @media (min-width: 1000px) {
   .common-header__label {
     width: 34%;
-    -webkit-transform: translate(30px, 30px);
-    transform: translate(30px, 30px);
+    -webkit-transform: translate(0, 555px);
+    transform: translate(0, 555px);
   }
 }
 
@@ -802,42 +802,13 @@ img {
 }
 
 /* page-link */
-.page-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.page-link__icon {
-  padding-right: 5%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 30%;
-  flex: 0 0 30%;
-}
-
-@media (min-width: 1000px) {
-  .page-link__icon {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 12%;
-    flex: 0 0 12%;
-  }
-}
-
 .page-link__title {
-  font-size: 5vw;
-  margin-top: 6%;
-  line-height: 1.9;
+  font-weight: 500;
 }
 
 @media (min-width: 760px) {
   .page-link__title {
-    margin-top: 40px;
-    font-size: 2.5rem;
+    font-size: 25px;
   }
 }
 
@@ -846,19 +817,101 @@ img {
   font-family: FontAwesome;
   position: relative;
   left: 3px;
+  font-weight: 500;
 }
 
-.page-link__title:hover {
-  color: darkgray;
+.page-link__title1:before {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 80px;
+  /*画像の高さ*/
+  background-image: url(../images/step1-icon.png);
+  background-size: contain;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+.page-link__title2:before {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 80px;
+  /*画像の高さ*/
+  background-image: url(../images/step2-icon.png);
+  background-size: contain;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+.page-link__title3:before {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 80px;
+  /*画像の高さ*/
+  background-image: url(../images/step3-icon.png);
+  background-size: contain;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+.link-active {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.link-active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #a83333;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.link-active:hover::after {
+  width: 100%;
 }
 
 .link-outer {
   padding: 7% 7%;
+  text-align: right;
+}
+
+@media (min-width: 760px) {
+  .link-outer {
+    padding: 2% 7%;
+  }
+}
+
+.link-outer:hover {
+  opacity: 0.6;
 }
 
 /* thumb-nav */
 .thumb-nav {
   padding: 0 4% 7%;
+}
+
+@media (min-width: 1000px) {
+  .thumb-nav {
+    padding: 2% 7%;
+  }
 }
 
 .thumb-nav__outer {
@@ -1112,6 +1165,10 @@ img {
   }
 }
 
+.page1-section__block:last-of-type {
+  margin-bottom: 0;
+}
+
 .page1-section__block:nth-child(2) {
   background: url(../images/step1-bgi.png);
   background-size: cover;
@@ -1351,7 +1408,8 @@ img {
   .page2-section__title {
     font-size: 2.5rem;
     padding: 0;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
 }
 
@@ -1366,7 +1424,7 @@ img {
 @media (min-width: 750px) {
   .page2-section__paragraph {
     margin-bottom: 10px;
-    line-height: 1.9;
+    line-height: 2;
     padding: 2px 0;
   }
 }
@@ -1383,6 +1441,12 @@ img {
   }
 }
 
+@media (min-width: 750px) {
+  .page2-section__text-wrapper {
+    padding-bottom: 50px;
+  }
+}
+
 .page2-section__img {
   text-align: center;
   padding-bottom: 8%;
@@ -1390,6 +1454,7 @@ img {
 
 @media (min-width: 750px) {
   .page2-section__img {
+    margin: 10px 0;
     padding-bottom: 2%;
   }
 }
@@ -1423,7 +1488,7 @@ img {
 
 @media (min-width: 750px) {
   .page2-section__subText {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     padding: 3%;
   }
@@ -1520,9 +1585,9 @@ img {
 
 @media (min-width: 750px) {
   .page2-section__thumb_small {
-    max-width: 500px;
+    max-width: 390px;
     margin: 0 auto;
-    padding: 4% 0 0;
+    padding: 0;
   }
 }
 
@@ -1573,7 +1638,7 @@ img {
   .page2-section__outer_note {
     max-width: 500px;
     margin: 0 auto;
-    padding: 0 4%;
+    padding: 0;
     line-height: 1.7;
   }
 }
@@ -1635,6 +1700,14 @@ img {
 
 .page2-section__btn > a {
   display: block;
+}
+
+@media (min-width: 750px) {
+  .page2-section__pc-flex-outer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 /* step3.css */
