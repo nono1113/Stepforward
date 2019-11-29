@@ -1,6 +1,6 @@
 //  スライドショー
 $(function () {
-  $("header").vegas({
+  $(".page-header").vegas({
     //背景画像でスライドショーしたい場所の設定
     slides: [{
         src: "images/header_index.png"

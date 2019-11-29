@@ -57,7 +57,8 @@ $themeRed: #a83333;
     @include pc {
       font-size: 2.5rem;
       padding: 0;
-      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
     }
 
   }
@@ -70,7 +71,7 @@ $themeRed: #a83333;
 
     @include pc {
       margin-bottom: 10px;
-      line-height: 1.9;
+      line-height: 2;
       padding: 2px 0;
     }
 
@@ -85,11 +86,18 @@ $themeRed: #a83333;
     }
   }
 
+  &__text-wrapper {
+    @include pc {
+      padding-bottom: 50px;
+    }
+  }
+
   &__img {
     text-align: center;
     padding-bottom: 8%;
 
     @include pc {
+      margin: 10px 0;
       padding-bottom: 2%;
     }
   }
@@ -114,7 +122,7 @@ $themeRed: #a83333;
     line-height: 1.6;
 
     @include pc {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       line-height: 1.6;
       padding: 3%;
     }
@@ -194,9 +202,9 @@ $themeRed: #a83333;
       padding: 0 6% 5%;
 
       @include pc {
-        max-width: 500px;
+        max-width: 390px;
         margin: 0 auto;
-        padding: 4% 0 0;
+        padding: 0;
       }
     }
 
@@ -234,10 +242,12 @@ $themeRed: #a83333;
       line-height: 1.2;
       font-feature-settings: "palt";
 
+      @include tablet {}
+
       @include pc {
         max-width: 500px;
         margin: 0 auto;
-        padding: 0 4%;
+        padding: 0;
         line-height: 1.7;
       }
     }
@@ -289,6 +299,12 @@ $themeRed: #a83333;
 
     >a {
       display: block;
+    }
+  }
+
+  &__pc-flex-outer {
+    @include pc {
+      display: flex;
     }
   }
 }

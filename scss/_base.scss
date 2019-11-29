@@ -118,7 +118,7 @@ img {
 
     @include pc {
       width: 34%;
-      transform: translate(30px, 30px);
+      transform: translate(0, 555px);
     }
   }
 
@@ -221,32 +221,55 @@ img {
 
 
 /* page-link */
+// .page-link {
+//   display: flex;
+//   justify-content: center;
+//   flex-wrap: wrap;
+
+//   &__icon {
+//     padding-right: 5%;
+//     flex: 0 0 30%;
+
+//     @include pc {
+//       flex: 0 0 12%;
+//     }
+//   }
+
+//   // &__icon:hover {
+//   //   opacity: 0.6;
+//   // }
+
+//   &__title {
+//     font-size: 5vw;
+//     margin-top: 6%;
+//     line-height: 1.9;
+
+//     @include tablet {
+//       margin-top: 40px;
+//       font-size: 2.5rem;
+//     }
+//   }
+
+//   &__title::after {
+//     content: "\f105";
+//     font-family: FontAwesome;
+//     position: relative;
+//     left: 3px;
+//   }
+
+//   &__title:hover {
+//     color: rgb(169, 169, 169);
+//   }
+// }
+
+
 .page-link {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  &__icon {
-    padding-right: 5%;
-    flex: 0 0 30%;
-
-    @include pc {
-      flex: 0 0 12%;
-    }
-  }
-
-  // &__icon:hover {
-  //   opacity: 0.6;
-  // }
-
   &__title {
-    font-size: 5vw;
-    margin-top: 6%;
-    line-height: 1.9;
+    font-weight: 500;
 
     @include tablet {
-      margin-top: 40px;
-      font-size: 2.5rem;
+      font-size: 25px;
+
     }
   }
 
@@ -255,20 +278,97 @@ img {
     font-family: FontAwesome;
     position: relative;
     left: 3px;
+    font-weight: 500;
   }
 
-  &__title:hover {
-    color: rgb(169, 169, 169);
+  &__title1:before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 80px;
+    /*画像の幅*/
+    height: 80px;
+    /*画像の高さ*/
+    background-image: url(../images/step1-icon.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+
+  &__title2:before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 80px;
+    /*画像の幅*/
+    height: 80px;
+    /*画像の高さ*/
+    background-image: url(../images/step2-icon.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+
+  &__title3:before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 80px;
+    /*画像の幅*/
+    height: 80px;
+    /*画像の高さ*/
+    background-image: url(../images/step3-icon.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
   }
 }
 
+.link-active {
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+
+.link-active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: $themeRed;
+  transition: .3s;
+}
+
+.link-active:hover::after {
+  width: 100%;
+}
+
+
 .link-outer {
   padding: 7% 7%;
+  text-align: right;
+
+  @include tablet {
+    padding: 2% 7%;
+  }
+}
+
+.link-outer:hover {
+  opacity: 0.6;
 }
 
 /* thumb-nav */
 .thumb-nav {
   padding: 0 4% 7%;
+
+  @include pc {
+    padding: 2% 7%;
+  }
 
 
   &__outer {
