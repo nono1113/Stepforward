@@ -184,3 +184,104 @@ $(function () {
     transitionDuration: 6000 //エフェクト時間をミリ秒単位で設定
   });
 });
+
+
+//  makuchariスライドショー
+$(function () {
+  $(".p1-header").vegas({
+    //背景画像でスライドショーしたい場所の設定
+    slides: [{
+        src: "images/header_step3.png"
+      }, //スライドする画像を配列で設定
+      {
+        src: "images/header_step3-16.png"
+      }
+    ],
+    delay: 4500, //スライドまでの時間ををミリ秒単位で設定
+    timer: true, //タイマーバーの表示/非表示を切り替え
+    // overlay: 'images/020202.png', //オーバーレイする画像の設定
+    animation: "random", //スライドのアニメーションを設定
+    transition: "blur", //スライド間のエフェクトを設定
+    transitionDuration: 6000 //エフェクト時間をミリ秒単位で設定
+  });
+});
+
+//  batonスライドショー
+$(function () {
+  $(".p2-header").vegas({
+    //背景画像でスライドショーしたい場所の設定
+    slides: [{
+        src: "images/header_step3.png"
+      }, //スライドする画像を配列で設定
+      {
+        src: "images/header_step3-16.png"
+      }
+    ],
+    delay: 4500, //スライドまでの時間ををミリ秒単位で設定
+    timer: true, //タイマーバーの表示/非表示を切り替え
+    // overlay: 'images/020202.png', //オーバーレイする画像の設定
+    animation: "random", //スライドのアニメーションを設定
+    transition: "blur", //スライド間のエフェクトを設定
+    transitionDuration: 6000 //エフェクト時間をミリ秒単位で設定
+  });
+});
+
+//  ftスライドショー
+$(function () {
+  $(".p3-header").vegas({
+    //背景画像でスライドショーしたい場所の設定
+    slides: [{
+        src: "images/header_step3.png"
+      }, //スライドする画像を配列で設定
+      {
+        src: "images/header_step3-16.png"
+      }
+    ],
+    delay: 4500, //スライドまでの時間ををミリ秒単位で設定
+    timer: true, //タイマーバーの表示/非表示を切り替え
+    // overlay: 'images/020202.png', //オーバーレイする画像の設定
+    animation: "random", //スライドのアニメーションを設定
+    transition: "blur", //スライド間のエフェクトを設定
+    transitionDuration: 6000 //エフェクト時間をミリ秒単位で設定
+  });
+});
+
+//  tftスライドショー
+$(function () {
+  $(".p4-header").vegas({
+    //背景画像でスライドショーしたい場所の設定
+    slides: [{
+        src: "images/header_step3.png"
+      }, //スライドする画像を配列で設定
+      {
+        src: "images/header_step3-16.png"
+      }
+    ],
+    delay: 4500, //スライドまでの時間ををミリ秒単位で設定
+    timer: true, //タイマーバーの表示/非表示を切り替え
+    // overlay: 'images/020202.png', //オーバーレイする画像の設定
+    animation: "random", //スライドのアニメーションを設定
+    transition: "blur", //スライド間のエフェクトを設定
+    transitionDuration: 6000 //エフェクト時間をミリ秒単位で設定
+  });
+});
+
+//  復興支援スライドショー
+$(function () {
+  $(".p5-header").vegas({
+    //背景画像でスライドショーしたい場所の設定
+    slides: [{
+        src: "images/header_step3.png"
+      }, //スライドする画像を配列で設定
+      {
+        src: "images/header_step3-16.png"
+      }
+    ],
+    delay: 4500, //スライドまでの時間ををミリ秒単位で設定
+    timer: true, //タイマーバーの表示/非表示を切り替え
+    // overlay: 'images/020202.png', //オーバーレイする画像の設定
+    animation: "random", //スライドのアニメーションを設定
+    transition: "blur", //スライド間のエフェクトを設定
+    transitionDuration: 6000 //エフェクト時間をミリ秒単位で設定
+  });
+});
