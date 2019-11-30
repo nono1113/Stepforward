@@ -70,6 +70,10 @@
 }
 
 .project1-section {
+  @include pc {
+    padding-top: 60px;
+  }
+
   &__block {
     margin-bottom: 3%;
     padding: 7% 7% 7%;
@@ -250,7 +254,7 @@
 
     @include pc {
       flex: 0 0 30%;
-      margin: 5% 2%;
+      margin: 5% 1%;
       padding: 0;
     }
   }
