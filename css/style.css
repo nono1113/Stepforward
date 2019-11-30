@@ -815,7 +815,8 @@ img {
 .btn-pageTop {
   display: block;
   margin-left: auto;
-  padding-right: 5%;
+  margin-top: 30px;
+  padding-right: 10px;
 }
 
 .btn-pageTop:hover {
@@ -944,7 +945,7 @@ img {
 }
 
 .thumb-nav__wrapper {
-  background-color: #fff;
+  background-color: #ededed;
   -webkit-box-shadow: 0 2.5rem 4rem rgba(52, 52, 52, 0.5);
   box-shadow: 0 2.5rem 4rem rgba(52, 52, 52, 0.5);
   padding: 20px 0 10px;
@@ -1042,6 +1043,20 @@ img {
   .thumb-nav__inner_title {
     font-size: 1.8rem;
   }
+}
+
+.thumb-nav__sub-wrapper {
+  background-color: white;
+  -webkit-box-shadow: 0 2.5rem 4rem rgba(52, 52, 52, 0.5);
+  box-shadow: 0 2.5rem 4rem rgba(52, 52, 52, 0.5);
+  padding: 40px 0 40px;
+}
+
+.thumb-nav__sub-wrapper_title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
 .nav_item__left {
@@ -1203,6 +1218,54 @@ img {
 
 .page-footer__active {
   color: #a83333;
+}
+
+/* sns icon */
+.sns_icon {
+  color: #fff;
+}
+
+.sns_icon__facebook::before {
+  content: "\f082";
+  font-family: FontAwesome;
+  position: relative;
+  left: 5px;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.sns_icon__twitter::before {
+  content: "\f099";
+  font-family: FontAwesome;
+  position: relative;
+  left: 5px;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.sns_icon__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sns_icon__left {
+  padding-left: 20px;
+}
+
+@media (max-width: 770px) {
+  .sns_icon__outer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+.sns_icon:hover {
+  color: #cbcbcb;
 }
 
 /* step1.css */
@@ -2026,6 +2089,12 @@ img {
   }
 }
 
+@media (min-width: 750px) {
+  .project1-section {
+    padding-top: 60px;
+  }
+}
+
 .project1-section__block {
   margin-bottom: 3%;
   padding: 7% 7% 7%;
@@ -2245,7 +2314,7 @@ img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
-    margin: 5% 2%;
+    margin: 5% 1%;
     padding: 0;
   }
 }

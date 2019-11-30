@@ -33,14 +33,23 @@ $(function () {
         src: "images/header_step1-8.png"
       },
       {
-        src: "images/header_step1-9.png"
+        src: "images/header_step1-15.png"
       },
       {
         src: "images/header_step1-10.png"
       },
       {
         src: "images/header_step1-11.png"
-      }
+      },
+      {
+        src: "images/header_step1-14.png"
+      },
+      {
+        src: "images/header_step1-9.png"
+      },
+      {
+        src: "images/header_step1-16.png"
+      },
     ],
     delay: 4500, //スライドまでの時間ををミリ秒単位で設定
     timer: true, //タイマーバーの表示/非表示を切り替え
@@ -59,9 +68,6 @@ $(function () {
         src: "images/header_step2.png"
       }, //スライドする画像を配列で設定
       {
-        src: "images/header_step2-2.png"
-      },
-      {
         src: "images/header_step2-3.png"
       },
       {
@@ -71,10 +77,19 @@ $(function () {
         src: "images/header_step2-5.png"
       },
       {
+        src: "images/header_step2-2.png"
+      },
+      {
         src: "images/header_step2-6.png"
       },
       {
         src: "images/header_step2-7.png"
+      },
+      {
+        src: "images/header_step2-22.png"
+      },
+      {
+        src: "images/header_step2-23.png"
       },
       {
         src: "images/header_step2-8.png"
@@ -108,6 +123,12 @@ $(function () {
       },
       {
         src: "images/header_step2-18.png"
+      },
+      {
+        src: "images/header_step2-20.jpg"
+      },
+      {
+        src: "images/header_step2-21.jpg"
       },
       {
         src: "images/header_step2-19.png"
@@ -191,10 +212,28 @@ $(function () {
   $(".p1-header").vegas({
     //背景画像でスライドショーしたい場所の設定
     slides: [{
-        src: "images/header_step3.png"
+        src: "images/header_p1.png"
       }, //スライドする画像を配列で設定
       {
-        src: "images/header_step3-16.png"
+        src: "images/header_step3-11.jpg"
+      },
+      {
+        src: "images/header_step3-4.png"
+      },
+      {
+        src: "images/header_step3-5.png"
+      },
+      {
+        src: "images/header_step3-6.png"
+      },
+      {
+        src: "images/header_step3-7.png"
+      },
+      {
+        src: "images/header_step3-12.jpg"
+      },
+      {
+        src: "images/header_step3.png"
       }
     ],
     delay: 4500, //スライドまでの時間ををミリ秒単位で設定
@@ -211,11 +250,37 @@ $(function () {
   $(".p2-header").vegas({
     //背景画像でスライドショーしたい場所の設定
     slides: [{
-        src: "images/header_step3.png"
+        src: "images/baton_thumb.png"
       }, //スライドする画像を配列で設定
       {
+        src: "images/header_p2-2.png"
+      },
+      {
+        src: "images/header_p2-3.png"
+      },
+      {
+        src: "images/header_p2-4.png"
+      },
+      {
+        src: "images/header_p2-5.jpg"
+      },
+      {
+        src: "images/header_p2-6.png"
+      },
+      {
+        src: "images/header_p2-7.png"
+      },
+      {
+        src: "images/header_step3-13.png"
+      },
+      {
+        src: "images/header_step3-14.png"
+      },
+      {
+        src: "images/header_step3-15.png"
+      }, {
         src: "images/header_step3-16.png"
-      }
+      },
     ],
     delay: 4500, //スライドまでの時間ををミリ秒単位で設定
     timer: true, //タイマーバーの表示/非表示を切り替え
@@ -231,10 +296,26 @@ $(function () {
   $(".p3-header").vegas({
     //背景画像でスライドショーしたい場所の設定
     slides: [{
-        src: "images/header_step3.png"
+        src: "images/fairtrade_thumb.png"
       }, //スライドする画像を配列で設定
       {
-        src: "images/header_step3-16.png"
+        src: "images/header_p3-2.png"
+      }, {
+        src: "images/header_p3-3.png"
+      },
+      {
+        src: "images/header_p3-9.png"
+      }, {
+        src: "images/header_p3-4.png"
+      }, {
+        src: "images/header_p3-5.png"
+      }, {
+        src: "images/header_p3-6.png"
+      }, {
+        src: "images/header_p3-7.png"
+      },
+      {
+        src: "images/header_p3-8.png"
       }
     ],
     delay: 4500, //スライドまでの時間ををミリ秒単位で設定
@@ -251,10 +332,25 @@ $(function () {
   $(".p4-header").vegas({
     //背景画像でスライドショーしたい場所の設定
     slides: [{
-        src: "images/header_step3.png"
+        src: "images/tablefortwo_thumb.png"
       }, //スライドする画像を配列で設定
       {
-        src: "images/header_step3-16.png"
+        src: "images/project4-poster.png"
+      }, {
+        src: "images/header_p4-2.jpg"
+      }, {
+        src: "images/header_p4-3.jpg"
+      }, {
+        src: "images/header_p4-4.jpg"
+      }, {
+        src: "images/header_p4-5.png"
+      }, {
+        src: "images/header_p4-6.png"
+      }, {
+        src: "images/header_p4-7.png"
+      },
+      {
+        src: "images/header_step3-9.png"
       }
     ],
     delay: 4500, //スライドまでの時間ををミリ秒単位で設定
@@ -271,10 +367,29 @@ $(function () {
   $(".p5-header").vegas({
     //背景画像でスライドショーしたい場所の設定
     slides: [{
-        src: "images/header_step3.png"
+        src: "images/earthquake_thumb.png"
       }, //スライドする画像を配列で設定
       {
-        src: "images/header_step3-16.png"
+        src: "images/header_step3-10.jpeg"
+      },
+      {
+        src: "images/header_step3-3.png"
+      },
+      {
+        src: "images/header_step3-8.png"
+      },
+
+      {
+        src: "images/header_step3-2.jpg"
+      },
+      {
+        src: "images/header_p5-1.jpg"
+      },
+      {
+        src: "images/header_p5-2.png"
+      },
+      {
+        src: "images/header_p5-3.png"
       }
     ],
     delay: 4500, //スライドまでの時間ををミリ秒単位で設定
