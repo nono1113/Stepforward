@@ -5,6 +5,13 @@
 $themeRed: #a83333;
 
 //メディアクエリ
+
+@mixin l_pc {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
 @mixin pc {
   @media (min-width: 750px) {
     @content;
@@ -126,9 +133,16 @@ $themeRed: #a83333;
 
       @include pc {
         display: block;
-        width: 130px;
-        margin: 0 0 0 250px;
+        width: 100px;
         padding-top: 3%;
+        margin-left: auto;
+      }
+
+      @include l_pc {
+        display: block;
+        width: 130px;
+        padding-top: 3%;
+        margin-left: auto;
       }
     }
 
@@ -158,8 +172,15 @@ $themeRed: #a83333;
 .img-big {
   @include pc {
     display: block;
-    width: 220px;
-    margin: 0 0 0 40%;
+    width: 200px;
     padding-top: 10%;
+    margin-left: auto;
+  }
+
+  @include l_pc {
+    display: block;
+    width: 290px;
+    padding-top: 3%;
+    margin-left: auto;
   }
 }
