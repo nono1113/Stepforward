@@ -12,7 +12,7 @@ $(function () {
         src: "images/header_index-3.png"
       },
       {
-        src: "images/header_index-3.png"
+        src: "images/header_step3.png"
       }
     ],
     delay: 4500, //スライドまでの時間ををミリ秒単位で設定

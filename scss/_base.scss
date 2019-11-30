@@ -5,13 +5,13 @@ $themeRed: #a83333;
 
 //メディアクエリ
 @mixin pc {
-  @media (min-width: 1000px) {
+  @media (min-width: 770px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: 760px) {
+  @media (max-width: 770px) {
     @content;
   }
 }
@@ -37,9 +37,14 @@ body {
   /* Safari: ゴシック体にする */
   font-family: sans-serif;
 
-  @include tablet {
+  @include pc {
     padding: 3rem;
   }
+
+  @include tablet {
+    padding: 0;
+  }
+
 
   font-family: 'Noto Sans JP',
   sans-serif;
@@ -83,128 +88,162 @@ img {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* page-header */
 
-.common-header {
-  background: url(../images/header_step1.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 50vh;
-
-  @include tablet {
-    height: 500px;
-  }
+.page-header {
+  box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
 
   @include pc {
-    height: 780px;
+    display: flex;
   }
 
-
-  &__label {
-    // background-color: $themeRed;
-    // opacity: 0.8;
-    background-color: rgba(168, 51, 51, 0.8);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 46%;
-    padding: 2% 3%;
-    transform: translate(0, 230px);
+  &__outer {
+    background-color: $themeRed;
+    opacity: 0.9;
+    padding: 18px 18px 0 18px;
+    flex: 0 0 auto;
 
     @include tablet {
-      transform: translate(0, 330px);
+      padding-top: 10px;
     }
 
-    @include pc {
-      width: 34%;
-      transform: translate(0, 555px);
-    }
-  }
-
-  &__icon {
-    padding-right: 10%;
-    flex: 0 0 35%;
-
-    @include pc {
-      padding-right: 10%;
-      flex: 0 0 26%;
-      font-size: 3rem;
-      padding-right: 45px;
+    @include sp {
+      padding: 8px 10px 0;
     }
   }
 
   &__title {
-    font-size: 3.2vw;
-    color: #fff;
     font-weight: 500;
-    line-height: 1.4;
-    padding-top: 2%;
+    color: #fff;
 
     @include pc {
-      font-size: 2.7rem;
+      margin-bottom: 50px;
+    }
+
+
+    @include tablet {
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+
+    @include sp {
+      font-size: 15px;
+      padding-bottom: 10px;
     }
   }
-}
 
-.replace-img2 {
-  background: url(../images/header_step2.png);
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  height: 40vh;
-
-  @include tablet {
-    height: 500px;
+  &__title:before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 80px;
+    /*画像の幅*/
+    height: 50px;
+    /*画像の高さ*/
+    background-image: url(../images/step1-icon_wht.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
   }
 
-  @include pc {
-    height: 800px;
-  }
-}
-
-
-.replace-title2 {
-  font-size: 3vw;
-  color: #fff;
-  font-weight: 500;
-  line-height: 1.4;
-  padding-top: 2%;
-
-  @include pc {
-    font-size: 2rem;
-  }
-}
-
-.replace-icon2 {
-  padding-right: 10%;
-
-  @include pc {
-    padding-right: 10%;
-    flex: 0 0 26%;
-    font-size: 3rem;
-    padding-right: 45px;
-  }
-}
-
-.replace-img3 {
-  background: url(../images/header_index-3.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 50vh;
-
-  @include tablet {
-    height: 500px;
+  &__title2:before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 80px;
+    /*画像の幅*/
+    height: 50px;
+    /*画像の高さ*/
+    background-image: url(../images/step2-icon_wht.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
   }
 
-  @include pc {
-    height: 700px;
+  &__title3:before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 80px;
+    /*画像の幅*/
+    height: 50px;
+    /*画像の高さ*/
+    background-image: url(../images/step3-icon_wht.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
   }
-}
 
-.replace-label {
-  transform: translate(0, 40px);
+  &__nav {
+    @include tablet {
+      display: none;
+    }
+
+    @include sp {
+      display: none;
+    }
+
+    @include pc {
+      display: block;
+    }
+  }
+
+  &__item {
+    padding-bottom: 40px;
+  }
+
+  &__list {
+    color: #fff;
+    opacity: 0.7;
+    display: block;
+  }
+
+  &__list:hover {
+    color: rgb(203, 203, 203);
+  }
+
+  &__active {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  &__sub-nav {
+    @include tablet {
+      display: none;
+    }
+
+    @include sp {
+      display: none;
+    }
+
+    @include pc {
+      display: block;
+      padding-left: 10px;
+    }
+
+    &_item {
+      padding-bottom: 30px;
+    }
+
+    &_list {
+      font-size: 1.4rem;
+      color: #fff;
+      opacity: 0.7;
+      display: block;
+    }
+
+    &_list:hover {
+      color: rgb(203, 203, 203);
+    }
+  }
+
 }
 
 
@@ -219,56 +258,19 @@ img {
   opacity: 0.6;
 }
 
-
 /* page-link */
-// .page-link {
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-
-//   &__icon {
-//     padding-right: 5%;
-//     flex: 0 0 30%;
-
-//     @include pc {
-//       flex: 0 0 12%;
-//     }
-//   }
-
-//   // &__icon:hover {
-//   //   opacity: 0.6;
-//   // }
-
-//   &__title {
-//     font-size: 5vw;
-//     margin-top: 6%;
-//     line-height: 1.9;
-
-//     @include tablet {
-//       margin-top: 40px;
-//       font-size: 2.5rem;
-//     }
-//   }
-
-//   &__title::after {
-//     content: "\f105";
-//     font-family: FontAwesome;
-//     position: relative;
-//     left: 3px;
-//   }
-
-//   &__title:hover {
-//     color: rgb(169, 169, 169);
-//   }
-// }
-
-
 .page-link {
   &__title {
     font-weight: 500;
+    font-size: 1.6rem;
 
     @include tablet {
-      font-size: 25px;
+      font-size: 1.6rem;
+
+    }
+
+    @include pc {
+      font-size: 2rem;
 
     }
   }
@@ -354,7 +356,7 @@ img {
   text-align: right;
 
   @include tablet {
-    padding: 2% 7%;
+    padding: 2% 3%;
   }
 }
 
@@ -364,55 +366,55 @@ img {
 
 /* thumb-nav */
 .thumb-nav {
-  padding: 0 4% 7%;
+  background-color: #F4F3F2;
+  padding: 0 4% 0;
 
   @include pc {
     padding: 2% 7%;
   }
 
+  &__wrapper {
+    background-color: #fff;
+    box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+    padding: 20px 0 10px;
+  }
 
   &__outer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     @include pc {
       padding: 0;
-      max-width: 750px;
       margin: 0 auto;
       margin-bottom: 7%;
     }
 
   }
 
-  // &__outer:first-of-type {
-  //   margin-bottom: 7%;
-  // }
-
   &__item {
-    margin-left: 5%;
+    flex: 0 0 30%;
 
-    @include tablet {
-      margin-left: 4%;
+    @include sp {
+      flex: 0 0 40%;
     }
 
+
     &_title {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       font-weight: 500;
       padding: 4% 1%;
 
       @include tablet {
         font-size: 1.5rem;
       }
+
+      @include sp {
+        font-size: 1rem;
+      }
     }
 
     &_img {
       transition: all .2s;
-    }
-
-    &_img:nth-of-type(2n) {
-      @include pc {
-        margin-left: 50px;
-      }
     }
 
     &_img:hover {
@@ -424,6 +426,19 @@ img {
 
   }
 
+
+  &__icon {
+    transition: all .2s;
+  }
+
+  &__icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+    z-index: 20;
+    opacity: 0.9;
+  }
+
+
   &__inner {
     text-align: center;
 
@@ -433,12 +448,12 @@ img {
       font-weight: 500;
       padding: 10px;
 
-      @include tablet {
-        font-size: 1.9rem;
-      }
+      // @include tablet {
+      //   font-size: 1.9rem;
+      // }
 
       @include pc {
-        margin-left: 40px;
+        font-size: 1.8rem;
       }
     }
   }
@@ -446,13 +461,17 @@ img {
 
 
 .nav_item__left {
-  margin-left: 0;
+  margin-left: 10px;
+
+  @include pc {
+    margin-left: 45px;
+  }
 }
 
 
 /* footer */
 .page-footer {
-  background-color: #ffffff;
+  background-color: #fff;
   box-sizing: border-box;
   border-bottom: solid 10px #393939;
   background-image: url(../images/bg-gra-top.png),
@@ -463,35 +482,37 @@ img {
   background-size: auto 48px;
 
   &__outer {
-    padding: 7px 25px;
+    padding: 1px 10px;
 
     @include tablet {
-      padding: 20px 100px;
+      padding: 1px 25px;
     }
 
     @include pc {
-      padding: 40px 200px;
+      padding: 40px 50px;
     }
   }
 
   &__head {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     padding: 22px 0;
     border-bottom: solid $themeRed 0.4px;
     padding-bottom: 3px;
-    width: 60%;
+    width: 40%;
 
     &_active {
       color: rgb(66, 66, 66);
     }
 
-    @include tablet {
-      width: 40%;
-    }
-
     @include pc {
       width: 50%;
     }
+
+    @include sp {
+      width: 60%;
+    }
+
+
 
     &_item:hover {
       color: rgb(169, 169, 169);
@@ -535,6 +556,7 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
     margin-left: 3%;
 
     >li {
@@ -546,6 +568,11 @@ img {
       @include tablet {
         font-size: 1.3rem;
         flex: 0 0 150px;
+      }
+
+      @include pc {
+        padding-left: 1%;
+        flex: 0 0 140px;
       }
     }
 

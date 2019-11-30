@@ -24,6 +24,12 @@ sans-serif;
   }
 }
 
+.display_none {
+  @include tablet {
+    display: none;
+  }
+}
+
 .project5-header,
 .project5-section {
   font-family: $Sawarabi_Gothic;

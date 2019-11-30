@@ -233,11 +233,7 @@ $themeRed: #a83333;
   }
 
   &__item:last-of-type {
-    margin-bottom: 30%;
-
-    @include pc {
-      margin-bottom: 10%;
-    }
+    margin-bottom: 10%;
   }
 
   &__inner {
