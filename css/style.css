@@ -826,7 +826,7 @@ img {
 .page-link__title {
   font-weight: 500;
   font-size: 1.6rem;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 
 @media (max-width: 770px) {
@@ -3448,13 +3448,17 @@ img {
   background-color: #fff679;
 }
 
+body.kuisgoods-body {
+  padding: 3rem 0 0;
+}
+
 .kuisgoods-header {
   width: 200px;
   margin: 0 auto;
 }
 
 .kuisgoods-header__img-wrap {
-  margin-top: 100px;
+  margin-top: 30px;
   position: relative;
 }
 
@@ -3560,7 +3564,21 @@ img {
 }
 
 .kuisgoods-section {
-  padding: 40px 0;
+  padding: 35px 0 40px;
+}
+
+.kuisgoods-section__head {
+  font-size: 35px;
+  text-align: center;
+  font-family: "Nico Moji";
+}
+
+.kuisgoods-section__title {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 30px;
+  font-family: "Nico Moji";
+  letter-spacing: 0.8;
 }
 
 .kuisgoods-section__text-outer {
@@ -3570,48 +3588,24 @@ img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 10px 0 30px;
+}
+
+@media (max-width: 700px) {
+  .kuisgoods-section__text-outer {
+    margin-bottom: 15px;
+  }
 }
 
 .kuisgoods-section__text {
-  margin-right: 30px;
+  padding-bottom: 20px;
 }
 
-.kuisgoods-section__text.active > a {
-  color: #777;
-}
-
-.kuisgoods-section__link::after {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border: 0.2px solid #aaa;
-  bottom: -4px;
-  content: " ";
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  -webkit-transition: all 180ms ease-in-out;
-  transition: all 180ms ease-in-out;
-  width: 0;
-}
-
-.kuisgoods-section__link:hover::after {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-color: #aaa;
-  -webkit-transition: width 250ms ease-in-out;
-  transition: width 250ms ease-in-out;
-  width: 100%;
-}
-
-.kuisgoods-section__link:hover::before {
-  bottom: auto;
-  top: 0;
-  width: 70%;
-}
-
-.kuisgoods-section__link:hover {
-  color: #aaa;
+.kuisgoods-section__text:hover {
+  opacity: 0.8;
 }
 
 .row {
@@ -3638,6 +3632,10 @@ img {
   .row .col-1-of-4 {
     width: calc((100% - 2 * 5rem) / 3);
   }
+}
+
+.row .col-1-of-4:hover {
+  cursor: url(../goods_imgs/cursor_icon.png), auto;
 }
 
 .row .col-1-of-4:nth-of-type(2n):hover {
@@ -3695,9 +3693,402 @@ img {
   }
 }
 
+.all_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/all_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.t-shirts_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/tshirts_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.parker_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/parker_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.towel_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/towel.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.stationery_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/pen_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bag_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/bag_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bag_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/bag_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cup_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/cup_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.food_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/sweets_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.batch_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/batch_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.etc_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/etc_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.jun_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/jun_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* kuisgood sns icon */
+.kuisgoods-nav__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.kuisgoods-nav__home_icon {
+  color: #343434;
+  font-size: 2rem;
+}
+
+.kuisgoods-nav__home_icon:hover {
+  color: #cbcbcb;
+}
+
+.kuisgoods-nav__outer {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
+}
+
+.kuisgoods-nav__item {
+  font-family: "Nico Moji";
+  padding-top: 2px;
+}
+
+.kuisgoods-nav__sns-icon {
+  color: #343434;
+}
+
+.kuisgoods-nav__sns-icon_facebook::before {
+  content: "\f082";
+  font-family: FontAwesome;
+  position: relative;
+  left: 5px;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.kuisgoods-nav__sns-icon_twitter::before {
+  content: "\f099";
+  font-family: FontAwesome;
+  position: relative;
+  left: 5px;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.kuisgoods-nav__sns-icon_home::before {
+  content: "\f015";
+  font-family: FontAwesome;
+  position: relative;
+  left: 5px;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.kuisgoods-nav__sns-icon_left {
+  padding-left: 20px;
+}
+
+.kuisgoods-nav__sns-icon:hover {
+  color: #cbcbcb;
+}
+
+/* footer */
+.kuisgoods-footer {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: solid 20px #393939;
+}
+
+.kuisgoods-footer__outer {
+  padding: 1px 10px;
+}
+
+@media (min-width: 760px) {
+  .kuisgoods-footer__outer {
+    padding: 1px 25px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .kuisgoods-footer__outer {
+    padding: 40px 50px;
+  }
+}
+
+.kuisgoods-footer__head {
+  font-size: 2.5rem;
+  padding: 22px 0;
+  border-bottom: solid #a83333 0.4px;
+  padding-bottom: 3px;
+  width: 40%;
+}
+
+.kuisgoods-footer__head_active {
+  color: #424242;
+}
+
+@media (min-width: 1000px) {
+  .kuisgoods-footer__head {
+    width: 50%;
+  }
+}
+
+@media (max-width: 380px) {
+  .kuisgoods-footer__head {
+    width: 60%;
+  }
+}
+
+.kuisgoods-footer__head_item:hover {
+  color: darkgray;
+}
+
+.kuisgoods-footer__inner > li {
+  font-size: 1.5rem;
+  padding: 17px;
+}
+
+.kuisgoods-footer__inner > li:first-of-type {
+  padding-top: 25px;
+}
+
+.kuisgoods-footer__inner > li:last-of-type {
+  padding-bottom: 25px;
+}
+
+.kuisgoods-footer__inner_item {
+  color: #424242;
+}
+
+.kuisgoods-footer__inner_item:hover {
+  color: darkgray;
+}
+
+.kuisgoods-footer__inner_active {
+  color: black;
+  font-weight: 500;
+}
+
+.kuisgoods-footer__block {
+  margin-bottom: 20px;
+}
+
+.kuisgoods-footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: 3%;
+}
+
+@media (min-width: 1000px) {
+  .kuisgoods-footer__item {
+    display: block;
+  }
+}
+
+.kuisgoods-footer__item > li {
+  font-size: 1.2rem;
+  padding-left: 5%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px;
+  padding-bottom: 4%;
+}
+
+@media (min-width: 760px) {
+  .kuisgoods-footer__item > li {
+    font-size: 1.3rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 150px;
+    flex: 0 0 150px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .kuisgoods-footer__item > li {
+    display: inline-block;
+    padding-left: 2%;
+  }
+}
+
+.kuisgoods-footer__item_project {
+  color: #424242;
+}
+
+.kuisgoods-footer__item_project:hover {
+  color: darkgray;
+}
+
+.kuisgoods-footer__item_active {
+  color: black;
+  font-weight: 500;
+}
+
+.kuisgoods-footer__copy {
+  color: #424242;
+  font-size: 1.2rem;
+}
+
+.kuisgoods-footer__active {
+  color: #a83333;
+}
+
 /* kuisgoods */
 .chart-body {
   background-color: #fff679;
+}
+
+body.chart-body {
+  padding: 3rem 0 0;
 }
 
 .__wrapper {
@@ -3715,9 +4106,9 @@ img {
 
 .chart-container__head {
   font-size: 35px;
-  margin: 40px 0;
+  margin: 35px 0 40px;
   text-align: center;
-  padding: 40px;
+  font-family: "Nico Moji";
 }
 
 .chart-list {

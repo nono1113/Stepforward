@@ -25,6 +25,18 @@ $(function () {
 });
 
 /*-------------------------
+ページトップボタン
+--------------------------*/
+$(".btn-pageTop>a").on("click", function () {
+  $("html,body").animate({
+      scrollTop: 0
+    },
+    2000
+  );
+});
+
+
+/*-------------------------
 chartページのグラフ
 --------------------------*/
 var ctx = document.getElementById("myChart").getContext('2d');

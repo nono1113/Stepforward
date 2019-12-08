@@ -19,6 +19,10 @@
   background-color: rgb(255, 246, 121);
 }
 
+body.chart-body {
+  padding: 3rem 0 0;
+}
+
 .__wrapper {
   max-width: 700px;
   margin: 0 auto;
@@ -34,9 +38,9 @@
 
   &__head {
     font-size: 35px;
-    margin: 40px 0;
+    margin: 35px 0 40px;
     text-align: center;
-    padding: 40px;
+    font-family: "Nico Moji";
   }
 }
 
