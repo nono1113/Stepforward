@@ -7,12 +7,16 @@
   background-color: rgb(255, 246, 121);
 }
 
+body.kuisgoods-body {
+  padding: 3rem 0 0;
+}
+
 .kuisgoods-header {
   width: 200px;
   margin: 0 auto;
 
   &__img-wrap {
-    margin-top: 100px;
+    margin-top: 30px;
     position: relative;
   }
 
@@ -84,6 +88,12 @@
   }
 }
 
+@mixin goods-sp {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
 //GRID
 $grid-width: 100rem;
 $gutter-horizontal: 5rem;
@@ -91,58 +101,45 @@ $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 
 .kuisgoods-section {
-  padding: 40px 0;
+  padding: 35px 0 40px;
+
+  &__head {
+    font-size: 35px;
+    text-align: center;
+    font-family: "Nico Moji";
+  }
+
+  &__title {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 30px;
+    font-family: "Nico Moji";
+    letter-spacing: 0.8;
+  }
 
   &__text-outer {
     display: flex;
     justify-content: center;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    padding: 0 10px 0 30px;
+
+    @include goods-sp {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
-    margin-right: 30px;
+    padding-bottom: 20px;
   }
 
-  &__text.active > a {
-    color: #777;
+  &__text:hover {
+    opacity: 0.8;
   }
 
-  &__link::after {
-    backface-visibility: hidden;
-    border: 0.2px solid #aaa;
-    bottom: -4px;
-    content: " ";
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    transition: all 180ms ease-in-out;
-    width: 0;
-  }
-
-  &__link:hover::after {
-    backface-visibility: hidden;
-    border-color: #aaa;
-    transition: width 250ms ease-in-out;
-    width: 100%;
-  }
-
-  &__link:hover::before {
-    bottom: auto;
-    top: 0;
-    width: 70%;
-  }
-
-  &__link:hover {
-    color: #aaa;
-  }
 }
 
-@mixin goods-sp {
-  @media (max-width: 700px) {
-    @content;
-  }
-}
-
+// 写真一覧のコンテナ
 .row {
   max-width: $grid-width;
   margin: 0 auto;
@@ -159,6 +156,10 @@ $gutter-vertical-small: 6rem;
     @include goods-sp {
       width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
     }
+  }
+
+  .col-1-of-4:hover {
+    cursor: url(../goods_imgs/cursor_icon.png), auto;
   }
 
   .col-1-of-4:nth-of-type(2n):hover {
@@ -178,6 +179,7 @@ $gutter-vertical-small: 6rem;
   transform: rotateZ(360deg);
 }
 
+// 写真
 .goods-img {
   padding: 20px 0;
   filter: drop-shadow(1px 0px 10px rgb(212, 210, 194));
@@ -191,6 +193,7 @@ $gutter-vertical-small: 6rem;
   display: none;
 }
 
+// 製作年度表示
 .one {
   position: absolute;
   display: none;
@@ -206,4 +209,379 @@ $gutter-vertical-small: 6rem;
     padding: 10px;
     font-size: 0.6px;
   }
+}
+
+// icon nav
+.all_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/all_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.t-shirts_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/tshirts_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.parker_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/parker_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.towel_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/towel.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.stationery_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/pen_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bag_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/bag_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bag_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/bag_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cup_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/cup_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.food_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/sweets_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.batch_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/batch_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.etc_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/etc_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.jun_icon:after {
+  content: '';
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 80px;
+  /*画像の幅*/
+  height: 55px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/jun_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/* kuisgood sns icon */
+.kuisgoods-nav {
+  &__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__home {
+    &_icon {
+      color: #343434;
+      font-size: 2rem;
+    }
+
+    &_icon:hover {
+      color: rgb(203, 203, 203);
+    }
+  }
+
+
+  &__outer {
+    margin-left: auto;
+    display: flex;
+    padding: 0 20px;
+  }
+
+  &__item {
+    font-family: "Nico Moji";
+    padding-top: 2px;
+  }
+
+  &__sns-icon {
+
+    color: #343434;
+
+    &_facebook::before {
+      content: "\f082";
+      font-family: FontAwesome;
+      position: relative;
+      left: 5px;
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+
+    &_twitter::before {
+      content: "\f099";
+      font-family: FontAwesome;
+      position: relative;
+      left: 5px;
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+
+    &_home::before {
+      content: "\f015";
+      font-family: FontAwesome;
+      position: relative;
+      left: 5px;
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+
+    &_left {
+      padding-left: 20px;
+    }
+
+  }
+
+  &__sns-icon:hover {
+    color: rgb(203, 203, 203);
+  }
+
+}
+
+
+/* footer */
+.kuisgoods-footer {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-bottom: solid 20px #393939;
+
+  &__outer {
+    padding: 1px 10px;
+
+    @include tablet {
+      padding: 1px 25px;
+    }
+
+    @include pc {
+      padding: 40px 50px;
+    }
+  }
+
+  &__head {
+    font-size: 2.5rem;
+    padding: 22px 0;
+    border-bottom: solid $themeRed 0.4px;
+    padding-bottom: 3px;
+    width: 40%;
+
+    &_active {
+      color: rgb(66, 66, 66);
+    }
+
+    @include pc {
+      width: 50%;
+    }
+
+    @include sp {
+      width: 60%;
+    }
+
+
+
+    &_item:hover {
+      color: rgb(169, 169, 169);
+    }
+  }
+
+  &__inner {
+    >li {
+      font-size: 1.5rem;
+      padding: 17px;
+    }
+
+    >li:first-of-type {
+      padding-top: 25px;
+    }
+
+
+    >li:last-of-type {
+      padding-bottom: 25px;
+    }
+
+    &_item {
+      color: rgb(66, 66, 66);
+    }
+
+    &_item:hover {
+      color: rgb(169, 169, 169);
+    }
+
+    &_active {
+      color: rgb(0, 0, 0);
+      font-weight: 500;
+    }
+  }
+
+  &__block {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 3%;
+
+    @include pc {
+      display: block;
+    }
+
+    >li {
+      font-size: 1.2rem;
+      padding-left: 5%;
+      flex: 0 0 120px;
+      padding-bottom: 4%;
+
+      @include tablet {
+        font-size: 1.3rem;
+        flex: 0 0 150px;
+      }
+
+      @include pc {
+        display: inline-block;
+        padding-left: 2%;
+      }
+    }
+
+    &_project {
+      color: rgb(66, 66, 66);
+    }
+
+    &_project:hover {
+      color: rgb(169, 169, 169);
+    }
+
+    &_active {
+      color: rgb(0, 0, 0);
+      font-weight: 500;
+    }
+  }
+
+  &__copy {
+    color: rgb(66, 66, 66);
+    font-size: 1.2rem;
+  }
+
+  &__active {
+    color: #a83333;
+  }
+
 }

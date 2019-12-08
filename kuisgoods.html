@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&display=swap&subset=japanese"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <meta name="format-detection" content="telephone=no" />
   <link rel="apple-touch-icon" href="images/touch-icon.png" />
@@ -16,6 +17,28 @@
 </head>
 
 <body class="kuisgoods-body">
+  <!-- nav header -->
+  <nav class="kuisgoods-nav">
+    <ul class="kuisgoods-nav__wrapper">
+      <div class="kuisgoods-nav__outer">
+        <li class="kuisgoods-nav__item"><a class="kuisgoods-nav__sns-icon" href="./">ぐっずをさがす</a></li>
+        <li class="kuisgoods-nav__item kuisgoods-nav__sns-icon_left"><a class="kuisgoods-nav__sns-icon"
+            href="chart.html">データでみる</a></li>
+        <li class="kuisgoods-nav__sns-icon_left"><a class="kuisgoods-nav__sns-icon kuisgoods-nav__sns-icon_facebook"
+            href="http://www.facebook.com/share.php?u=#" target="_blank">
+          </a></li>
+        <li class="kuisgoods-nav__sns-icon_left"><a class="kuisgoods-nav__sns-icon kuisgoods-nav__sns-icon_twitter"
+            href="https://twitter.com/share?url=#" target="_blank" rel="nofollow">
+          </a>
+        </li>
+        <li class="kuisgoods-nav__sns-icon_left"><a class="kuisgoods-nav__sns-icon kuisgoods-nav__sns-icon_home"
+            href="index.html" target="_blank">
+          </a>
+        </li>
+      </div>
+    </ul>
+  </nav>
+  <!-- header くいちゃんキョロ目ロゴ -->
   <header class="kuisgoods-header">
     <h1 class="kuisgoods-header__img-wrap">
       <img class="kuichan" src="./goods_imgs/kuichan_whiteeyes.png" alt="くいちゃんの目" />
@@ -23,88 +46,166 @@
       <img class="kuisgoods-header__blk_eye-right" src="./goods_imgs/kuichan_blkeye.png" alt="くいちゃんの右目" />
     </h1>
   </header>
-  <div>
-  </div>
   <main class="kuisgoods-section">
     <div>
-      <ul class="kuisgoods-section__text-outer">
-        <li class="kuisgoods-section__text current active filter" data-filter="all">
-          <a class="kuisgoods-section__link" href="#">ALL</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".t-shirts">
-          <a class="kuisgoods-section__link" href="#">Tシャツ</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".parker">
-          <a class="kuisgoods-section__link" href="#">パーカー</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".towel">
-          <a class="kuisgoods-section__link" href="#">タオル</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".stationery">
-          <a class="kuisgoods-section__link" href="#">文房具</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".bag">
-          <a class="kuisgoods-section__link" href="#">バッグ</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".cup">
-          <a class="kuisgoods-section__link" href="#">マグカップ</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".tumbler">
-          <a class="kuisgoods-section__link" href="#">タンブラー</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".batch">
-          <a class="kuisgoods-section__link" href="#">缶バッチ</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".food">
-          <a class="kuisgoods-section__link" href="#">たべもの</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".etc">
-          <a class="kuisgoods-section__link" href="#">その他</a>
-        </li>
-        <li class="kuisgoods-section__text filter" data-filter=".jun">
-          <a class="kuisgoods-section__link" href="#">JUN</a>
-        </li>
-      </ul>
+      <h2 class="kuisgoods-section__head">くいすぐっずをさがす
+      </h2>
+      <p class="kuisgoods-section__title">あなたがすきなぐっずはどれ？
+      </p>
+      <!-- sort_icon nav -->
+      <nav>
+        <ul class="kuisgoods-section__text-outer">
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text current active filter all_icon" data-filter="all">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter t-shirts_icon" data-filter=".t-shirts">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter parker_icon" data-filter=".parker">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter towel_icon" data-filter=".towel">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter stationery_icon" data-filter=".stationery">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter bag_icon" data-filter=".bag">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter cup_icon" data-filter=".cup">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter batch_icon" data-filter=".batch">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter food_icon" data-filter=".food">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter etc_icon" data-filter=".etc">
+            </li>
+          </a>
+          <a class="kuisgoods-section__link" href="#">
+            <li class="kuisgoods-section__text filter jun_icon" data-filter=".jun">
+            </li>
+          </a>
+        </ul>
+      </nav>
     </div>
+    <!-- くいすぐっず写真一覧 -->
     <div id="container" class="row">
       <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/1_kuisgoods.png" alt="2003年" />
+        <img class="goods-img" src="./goods_imgs/10_kuisgoods.png" alt="2004年" />
+      </p>
+      <p class="col-1-of-4 mix all parker">
+        <img class="goods-img" src="./goods_imgs/46_kuisgoods.png" alt="2012年" />
+      </p>
+
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/201_kuisgoods.png" alt="2007年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/117_kuisgoods.png" alt="2018年" />
+      </p>
+      <p class="col-1-of-4 mix all cup">
+        <img class="goods-img" src="./goods_imgs/144_kuisgoods.png" alt="2008年" />
       </p>
       <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/2_kuisgoods.png" alt="2003年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/3_kuisgoods.png" alt="2003年" />
+        <img class="goods-img" src="./goods_imgs/101_kuisgoods.png" alt="2015年" />
       </p>
       <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/4_kuisgoods.png" alt="2003年" />
+        <img class="goods-img" src="./goods_imgs/47_kuisgoods.png" alt="2012年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/120_kuisgoods.png" alt="2015年" />
+      </p>
+      <p id="jun2" class="col-1-of-4 mix all jun batch">
+        <img class="goods-img" src="./goods_imgs/155_kuisgoods.png" alt="JUN" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/122_kuisgoods.png" alt="2015年" />
+      </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/183_kuisgoods.png" alt="2004年" />
+      </p>
+      <p class="col-1-of-4 mix all stationery">
+        <img class="goods-img" src="./goods_imgs/125_kuisgoods.png" alt="2013年" />
+      </p>
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/80_kuisgoods.png" alt="" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/192_kuisgoods.png" alt="2003年" />
+      </p>
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/203_kuisgoods.png" alt="2019年" />
+      </p>
+      <p class="col-1-of-4 mix all stationery">
+        <img class="goods-img" src="./goods_imgs/126_kuisgoods.png" alt="2014年" />
+      </p>
+      <p class="col-1-of-4 mix all parker">
+        <img class="goods-img" src="./goods_imgs/55_kuisgoods.png" alt="2014年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/56_kuisgoods.png" alt="2014年" />
       </p>
       <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/5_kuisgoods.png" alt="2003年" />
+        <img class="goods-img" src="./goods_imgs/58_kuisgoods.png" alt="2014年" />
+      </p>
+      <p class="col-1-of-4 mix all parker">
+        <img class="goods-img" src="./goods_imgs/59_kuisgoods.png" alt="2015年" />
+      </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/170_kuisgoods.png" alt="2003年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/191_kuisgoods.png" alt="2003年" />
+      </p>
+      <p class="col-1-of-4 mix all stationery">
+        <img class="goods-img" src="./goods_imgs/102_kuisgoods.png" alt="2013年" />
+      </p>
+      <p class="col-1-of-4 mix all parker">
+        <img class="goods-img" src="./goods_imgs/49_kuisgoods.png" alt="2013年" />
+      </p>
+      <p class="col-1-of-4 mix all cup">
+        <img class="goods-img" src="./goods_imgs/199_kuisgoods.png" alt="2005年" />
+      </p>
+      <p class="col-1-of-4 mix all parker">
+        <img class="goods-img" src="./goods_imgs/51_kuisgoods.png" alt="2013年" />
+      </p>
+      <p id="jun3" class="col-1-of-4 mix all jun batch">
+        <img class="goods-img" src="./goods_imgs/156_kuisgoods.png" alt="JUN" />
       </p>
       <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/6_kuisgoods.png" alt="2003年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/7_kuisgoods.png" alt="2003年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/8_kuisgoods.png" alt="2004年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/9_kuisgoods.png" alt="2004年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/10_kuisgoods.png" alt="2004年" />
+        <img class="goods-img" src="./goods_imgs/52_kuisgoods.png" alt="2013年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/11_kuisgoods.png" alt="2004年" />
       </p>
+      <p class="col-1-of-4 mix all stationery">
+        <img class="goods-img" src="./goods_imgs/132_kuisgoods.png" alt="2004年" />
+      </p>
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/88_kuisgoods.png" alt="2012年" />
+      </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/171_kuisgoods.png" alt="2003年" />
+      </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/12_kuisgoods.png" alt="2003年" />
       </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/13_kuisgoods.png" alt="2004年" />
+      <p class="col-1-of-4 mix all towel">
+        <img class="goods-img" src="./goods_imgs/28_kuisgoods.png" alt="2007年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/14_kuisgoods.png" alt="2004年" />
@@ -112,20 +213,23 @@
       <p class="col-1-of-4 mix all towel">
         <img class="goods-img" src="./goods_imgs/15_kuisgoods.png" alt="2004年" />
       </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/180_kuisgoods.png" alt="2010年" />
+      </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/16_kuisgoods.png" alt="2004年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/17_kuisgoods.png" alt="2005年" />
       </p>
+      <p class="col-1-of-4 mix all stationery">
+        <img class="goods-img" src="./goods_imgs/151_kuisgoods.png" alt="2003年" />
+      </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/18_kuisgoods.png" alt="2005年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/19_kuisgoods.png" alt="2005年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/20_kuisgoods.png" alt="2005年" />
       </p>
       <p class="col-1-of-4 mix all towel">
         <img class="goods-img" src="./goods_imgs/21_kuisgoods.png" alt="2005年" />
@@ -148,23 +252,14 @@
       <p class="col-1-of-4 mix all towel">
         <img class="goods-img" src="./goods_imgs/27_kuisgoods.png" alt="2007年" />
       </p>
-      <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/28_kuisgoods.png" alt="2007年" />
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/173_kuisgoods.png" alt="2003年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/29_kuisgoods.png" alt="2008年" />
       </p>
-      <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/30_kuisgoods.png" alt="2008年" />
-      </p>
-      <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/31_kuisgoods.png" alt="2008年" />
-      </p>
-      <p class="col-1-of-4 mix all food">
-        <img class="goods-img" src="./goods_imgs/32_kuisgoods.png" alt="2009年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/33_kuisgoods.png" alt="2009年" />
+      <p class="col-1-of-4 mix all etc">
+        <img class="goods-img" src="./goods_imgs/96_kuisgoods.png" alt="2012年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/34_kuisgoods.png" alt="2006年" />
@@ -172,8 +267,39 @@
       <p class="col-1-of-4 mix all towel">
         <img class="goods-img" src="./goods_imgs/35_kuisgoods.png" alt="2009年" />
       </p>
+      <p class="col-1-of-4 mix all cup">
+        <img class="goods-img" src="./goods_imgs/196_kuisgoods.png" alt="2018年" />
+      </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/165_kuisgoods.png" alt="2007年" />
+      </p>
       <p class="col-1-of-4 mix all towel">
         <img class="goods-img" src="./goods_imgs/36_kuisgoods.png" alt="2009年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/1_kuisgoods.png" alt="2003年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/3_kuisgoods.png" alt="2003年" />
+      </p>
+      <p class="col-1-of-4 mix all towel">
+        <img class="goods-img" src="./goods_imgs/4_kuisgoods.png" alt="2003年" />
+      </p>
+      <p class="col-1-of-4 mix all food">
+        <img class="goods-img" src="./goods_imgs/152_kuisgoods.png" alt="2013年" />
+      </p>
+      <p class="col-1-of-4 mix all towel">
+        <img class="goods-img" src="./goods_imgs/5_kuisgoods.png" alt="2003年" />
+      </p>
+
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/7_kuisgoods.png" alt="2003年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/8_kuisgoods.png" alt="2004年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/9_kuisgoods.png" alt="2004年" />
       </p>
       <p class="col-1-of-4 mix all stationery">
         <img class="goods-img" src="./goods_imgs/37_kuisgoods.png" alt="2010年" />
@@ -184,14 +310,21 @@
       <p class="col-1-of-4 mix all etc">
         <img class="goods-img" src="./goods_imgs/39_kuisgoods.png" alt="2010年" />
       </p>
-      <p class="col-1-of-4 mix all food">
-        <img class="goods-img" src="./goods_imgs/40_kuisgoods.png" alt="2010年" />
-      </p>
       <p class="col-1-of-4 mix all parker">
         <img class="goods-img" src="./goods_imgs/41_kuisgoods.png" alt="2010年" />
       </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/116_kuisgoods.png" alt="2017年" />
+      </p>
+
+      <p class="col-1-of-4 mix all etc">
+        <img class="goods-img" src="./goods_imgs/91_kuisgoods.png" alt="マモレンジャー" />
+      </p>
       <p class="col-1-of-4 mix all towel">
         <img class="goods-img" src="./goods_imgs/42_kuisgoods.png" alt="2010年" />
+      </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/162_kuisgoods.png" alt="2013年" />
       </p>
       <p class="col-1-of-4 mix all parker">
         <img class="goods-img" src="./goods_imgs/43_kuisgoods.png" alt="2011年" />
@@ -202,27 +335,7 @@
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/45_kuisgoods.png" alt="2011年" />
       </p>
-      <p class="col-1-of-4 mix all parker">
-        <img class="goods-img" src="./goods_imgs/46_kuisgoods.png" alt="2012年" />
-      </p>
-      <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/47_kuisgoods.png" alt="2012年" />
-      </p>
-      <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/48_kuisgoods.png" alt="2012年" />
-      </p>
-      <p class="col-1-of-4 mix all parker">
-        <img class="goods-img" src="./goods_imgs/49_kuisgoods.png" alt="2013年" />
-      </p>
-      <p class="col-1-of-4 mix all parker">
-        <img class="goods-img" src="./goods_imgs/50_kuisgoods.png" alt="2013年" />
-      </p>
-      <p class="col-1-of-4 mix all parker">
-        <img class="goods-img" src="./goods_imgs/51_kuisgoods.png" alt="2013年" />
-      </p>
-      <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/52_kuisgoods.png" alt="2013年" />
-      </p>
+
       <p class="col-1-of-4 mix all towel">
         <img class="goods-img" src="./goods_imgs/53_kuisgoods.png" alt="2013年" />
       </p>
@@ -230,31 +343,34 @@
         <img class="goods-img" src="./goods_imgs/54_kuisgoods.png" alt="2014年" />
       </p>
       <p class="col-1-of-4 mix all parker">
-        <img class="goods-img" src="./goods_imgs/55_kuisgoods.png" alt="2014年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/56_kuisgoods.png" alt="2014年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/57_kuisgoods.png" alt="2014年" />
-      </p>
-      <p class="col-1-of-4 mix all towel">
-        <img class="goods-img" src="./goods_imgs/58_kuisgoods.png" alt="2014年" />
-      </p>
-      <p class="col-1-of-4 mix all parker">
-        <img class="goods-img" src="./goods_imgs/59_kuisgoods.png" alt="2015年" />
-      </p>
-      <p class="col-1-of-4 mix all parker">
         <img class="goods-img" src="./goods_imgs/60_kuisgoods.png" alt="2015年" />
       </p>
       <p class="col-1-of-4 mix all parker">
         <img class="goods-img" src="./goods_imgs/61_kuisgoods.png" alt="2015年" />
       </p>
+      <p class="col-1-of-4 mix all cup">
+        <img class="goods-img" src="./goods_imgs/200_kuisgoods.png" alt="2015年" />
+      </p>
       <p class="col-1-of-4 mix all parker">
         <img class="goods-img" src="./goods_imgs/62_kuisgoods.png" alt="2015年" />
       </p>
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/140_kuisgoods.png" alt="2009年" />
+      </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/160_kuisgoods.png" alt="2009年" />
+      </p>
       <p class="col-1-of-4 mix all parker">
         <img class="goods-img" src="./goods_imgs/63_kuisgoods.png" alt="2016年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/57_kuisgoods.png" alt="2014年" />
+      </p>
+      <p class="col-1-of-4 mix all stationery">
+        <img class="goods-img" src="./goods_imgs/98_kuisgoods.png" alt="2018" />
+      </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/167_kuisgoods.png" alt="2009年" />
       </p>
       <p class="col-1-of-4 mix all parker">
         <img class="goods-img" src="./goods_imgs/64_kuisgoods.png" alt="2016年" />
@@ -269,22 +385,22 @@
         <img class="goods-img" src="./goods_imgs/67_kuisgoods.png" alt="2019年" />
       </p>
       <p class="col-1-of-4 mix all parker">
-        <img class="goods-img" src="./goods_imgs/68_kuisgoods.png" alt="2019年" />
-      </p>
-      <p class="col-1-of-4 mix all parker">
         <img class="goods-img" src="./goods_imgs/69_kuisgoods.png" alt="2019年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/70_kuisgoods.png" alt="2019年" />
+      </p>
+      <p class="col-1-of-4 mix all stationery">
+        <img class="goods-img" src="./goods_imgs/128_kuisgoods.png" alt="2010年" />
+      </p>
+      <p class="col-1-of-4 mix all batch etc">
+        <img class="goods-img" src="./goods_imgs/129_kuisgoods.png" alt="2011年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/71_kuisgoods.png" alt="2011年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/72_kuisgoods.png" alt="Stop AIDS" />
-      </p>
-      <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/73_kuisgoods.png" alt="2012年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/74_kuisgoods.png" alt="2007年" />
@@ -295,26 +411,35 @@
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/76_kuisgoods.png" alt="2006年" />
       </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/110_kuisgoods.png" alt="2013年" />
+      </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/77_kuisgoods.png" alt="2008年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/78_kuisgoods.png" alt="2006年" />
       </p>
-      <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/79_kuisgoods.png" alt="2006年" />
+      <p class="col-1-of-4 mix all stationery">
+        <img class="goods-img" src="./goods_imgs/73_kuisgoods.png" alt="2012年" />
       </p>
       <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/80_kuisgoods.png" alt="" />
+        <img class="goods-img" src="./goods_imgs/79_kuisgoods.png" alt="2006年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/81_kuisgoods.png" alt="2005年" />
       </p>
       <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/82_kuisgoods.png" alt="2005年" />
-      </p>
-      <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/83_kuisgoods.png" alt="2005年" />
+      </p>
+      <p class="col-1-of-4 mix all towel">
+        <img class="goods-img" src="./goods_imgs/30_kuisgoods.png" alt="2008年" />
+      </p>
+      <p class="col-1-of-4 mix all towel">
+        <img class="goods-img" src="./goods_imgs/31_kuisgoods.png" alt="2008年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/33_kuisgoods.png" alt="2009年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/84_kuisgoods.png" alt="2005年" />
@@ -322,14 +447,14 @@
       <p class="col-1-of-4 mix all stationery">
         <img class="goods-img" src="./goods_imgs/85_kuisgoods.png" alt="2009年" />
       </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/174_kuisgoods.png" alt="2004年" />
+      </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/86_kuisgoods.png" alt="2008年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/87_kuisgoods.png" alt="2010年" />
-      </p>
-      <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/88_kuisgoods.png" alt="2012年" />
       </p>
       <p id="jun" class="col-1-of-4 mix all jun etc">
         <img class="goods-img" src="./goods_imgs/89_kuisgoods.png" alt="JUN" />
@@ -337,29 +462,26 @@
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/90_kuisgoods.png" alt="幕チャリ" />
       </p>
-      <p class="col-1-of-4 mix all etc">
-        <img class="goods-img" src="./goods_imgs/91_kuisgoods.png" alt="マモレンジャー" />
+      <p class="col-1-of-4 mix all towel">
+        <img class="goods-img" src="./goods_imgs/48_kuisgoods.png" alt="2012年" />
       </p>
-      <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/92_kuisgoods.png" alt="2015年" />
-      </p>
-      <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/93_kuisgoods.png" alt="2014年" />
+      <p class="col-1-of-4 mix all parker">
+        <img class="goods-img" src="./goods_imgs/68_kuisgoods.png" alt="2019年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/94_kuisgoods.png" alt="2009年" />
+      </p>
+      <p class="col-1-of-4 mix all cup">
+        <img class="goods-img" src="./goods_imgs/142_kuisgoods.png" alt="2003年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/95_kuisgoods.png" alt="2012年" />
       </p>
       <p class="col-1-of-4 mix all etc">
-        <img class="goods-img" src="./goods_imgs/96_kuisgoods.png" alt="2012年" />
+        <img class="goods-img" src="./goods_imgs/176_kuisgoods.png" alt="2019年" />
       </p>
       <p class="col-1-of-4 mix all stationery">
         <img class="goods-img" src="./goods_imgs/97_kuisgoods.png" alt="2016年" />
-      </p>
-      <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/98_kuisgoods.png" alt="2018" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/99_kuisgoods.png" alt="2014年" />
@@ -368,25 +490,22 @@
         <img class="goods-img" src="./goods_imgs/100_kuisgoods.png" alt="" />
       </p>
       <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/101_kuisgoods.png" alt="2015年" />
-      </p>
-      <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/102_kuisgoods.png" alt="2013年" />
-      </p>
-      <p class="col-1-of-4 mix all stationery">
         <img class="goods-img" src="./goods_imgs/103_kuisgoods.png" alt="2018年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/104_kuisgoods.png" alt="2012年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/105_kuisgoods.png" alt="2012年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/106_kuisgoods.png" alt="2012年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/107_kuisgoods.png" alt="2015年" />
+      </p>
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/93_kuisgoods.png" alt="2014年" />
+      </p>
+      <p class="col-1-of-4 mix all cup">
+        <img class="goods-img" src="./goods_imgs/197_kuisgoods.png" alt="2018年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/108_kuisgoods.png" alt="2012年" />
@@ -395,51 +514,31 @@
         <img class="goods-img" src="./goods_imgs/109_kuisgoods.png" alt="2015年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/110_kuisgoods.png" alt="2013年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/111_kuisgoods.png" alt="2013年" />
       </p>
-
+      <p class="col-1-of-4 mix all towel">
+        <img class="goods-img" src="./goods_imgs/6_kuisgoods.png" alt="2003年" />
+      </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/112_kuisgoods.png" alt="2014年" />
       </p>
-
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/113_kuisgoods.png" alt="2017年" />
       </p>
-
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/114_kuisgoods.png" alt="" />
       </p>
-
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/163_kuisgoods.png" alt="2013年" />
+      </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/115_kuisgoods.png" alt="2016年" />
       </p>
-
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/116_kuisgoods.png" alt="2017年" />
-      </p>
-
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/117_kuisgoods.png" alt="2018年" />
-      </p>
-
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/118_kuisgoods.png" alt="2016年" />
       </p>
-
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/119_kuisgoods.png" alt="2017年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/120_kuisgoods.png" alt="2015年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/121_kuisgoods.png" alt="2011年" />
-      </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/122_kuisgoods.png" alt="2015年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/123_kuisgoods.png" alt="2009年" />
@@ -448,19 +547,7 @@
         <img class="goods-img" src="./goods_imgs/124_kuisgoods.png" alt="2011年" />
       </p>
       <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/125_kuisgoods.png" alt="2013年" />
-      </p>
-      <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/126_kuisgoods.png" alt="2014年" />
-      </p>
-      <p class="col-1-of-4 mix all stationery">
         <img class="goods-img" src="./goods_imgs/127_kuisgoods.png" alt="2009年" />
-      </p>
-      <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/128_kuisgoods.png" alt="2010年" />
-      </p>
-      <p class="col-1-of-4 mix all batch etc">
-        <img class="goods-img" src="./goods_imgs/129_kuisgoods.png" alt="2011年" />
       </p>
       <p class="col-1-of-4 mix all batch">
         <img class="goods-img" src="./goods_imgs/130_kuisgoods.png" alt="2012年" />
@@ -468,11 +555,11 @@
       <p class="col-1-of-4 mix all food">
         <img class="goods-img" src="./goods_imgs/131_kuisgoods.png" alt="2010年" />
       </p>
-      <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/132_kuisgoods.png" alt="2004年" />
-      </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/133_kuisgoods.png" alt="2015年" />
+      </p>
+      <p class="col-1-of-4 mix all cup">
+        <img class="goods-img" src="./goods_imgs/146_kuisgoods.png" alt="2014年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/134_kuisgoods.png" alt="2018年" />
@@ -480,38 +567,32 @@
       <p class="col-1-of-4 mix all food">
         <img class="goods-img" src="./goods_imgs/135_kuisgoods.png" alt="2003年" />
       </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/194_kuisgoods.png" alt="2013年" />
+      </p>
+      <p class="col-1-of-4 mix all cup">
+        <img class="goods-img" src="./goods_imgs/195_kuisgoods.png" alt="2009年" />
+      </p>
+      <p class="col-1-of-4 mix all cup">
+        <img class="goods-img" src="./goods_imgs/198_kuisgoods.png" alt="2015年" />
+      </p>
+      <p class="col-1-of-4 mix all parker">
+        <img class="goods-img" src="./goods_imgs/184_kuisgoods.png" alt="2011年" />
+      </p>
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/202_kuisgoods.png" alt="2019年" />
+      </p>
       <p class="col-1-of-4 mix all food">
         <img class="goods-img" src="./goods_imgs/136_kuisgoods.png" alt="2015年" />
       </p>
       <p class="col-1-of-4 mix all stationery">
         <img class="goods-img" src="./goods_imgs/137_kuisgoods.png" alt="2004年" />
       </p>
-      <p class="col-1-of-4 mix all food">
-        <img class="goods-img" src="./goods_imgs/138_kuisgoods.png" alt="2009年" />
-      </p>
-      <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/139_kuisgoods.png" alt="2007年" />
-      </p>
-      <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/140_kuisgoods.png" alt="2009年" />
-      </p>
-      <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/141_kuisgoods.png" alt="2007年" />
-      </p>
-      <p class="col-1-of-4 mix all cup">
-        <img class="goods-img" src="./goods_imgs/142_kuisgoods.png" alt="2003年" />
-      </p>
       <p class="col-1-of-4 mix all cup">
         <img class="goods-img" src="./goods_imgs/143_kuisgoods.png" alt="2004年" />
       </p>
       <p class="col-1-of-4 mix all cup">
-        <img class="goods-img" src="./goods_imgs/144_kuisgoods.png" alt="2008年" />
-      </p>
-      <p class="col-1-of-4 mix all cup">
         <img class="goods-img" src="./goods_imgs/145_kuisgoods.png" alt="2011年" />
-      </p>
-      <p class="col-1-of-4 mix all cup">
-        <img class="goods-img" src="./goods_imgs/146_kuisgoods.png" alt="2014年" />
       </p>
       <p class="col-1-of-4 mix all bag">
         <img class="goods-img" src="./goods_imgs/147_kuisgoods.png" alt="2007年" />
@@ -519,17 +600,20 @@
       <p class="col-1-of-4 mix all food">
         <img class="goods-img" src="./goods_imgs/148_kuisgoods.png" alt="2011年" />
       </p>
+      <p class="col-1-of-4 mix all parker">
+        <img class="goods-img" src="./goods_imgs/50_kuisgoods.png" alt="2013年" />
+      </p>
       <p class="col-1-of-4 mix all stationery">
         <img class="goods-img" src="./goods_imgs/149_kuisgoods.png" alt="2011年" />
+      </p>
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/92_kuisgoods.png" alt="2015年" />
       </p>
       <p class="col-1-of-4 mix all stationery">
         <img class="goods-img" src="./goods_imgs/150_kuisgoods.png" alt="2003年" />
       </p>
-      <p class="col-1-of-4 mix all stationery">
-        <img class="goods-img" src="./goods_imgs/151_kuisgoods.png" alt="2003年" />
-      </p>
-      <p class="col-1-of-4 mix all food">
-        <img class="goods-img" src="./goods_imgs/152_kuisgoods.png" alt="2013年" />
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/105_kuisgoods.png" alt="2012年" />
       </p>
       <p class="col-1-of-4 mix all batch">
         <img class="goods-img" src="./goods_imgs/153_kuisgoods.png" alt="20年" />
@@ -537,12 +621,7 @@
       <p class="col-1-of-4 mix all etc">
         <img class="goods-img" src="./goods_imgs/154_kuisgoods.png" alt="2014年" />
       </p>
-      <p id="jun2" class="col-1-of-4 mix all jun batch">
-        <img class="goods-img" src="./goods_imgs/155_kuisgoods.png" alt="JUN" />
-      </p>
-      <p id="jun3" class="col-1-of-4 mix all jun batch">
-        <img class="goods-img" src="./goods_imgs/156_kuisgoods.png" alt="JUN" />
-      </p>
+
       <p class="col-1-of-4 mix all batch">
         <img class="goods-img" src="./goods_imgs/157_kuisgoods.png" alt="2009年" />
       </p>
@@ -553,70 +632,22 @@
         <img class="goods-img" src="./goods_imgs/159_kuisgoods.png" alt="2012年" />
       </p>
       <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/160_kuisgoods.png" alt="2009年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
         <img class="goods-img" src="./goods_imgs/161_kuisgoods.png" alt="2004年" />
       </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/162_kuisgoods.png" alt="2013年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/163_kuisgoods.png" alt="2013年" />
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/20_kuisgoods.png" alt="2005年" />
       </p>
       <p class="col-1-of-4 mix all batch">
         <img class="goods-img" src="./goods_imgs/164_kuisgoods.png" alt="2013年" />
       </p>
       <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/165_kuisgoods.png" alt="2007年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/167_kuisgoods.png" alt="2009年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
         <img class="goods-img" src="./goods_imgs/168_kuisgoods.png" alt="2003年" />
       </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/170_kuisgoods.png" alt="2003年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/171_kuisgoods.png" alt="2003年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/172_kuisgoods.png" alt="2003年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/173_kuisgoods.png" alt="2003年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/174_kuisgoods.png" alt="2004年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/175_kuisgoods.png" alt="2013年" />
-      </p>
-      <p class="col-1-of-4 mix all etc">
-        <img class="goods-img" src="./goods_imgs/176_kuisgoods.png" alt="2019年" />
-      </p>
-      <p class="col-1-of-4 mix all etc">
-        <img class="goods-img" src="./goods_imgs/177_kuisgoods.png" alt="2019年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/179_kuisgoods.png" alt="2004年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/180_kuisgoods.png" alt="2010年" />
-      </p>
       <p class="col-1-of-4 mix all food">
-        <img class="goods-img" src="./goods_imgs/181_kuisgoods.png" alt="2004年" />
+        <img class="goods-img" src="./goods_imgs/138_kuisgoods.png" alt="2009年" />
       </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/182_kuisgoods.png" alt="2011年" />
-      </p>
-      <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/183_kuisgoods.png" alt="2004年" />
-      </p>
-      <p class="col-1-of-4 mix all parker">
-        <img class="goods-img" src="./goods_imgs/184_kuisgoods.png" alt="2011年" />
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/139_kuisgoods.png" alt="2007年" />
       </p>
       <p class="col-1-of-4 mix all parker">
         <img class="goods-img" src="./goods_imgs/185_kuisgoods.png" alt="2011年" />
@@ -636,42 +667,38 @@
       <p class="col-1-of-4 mix all t-shirts">
         <img class="goods-img" src="./goods_imgs/190_kuisgoods.png" alt="2004年" />
       </p>
-      <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/191_kuisgoods.png" alt="2003年" />
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/141_kuisgoods.png" alt="2007年" />
       </p>
       <p class="col-1-of-4 mix all t-shirts">
-        <img class="goods-img" src="./goods_imgs/192_kuisgoods.png" alt="2003年" />
+        <img class="goods-img" src="./goods_imgs/13_kuisgoods.png" alt="2004年" />
+      </p>
+      <p class="col-1-of-4 mix all t-shirts">
+        <img class="goods-img" src="./goods_imgs/121_kuisgoods.png" alt="2011年" />
       </p>
       <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/194_kuisgoods.png" alt="2013年" />
+        <img class="goods-img" src="./goods_imgs/172_kuisgoods.png" alt="2003年" />
       </p>
-      <p class="col-1-of-4 mix all tumbler">
-        <img class="goods-img" src="./goods_imgs/195_kuisgoods.png" alt="2009年" />
-      </p>
-      <p class="col-1-of-4 mix all tumbler">
-        <img class="goods-img" src="./goods_imgs/196_kuisgoods.png" alt="2018年" />
-      </p>
-      <p class="col-1-of-4 mix all tumbler">
-        <img class="goods-img" src="./goods_imgs/197_kuisgoods.png" alt="2018年" />
-      </p>
-      <p class="col-1-of-4 mix all tumbler">
-        <img class="goods-img" src="./goods_imgs/198_kuisgoods.png" alt="2015年" />
-      </p>
-      <p class="col-1-of-4 mix all tumbler">
-        <img class="goods-img" src="./goods_imgs/199_kuisgoods.png" alt="2005年" />
-      </p>
-      <p class="col-1-of-4 mix all tumbler">
-        <img class="goods-img" src="./goods_imgs/200_kuisgoods.png" alt="2015年" />
+      <p class="col-1-of-4 mix all bag">
+        <img class="goods-img" src="./goods_imgs/82_kuisgoods.png" alt="2005年" />
       </p>
       <p class="col-1-of-4 mix all batch">
-        <img class="goods-img" src="./goods_imgs/201_kuisgoods.png" alt="2007年" />
+        <img class="goods-img" src="./goods_imgs/175_kuisgoods.png" alt="2013年" />
       </p>
-      <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/202_kuisgoods.png" alt="2019年" />
+      <p class="col-1-of-4 mix all etc">
+        <img class="goods-img" src="./goods_imgs/177_kuisgoods.png" alt="2019年" />
       </p>
-      <p class="col-1-of-4 mix all bag">
-        <img class="goods-img" src="./goods_imgs/203_kuisgoods.png" alt="2019年" />
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/179_kuisgoods.png" alt="2004年" />
       </p>
+      <p class="col-1-of-4 mix all food">
+        <img class="goods-img" src="./goods_imgs/181_kuisgoods.png" alt="2004年" />
+      </p>
+      <p class="col-1-of-4 mix all batch">
+        <img class="goods-img" src="./goods_imgs/182_kuisgoods.png" alt="2011年" />
+      </p>
+
+
     </div>
     <!-- top-btn -->
     <button class="btn-pageTop">
@@ -681,42 +708,43 @@
       </a>
     </button>
   </main>
-  <footer class="page-footer">
-    <nav class="page-footer__outer">
-      <h4 class="page-footer__head">
-        <a class="page-footer__head_active" href=" ./">Step Forward</a>
+  <!-- footer -->
+  <footer class="kuisgoods-footer">
+    <nav class="kuisgoods-footer__outer">
+      <h4 class="kuisgoods-footer__head">
+        <a class="kuisgoods-footer__head_item" href=" ./">Step Forward</a>
       </h4>
-      <ul class="page-footer__inner">
+      <ul class="kuisgoods-footer__inner">
         <li>
-          <a class="page-footer__inner_item" href="step1.html">Step1 立ち上がって 手をつなぐ</a>
+          <a class="kuisgoods-footer__inner_item" href="step1.html">Step1 立ち上がって 手をつなぐ</a>
         </li>
         <li>
-          <a class="page-footer__inner_item" href="step2.html">Step2 アイディアを育み 挑戦する</a>
+          <a class="kuisgoods-footer__inner_item" href="step2.html">Step2 アイディアを育み 挑戦する</a>
         </li>
         <li>
-          <a class="page-footer__inner_item" href="step3.html">Step3 社会へ世界へ つながる</a>
+          <a class="kuisgoods-footer__inner_item" href="step3.html">Step3 社会へ世界へ つながる</a>
         </li>
-        <div class="page-footer__block">
-          <div class="page-footer__item">
+        <div class="kuisgoods-footer__block">
+          <div class="kuisgoods-footer__item">
             <li>
-              <a class="page-footer__item_project" href="./">くいすぐっず</a>
+              <a class="kuisgoods-footer__item_active" href="./">くいすぐっず</a>
             </li>
             <li>
-              <a class="page-footer__item_project" href="makuchari.html">幕チャリ</a>
+              <a class="kuisgoods-footer__item_project" href="makuchari.html">幕チャリ</a>
             </li>
             <li>
-              <a class="page-footer__item_project" href="survival.html">復興支援と防災</a>
+              <a class="kuisgoods-footer__item_project" href="survival.html">復興支援と防災</a>
             </li>
             <li>
-              <a class="page-footer__item_project" href="baton.html">KUIS ×Stop! AIDS
+              <a class="kuisgoods-footer__item_project" href="baton.html">KUIS ×Stop! AIDS
               </a>
             </li>
             <li>
-              <a class="page-footer__item_project" href="fairtrade.html">KUIS × Fair Trade
+              <a class="kuisgoods-footer__item_project" href="fairtrade.html">KUIS × Fair Trade
               </a>
             </li>
             <li>
-              <a class="page-footer__item_project" href="tft.html">KUIS×Table For Two</a>
+              <a class="kuisgoods-footer__item_project" href="tft.html">KUIS×Table For Two</a>
             </li>
           </div>
         </div>
@@ -729,7 +757,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
   <script src="./js/kuisgoods.js"></script>
-  <script src="js/image.js"></script>
 </body>
 
 </html>
