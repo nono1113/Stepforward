@@ -6,13 +6,13 @@ $(function () {
         src: "images/header_index.png"
       }, //スライドする画像を配列で設定
       {
-        src: "images/header_index-2.png"
+        src: "images/header_step3.png"
       },
       {
         src: "images/header_index-3.png"
       },
       {
-        src: "images/header_step3.png"
+        src: "images/header_index-2.png"
       }
     ],
     delay: 4500, //スライドまでの時間ををミリ秒単位で設定

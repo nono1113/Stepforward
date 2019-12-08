@@ -156,13 +156,11 @@ $themeRed: #a83333;
 
     &_text {
       width: 200px;
-      // display: inline-block;
       padding: 15px 10px;
       margin: 30px 0 80px 0;
       border: rgb(213, 213, 213) solid 1px;
       color: rgb(133, 133, 133);
       font-size: 1.8rem;
-      border-radius: 3rem;
       transition: all 0.2s;
     }
 
@@ -201,7 +199,7 @@ $themeRed: #a83333;
 
   &__item {
     margin-bottom: 15%;
-    cursor: pointer;
+    // cursor: pointer;
 
     @include pc {
       margin-bottom: 7%;
@@ -259,11 +257,13 @@ $themeRed: #a83333;
       font-size: 2.1rem;
       margin-bottom: 4%;
       padding-left: 3%;
+      font-family: 'Kosugi', sans-serif;
+      letter-spacing: 1;
 
       @include pc {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         line-height: 1.4;
-        color: #2b2b2b;
+        color: #1e1e1e;
       }
     }
 
@@ -271,7 +271,7 @@ $themeRed: #a83333;
       content: "\f107";
       font-family: FontAwesome;
       position: relative;
-      left: 10px;
+      left: 1px;
     }
   }
 
@@ -350,7 +350,6 @@ $themeRed: #a83333;
       // border: rgb(213, 213, 213) solid 0.6px;
       color: rgb(255, 255, 255);
       font-size: 1.8rem;
-      border-radius: 3rem;
       transition: all 0.2s;
       backface-visibility: hidden;
     }
@@ -361,13 +360,5 @@ $themeRed: #a83333;
       position: relative;
       left: 16px;
     }
-
-    // &_text:hover {
-    //   border: none;
-    //   background-color: $themeRed;
-    //   color: #fff;
-    //   transform: translateY(-0.3rem);
-    //   box-shadow: 0 1rem 2rem rgba(#343434, .2);
-    // }
   }
 }

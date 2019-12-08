@@ -1,0 +1,165 @@
+/* kuisgoods */
+@charset "utf-8";
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 750px) {
+    @content;
+  }
+}
+
+@mixin s_sp {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+
+.chart-body {
+  background-color: rgb(255, 246, 121);
+}
+
+.__wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.chart-container {
+
+  @include pc {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  &__head {
+    font-size: 35px;
+    margin: 40px 0;
+    text-align: center;
+    padding: 40px;
+  }
+}
+
+.chart-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  text-align: center;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-left: 30px;
+    padding-bottom: 20px;
+
+  }
+
+  &__item:nth-of-type(1):before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 45px;
+    /*画像の幅*/
+    height: 40px;
+    /*画像の高さ*/
+    background-image: url(../goods_imgs/tshirts_icon.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+
+  &__item:nth-of-type(2):before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 45px;
+    /*画像の幅*/
+    height: 40px;
+    /*画像の高さ*/
+    background-image: url(../goods_imgs/parker_icon.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+
+  &__item:nth-of-type(3):before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 45px;
+    /*画像の幅*/
+    height: 40px;
+    /*画像の高さ*/
+    background-image: url(../goods_imgs/towel.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+
+  &__item:nth-of-type(4):before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 45px;
+    /*画像の幅*/
+    height: 40px;
+    /*画像の高さ*/
+    background-image: url(../goods_imgs/cup_icon.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+
+  &__item:nth-of-type(5):before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 45px;
+    /*画像の幅*/
+    height: 40px;
+    /*画像の高さ*/
+    background-image: url(../goods_imgs/pen_icon.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+
+  &__item:nth-of-type(6):before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 45px;
+    /*画像の幅*/
+    height: 40px;
+    /*画像の高さ*/
+    background-image: url(../goods_imgs/bag_icon.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+
+  &__item:nth-of-type(7):before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 45px;
+    /*画像の幅*/
+    height: 40px;
+    /*画像の高さ*/
+    background-image: url(../goods_imgs/sweets_icon.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+}
+
+.gg {
+  padding: 40px;
+  text-align: center;
+}
