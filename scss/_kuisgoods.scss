@@ -101,7 +101,11 @@ $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 
 .kuisgoods-section {
-  padding: 35px 0 40px;
+  padding: 10px 0 40px;
+
+  @include goods-sp {
+    padding: 5px 0 40px;
+  }
 
   &__head {
     font-size: 35px;
@@ -112,20 +116,32 @@ $gutter-vertical-small: 6rem;
   &__title {
     font-size: 20px;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     font-family: "Nico Moji";
     letter-spacing: 0.8;
+
+    @include goods-sp {
+      padding-bottom: 15px;
+    }
+
+    &_arrow-below::after {
+      content: "\f0d7";
+      font-family: FontAwesome;
+      position: relative;
+      left: 6px;
+    }
   }
 
   &__text-outer {
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
     padding: 0 10px 0 30px;
 
     @include goods-sp {
-      margin-bottom: 15px;
+      margin-bottom: 5px;
+      padding: 0 10px 0 10px;
     }
   }
 
@@ -224,6 +240,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/all_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .t-shirts_icon:after {
@@ -238,6 +259,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/tshirts_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .parker_icon:after {
@@ -252,6 +278,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/parker_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .towel_icon:after {
@@ -266,6 +297,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/towel.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .stationery_icon:after {
@@ -280,6 +316,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/pen_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .bag_icon:after {
@@ -294,6 +335,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/bag_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .bag_icon:after {
@@ -308,6 +354,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/bag_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .cup_icon:after {
@@ -322,6 +373,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/cup_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .food_icon:after {
@@ -336,6 +392,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/sweets_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .batch_icon:after {
@@ -350,6 +411,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/batch_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .etc_icon:after {
@@ -364,6 +430,11 @@ $gutter-vertical-small: 6rem;
   background-image: url(../goods_imgs/etc_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
 }
 
 .jun_icon:after {
@@ -376,6 +447,25 @@ $gutter-vertical-small: 6rem;
   height: 55px;
   /*画像の高さ*/
   background-image: url(../goods_imgs/jun_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include goods-sp {
+    width: 56px;
+    height: 45px;
+  }
+}
+
+.kuisgoods-active::before {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 27px;
+  /*画像の幅*/
+  height: 15px;
+  /*画像の高さ*/
+  background-image: url(../goods_imgs/cursor_icon.png);
   background-size: contain;
   background-repeat: no-repeat;
 }

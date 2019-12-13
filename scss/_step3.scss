@@ -30,7 +30,7 @@ $themeRed: #a83333;
   margin: 0 auto;
 
   @include pc {
-    padding: 3% 7%;
+    padding: 7% 7% 0;
   }
 }
 
@@ -134,13 +134,13 @@ $themeRed: #a83333;
       @include pc {
         display: block;
         width: 100px;
-        padding-top: 3%;
+        // padding-top: 3%;
         margin-left: auto;
       }
 
       @include l_pc {
         display: block;
-        width: 130px;
+        width: 140px;
         padding-top: 3%;
         margin-left: auto;
       }
@@ -167,20 +167,52 @@ $themeRed: #a83333;
       line-height: 1.9;
     }
   }
+
+  &__btn {
+
+    &_text {
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+      padding: 15px 10px;
+      margin-top: 4%;
+      border: rgb(213, 213, 213) solid 1px;
+      color: rgb(133, 133, 133);
+      font-size: 1.8rem;
+      transition: all 0.2s;
+      backface-visibility: hidden;
+    }
+
+    &_text::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 16px;
+    }
+
+    &_text:hover {
+      border: none;
+      background-color: $themeRed;
+      color: #fff;
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+    }
+  }
 }
 
 .img-big {
   @include pc {
     display: block;
-    width: 200px;
-    padding-top: 10%;
+    width: 220px;
+    padding-top: 8%;
     margin-left: auto;
   }
 
   @include l_pc {
     display: block;
-    width: 290px;
-    padding-top: 3%;
+    width: 220px;
+    padding-top: 8%;
     margin-left: auto;
   }
 }

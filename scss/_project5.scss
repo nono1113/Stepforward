@@ -116,6 +116,9 @@ sans-serif;
 .project5-section {
   &__block:nth-child(2) {
     background: url(../images/project5-bgi_2.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
   &__wrapper {
