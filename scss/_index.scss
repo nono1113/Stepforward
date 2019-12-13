@@ -162,6 +162,7 @@ $themeRed: #a83333;
       color: rgb(133, 133, 133);
       font-size: 1.8rem;
       transition: all 0.2s;
+      backface-visibility: hidden;
     }
 
     &_text::after {
@@ -257,7 +258,7 @@ $themeRed: #a83333;
       font-size: 2.1rem;
       margin-bottom: 4%;
       padding-left: 3%;
-      font-family: 'Kosugi', sans-serif;
+      font-family: "Kosugi", sans-serif;
       letter-spacing: 1;
 
       @include pc {
@@ -359,6 +360,173 @@ $themeRed: #a83333;
       font-family: FontAwesome;
       position: relative;
       left: 16px;
+    }
+  }
+}
+
+.page-link {
+  overflow: hidden;
+
+  &__boxOuter {
+    padding: 0 20% 32px 10%;
+    opacity: 0.8;
+  }
+
+  &__text {
+    transform: translate(115px, 32px);
+
+    @include tablet {
+      font-size: 3.5rem;
+      transform: translate(258px, 32px);
+    }
+
+    @include pc {
+      font-size: 3.5rem;
+      transform: translate(258px, 32px);
+    }
+  }
+
+  &__text::before {
+    content: "";
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 31px;
+    /*画像の幅*/
+    height: 47px;
+    /*画像の高さ*/
+    background-image: url(../images/stepman_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      /*忘れずに！*/
+      width: 57px;
+      /*画像の幅*/
+      height: 90px;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    transform: translate(51px, 48px);
+
+    @include tablet {
+      font-size: 3rem;
+      transform: translate(151px, 48px);
+    }
+
+    @include pc {
+      font-size: 3rem;
+      transform: translate(151px, 48px);
+    }
+  }
+
+  &__caption {
+    font-size: 1rem;
+    transform: translate(61px, 56px);
+
+    @include tablet {
+      transform: translate(177px, 106px);
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    @include pc {
+      transform: translate(188px, 68px);
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.page-link:hover {
+  opacity: 0.6;
+}
+
+.page-goods {
+
+  &__wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #fff679;
+    box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
+    padding: 26px 44px 26px;
+    overflow: hidden;
+
+    @include pc {
+      width: 70%;
+    }
+  }
+
+  &__outer {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    @include tablet {
+      flex: 0 0 40%;
+    }
+  }
+
+  &__paragraph {
+    text-align: center;
+    line-height: 1.5;
+    margin-top: -28px;
+    @include tablet {
+      transform: translateY(30%);
+    }
+    @include pc {
+      transform: translateY(32%);
+    }
+  }
+
+  &__text {
+    margin-bottom: 41px;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    @include tablet {
+      font-size: 1.7rem;
+      margin-bottom: 12px;
+    }
+
+    @include pc {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__btn {
+    @include tablet {
+      display: block;
+    }
+
+    &_text {
+      display: block;
+      text-align: center;
+      font-family: "Nico Moji";
+      background: rgb(255, 246, 121);
+      font-size: 2rem;
+      width: 200px;
+      margin: 0 auto;
+      padding: 10px;
+      transition: all 0.2s;
+    }
+
+    &_text::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 1px;
+      font-weight: 500;
+    }
+
+    &_text:hover {
+      border: none;
+      background: rgb(255, 239, 19);
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
     }
   }
 }

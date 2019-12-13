@@ -5,6 +5,10 @@ $(function () {
   $("#container").mixItUp();
 });
 
+/*-------------------------
+kuisgoods年代の出力
+--------------------------*/
+
 $(function () {
   $(".col-1-of-4").append('<div class="one">');
 
@@ -23,6 +27,17 @@ $(function () {
     }, 300);
   });
 });
+
+$('.kuisgoods-section__text-outer>a').click(function () {
+  $('a').removeClass('kuisgoods-active');
+  $(this).addClass('kuisgoods-active');
+});
+
+$('.btn-pageTop>a').click(function () {
+  $('a').removeClass('kuisgoods-active');
+  $(this).addClass('kuisgoods-active');
+});
+
 
 /*-------------------------
 ページトップボタン

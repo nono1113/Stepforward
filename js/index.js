@@ -41,7 +41,7 @@ $(function () {
 });
 
 // ページトップボタン
-$(".btn-pageTop>a").on("click", function () {
+$(".btn-pageTop2>a").on("click", function () {
   $("html,body").animate({
       scrollTop: 0
     },
@@ -51,9 +51,17 @@ $(".btn-pageTop>a").on("click", function () {
 
 // Step forwardボタン
 $("#trigger-btn").on("click", function () {
-  $("html,body").animate({
-      scrollTop: 1400
-    },
-    1000
-  );
+  if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
+    $("html,body").animate({
+        scrollTop: 1800
+      },
+      1000
+    );
+  } else {
+    $("html,body").animate({
+        scrollTop: 1400
+      },
+      1000
+    );
+  }
 });

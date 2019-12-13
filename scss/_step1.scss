@@ -21,8 +21,12 @@ $themeRed: #a83333;
 
 
 .page1-section {
-  max-width: 1000px;
-  margin: 0 auto;
+
+
+  &__global-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
   &__block {
     margin-bottom: 20%;
@@ -30,7 +34,7 @@ $themeRed: #a83333;
 
     @include pc {
       margin-bottom: 10%;
-      padding: 5% 5% 0;
+      padding: 7% 5% 0;
     }
 
     &_wrapper {
@@ -45,7 +49,7 @@ $themeRed: #a83333;
     margin-bottom: 0;
   }
 
-  &__block:nth-child(2) {
+  &__block_bgi {
     background: url(../images/step1-bgi.png);
     background-size: cover;
     background-position: center center;
@@ -72,7 +76,8 @@ $themeRed: #a83333;
       quotes: '“''”';
 
       @include pc {
-        font-size: 2.4rem;
+        line-height: 1.4;
+        font-size: 3rem;
         margin-top: 80px;
         margin-left: 68px;
         display: grid;
@@ -200,6 +205,7 @@ $themeRed: #a83333;
   &__subText {
     font-size: 0.8em;
     line-height: 1.6;
+    text-align: center;
 
     @include pc {
       padding: 1% 2% 0;

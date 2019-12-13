@@ -2,7 +2,7 @@
 ページトップボタン
 --------------------------*/
 
-$(function() {
+$(function () {
   $("img.lazy").lazyload({
     threshold: 100, // 100pxの距離まで近づいたら表示する
     effect: "fadeIn", // じわじわっと表示させる
@@ -14,9 +14,8 @@ $(function() {
 ページトップボタン
 --------------------------*/
 // ページトップボタン
-$(".btn-pageTop").on("click", function() {
-  $("html,body").animate(
-    {
+$(".btn-pageTop").on("click", function () {
+  $("html,body").animate({
       scrollTop: 0
     },
     1000

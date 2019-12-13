@@ -253,38 +253,53 @@ img {
   margin-left: auto;
   margin-top: 30px;
   padding-right: 10px;
-
+  position: fixed;
+  right: 0;
 }
 
 .btn-pageTop:hover {
   opacity: 0.6;
 }
 
+
+.btn-pageTop2 {
+  display: block;
+  margin-left: auto;
+  margin-top: 30px;
+  padding-right: 10px;
+  // position: fixed;
+  right: 0;
+}
+
+.btn-pageTop2:hover {
+  opacity: 0.6;
+}
+
 /* page-link */
 .page-link {
-  &__title {
-    font-weight: 500;
-    font-size: 1.6rem;
-    padding-bottom: 8px;
+  // &__title {
+  //   font-weight: 500;
+  //   font-size: 1.6rem;
+  //   padding-bottom: 8px;
 
-    @include tablet {
-      font-size: 1.6rem;
+  //   @include tablet {
+  //     font-size: 1.6rem;
 
-    }
+  //   }
 
-    @include pc {
-      font-size: 2rem;
+  //   @include pc {
+  //     font-size: 2rem;
 
-    }
-  }
+  //   }
+  // }
 
-  &__title::after {
-    content: "\f105";
-    font-family: FontAwesome;
-    position: relative;
-    left: 3px;
-    font-weight: 500;
-  }
+  // &__title::after {
+  //   content: "\f105";
+  //   font-family: FontAwesome;
+  //   position: relative;
+  //   left: 3px;
+  //   font-weight: 500;
+  // }
 
 
   &__title1:before {
@@ -353,7 +368,7 @@ img {
 
 
 .link-outer {
-  padding: 7% 7%;
+  padding: 4% 3% 2%;
   text-align: right;
 
   @include tablet {

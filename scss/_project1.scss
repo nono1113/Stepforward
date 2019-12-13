@@ -82,6 +82,7 @@
       padding: 0 3%;
       max-width: 850px;
       margin: 0 auto;
+      margin-bottom: 35px;
     }
   }
 
@@ -182,6 +183,12 @@
       padding: 0;
     }
 
+    &_bottom {
+      @include pc {
+        margin-bottom: 45px;
+      }
+    }
+
     &_small {
       font-size: 1.5rem;
       line-height: 1.7;
@@ -201,6 +208,12 @@
     @include pc {
       margin-left: 5%;
       padding: 0;
+    }
+
+    &_top {
+      @include pc {
+        padding-top: 75px;
+      }
     }
 
     &_small {
@@ -261,12 +274,14 @@
 
   &__bgi {
     background: url(../images/project2-bgi.png);
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
   }
 
   &__bgi2 {
     background: url(../images/project2-bgi2.png);
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 

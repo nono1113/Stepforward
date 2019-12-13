@@ -1,0 +1,295 @@
+/* history */
+@charset "utf-8";
+
+//変数
+$themeRed: #a83333;
+
+//メディアクエリ
+@mixin pc {
+  @media (min-width: 770px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 770px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: 380px) {
+    @content;
+  }
+}
+
+
+.history__wrapper {
+  padding: 3rem;
+
+  @include sp {
+    padding: 0;
+  }
+}
+
+
+.history-outer {
+  position: relative;
+
+  @include pc {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.history-header {
+  padding: 20px;
+
+  @include pc {
+    padding: 40px 20px 0;
+  }
+
+  &__head {
+    font-size: 3rem;
+    color: rgb(66, 66, 66);
+    text-shadow: 0 0.3px #fff;
+    border-bottom: solid $themeRed 0.4px;
+    padding-bottom: 4px;
+    width: 100%;
+
+    @include tablet {
+      font-size: 3rem;
+      width: 300px;
+    }
+
+    @include pc {
+      font-size: 5rem;
+      font-feature-settings: "palt";
+      letter-spacing: 0.01em;
+      width: 480px;
+    }
+  }
+
+  &__head::before {
+    content: "";
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 27px;
+    /*画像の幅*/
+    height: 36px;
+    /*画像の高さ*/
+    background-image: url(../images/stepman_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include pc {
+      content: "";
+      /*何も入れない*/
+      display: inline-block;
+      /*忘れずに！*/
+      width: 50px;
+      /*画像の幅*/
+      height: 50px;
+      /*画像の高さ*/
+      background-image: url(../images/stepman_icon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    padding-top: 15px;
+    font-size: 4rem;
+    font-family: 'Cormorant Garamond',
+      serif;
+    color: #343434;
+
+    @include sp {
+      padding-top: 10px;
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.history-nav {
+  padding: 20px 100px;
+  margin-bottom: 50px;
+  position: fixed;
+  left: 68%;
+  z-index: 1;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include sp {
+    display: none;
+  }
+
+  &__item {
+    color: $themeRed;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    margin-left: 20px;
+
+    &_arrow {
+      padding-left: 18px;
+    }
+
+    >a {
+      color: rgba(100, 30, 54, 0.8);
+    }
+
+    >a:hover {
+      color: rgb(203, 203, 203);
+    }
+  }
+
+  &__topBtn {
+    @include pc {
+      display: none;
+    }
+  }
+}
+
+
+.history-active::before {
+  content: "";
+  /*何も入れない*/
+  display: block;
+  /*忘れずに！*/
+  width: 27px;
+  /*画像の幅*/
+  height: 27px;
+  /*画像の高さ*/
+  background-image: url(../images/stepman_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.history-section {
+  color: #343434;
+  padding: 5px;
+
+  &__goods::before {
+    content: "";
+    display: inline-block;
+    /*忘れずに！*/
+    width: 25px;
+    /*画像の幅*/
+    height: 15px;
+    /*画像の高さ*/
+    background-image: url(../goods_imgs/cursor_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__textBold {
+    font-weight: bold;
+  }
+}
+
+// sectionの中身
+.cp_timeline04 {
+  position: relative;
+  margin: 2em auto;
+  padding-bottom: 2em;
+
+  @include sp {
+    margin: 0 auto;
+  }
+}
+
+.cp_timeline04:before {
+  position: absolute;
+  top: 0px;
+  left: 45px;
+  width: 3px;
+  height: 100%;
+  content: "";
+  background: #db2650;
+}
+
+.cp_timeline04 .timeline_item {
+  margin: 40px 0px 0px 80px;
+}
+
+.cp_timeline04 .timeline_item .time_date .time {
+  font-family: serif;
+  font-size: 6em;
+  font-weight: bold;
+  position: relative;
+  margin: 0;
+  letter-spacing: 3px;
+  color: rgba(233, 30, 99, 0.1);
+
+  @include sp {
+    font-size: 5em;
+  }
+}
+
+.cp_timeline04 .timeline_item .time_date .time:before {
+  position: absolute;
+  top: 50%;
+  left: -42px;
+  width: 10px;
+  height: 10px;
+  content: "";
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: 3px solid #db2650;
+  background: rgb(255, 255, 255);
+}
+
+.cp_timeline04 .timeline_item .time_date .flag {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  margin-top: -36px;
+  color: $themeRed;
+  line-height: 1.4;
+
+  @include sp {
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin-top: -35px;
+  }
+}
+
+.flag {
+  font-family: 'Noto Serif JP',
+    serif;
+}
+
+.cp_timeline04 .timeline_item .desc {
+  font-size: 0.8em;
+  line-height: 24px;
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 1px solid $themeRed;
+
+  @include sp {
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cp_timeline04:before {
+    left: 15px;
+  }
+
+  .cp_timeline04 .timeline_item .time_date .time:before {
+    left: -32px;
+  }
+
+  .cp_timeline04 .timeline_item {
+    margin: 0px 0px 0px 40px;
+  }
+
+  .cp_timeline04 .timeline_item .desc {
+    padding-left: 0px;
+    border-top: 1px solid $themeRed;
+    border-left: none;
+  }
+}
