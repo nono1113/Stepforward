@@ -14,7 +14,7 @@ $(function () {
 ページトップボタン
 --------------------------*/
 // ページトップボタン
-$(".btn-pageTop").on("click", function () {
+$(".btn-pageTop2").on("click", function () {
   $("html,body").animate({
       scrollTop: 0
     },

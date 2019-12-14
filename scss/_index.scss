@@ -255,9 +255,9 @@ $themeRed: #a83333;
 
     &_title {
       font-weight: 500;
-      font-size: 2.1rem;
+      font-size: 2rem;
       margin-bottom: 4%;
-      padding-left: 3%;
+      // padding-left: 3%;
       font-family: "Kosugi", sans-serif;
       letter-spacing: 1;
 
@@ -266,6 +266,10 @@ $themeRed: #a83333;
         line-height: 1.4;
         color: #1e1e1e;
       }
+    }
+
+    &_arrow {
+      text-align: center;
     }
 
     &_arrow::after {
@@ -365,7 +369,16 @@ $themeRed: #a83333;
 }
 
 .page-link {
-  overflow: hidden;
+  display: none;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include pc {
+    display: inline-block;
+    overflow: hidden;
+  }
 
   &__boxOuter {
     padding: 0 20% 32px 10%;
@@ -373,17 +386,20 @@ $themeRed: #a83333;
   }
 
   &__text {
-    transform: translate(115px, 32px);
+    font-size: 3rem;
+    transform: translate(152px, 32px);
 
-    @include tablet {
-      font-size: 3.5rem;
-      transform: translate(258px, 32px);
-    }
+    // @include tablet {
+    //   display: none;
+    //   font-size: 3.5rem;
+    //   transform: translate(258px, 32px);
+    // }
 
-    @include pc {
-      font-size: 3.5rem;
-      transform: translate(258px, 32px);
-    }
+    // @include pc {
+    //   display: none;
+    //   font-size: 3.5rem;
+    //   transform: translate(258px, 32px);
+    // }
   }
 
   &__text::before {
@@ -439,11 +455,60 @@ $themeRed: #a83333;
   }
 }
 
-.page-link:hover {
-  opacity: 0.6;
+.page-link2 {
+
+  @include pc {
+    display: none;
+  }
+
+  &__outer {
+    padding: 37px 31px;
+  }
+
+  &__text {
+    font-size: 3rem;
+    text-align-last: right;
+  }
+
+  &__text::before {
+    content: "";
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 31px;
+    /*画像の幅*/
+    height: 47px;
+    /*画像の高さ*/
+    background-image: url(../images/stepman_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      /*忘れずに！*/
+      width: 40px;
+      /*画像の幅*/
+      height: 61px;
+    }
+  }
+
+  &__text::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    position: relative;
+    left: 3px;
+    font-weight: 500;
+  }
+
+  &__caption {
+    text-align-last: right;
+    padding-top: 7px;
+  }
+
+
 }
 
 .page-goods {
+  padding: 20px;
 
   &__wrapper {
     max-width: 80%;
@@ -475,9 +540,11 @@ $themeRed: #a83333;
     text-align: center;
     line-height: 1.5;
     margin-top: -28px;
+
     @include tablet {
       transform: translateY(30%);
     }
+
     @include pc {
       transform: translateY(32%);
     }
@@ -485,15 +552,18 @@ $themeRed: #a83333;
 
   &__text {
     margin-bottom: 41px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 5px;
+    padding-top: 10px;
+
+
     @include tablet {
       font-size: 1.7rem;
       margin-bottom: 12px;
     }
 
     @include pc {
-      margin-bottom: 42px;
+      margin-bottom: 25px;
     }
   }
 
@@ -527,6 +597,81 @@ $themeRed: #a83333;
       background: rgb(255, 239, 19);
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+    }
+  }
+}
+
+.page-history {
+  padding: 30px 20px;
+
+  &__title {
+    font-family: 'Cormorant Garamond',
+      serif;
+    color: #343434;
+  }
+
+  &__wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #FFFDE6;
+    box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
+    padding: 0 44px 26px;
+    overflow: hidden;
+
+    @include pc {
+      width: 70%;
+      padding: 26px 44px 26px;
+    }
+  }
+
+  &__text {
+    transform: translate(29px, 32px);
+
+    @include tablet {
+      font-size: 2.5rem;
+      transform: translate(82px, 32px);
+    }
+
+    @include pc {
+      font-size: 3.5rem;
+      transform: translate(90px, 32px);
+    }
+  }
+
+  &__text::before {
+    content: "";
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 31px;
+    /*画像の幅*/
+    height: 47px;
+    /*画像の高さ*/
+    background-image: url(../images/stepman_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      /*忘れずに！*/
+      width: 57px;
+      /*画像の幅*/
+      height: 90px;
+    }
+  }
+
+  &__caption {
+    transform: translate(34px, 56px);
+    font-size: 1rem;
+
+    @include tablet {
+      transform: translate(86px, 106px);
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    @include pc {
+      transform: translate(98px, 43px);
+      letter-spacing: 2px;
     }
   }
 }

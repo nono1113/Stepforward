@@ -100,14 +100,6 @@ $themeRed: #a83333;
     }
   }
 
-
-  &__add-arrow::after {
-    content: "\f105";
-    font-family: FontAwesome;
-    position: relative;
-    left: 8px;
-  }
-
   &__thumb {
     text-align: center;
 
@@ -116,17 +108,17 @@ $themeRed: #a83333;
       flex: 0 0 45%;
     }
 
-    img {
-      width: 95%;
-      transition: all .2s;
-    }
+    // img {
+    //   width: 95%;
+    //   transition: all .2s;
+    // }
 
-    img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
-      z-index: 20;
-      opacity: 0.9;
-    }
+    // img:hover {
+    //   transform: scale(1.05);
+    //   box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+    //   z-index: 20;
+    //   opacity: 0.9;
+    // }
 
     &_pc-img {
       display: none;
@@ -176,12 +168,13 @@ $themeRed: #a83333;
       text-align: center;
       display: block;
       padding: 15px 10px;
-      margin-top: 4%;
-      border: rgb(213, 213, 213) solid 1px;
-      color: rgb(133, 133, 133);
-      font-size: 1.8rem;
-      transition: all 0.2s;
-      backface-visibility: hidden;
+      margin-top: 10%;
+      border: none;
+      background-color: $themeRed;
+      color: #fff;
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+      transition: all 0.5s;
     }
 
     &_text::after {
@@ -192,11 +185,13 @@ $themeRed: #a83333;
     }
 
     &_text:hover {
-      border: none;
-      background-color: $themeRed;
-      color: #fff;
-      transform: translateY(-0.3rem);
-      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+      border: $themeRed solid 1px;
+      color: $themeRed;
+      background-color: rgb(255, 255, 255);
+      font-size: 1.8rem;
+
+      backface-visibility: hidden;
+
     }
   }
 }
