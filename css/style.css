@@ -443,9 +443,8 @@ button {
 
 .page-section__inner_title {
   font-weight: 500;
-  font-size: 2.1rem;
+  font-size: 2rem;
   margin-bottom: 4%;
-  padding-left: 3%;
   font-family: "Kosugi", sans-serif;
   letter-spacing: 1;
 }
@@ -456,6 +455,10 @@ button {
     line-height: 1.4;
     color: #1e1e1e;
   }
+}
+
+.page-section__inner_arrow {
+  text-align: center;
 }
 
 .page-section__inner_arrow::after {
@@ -569,7 +572,20 @@ button {
 }
 
 .page-link {
-  overflow: hidden;
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .page-link {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-link {
+    display: inline-block;
+    overflow: hidden;
+  }
 }
 
 .page-link__boxOuter {
@@ -578,24 +594,9 @@ button {
 }
 
 .page-link__text {
-  -webkit-transform: translate(115px, 32px);
-  transform: translate(115px, 32px);
-}
-
-@media (min-width: 760px) {
-  .page-link__text {
-    font-size: 3.5rem;
-    -webkit-transform: translate(258px, 32px);
-    transform: translate(258px, 32px);
-  }
-}
-
-@media (min-width: 1000px) {
-  .page-link__text {
-    font-size: 3.5rem;
-    -webkit-transform: translate(258px, 32px);
-    transform: translate(258px, 32px);
-  }
+  font-size: 3rem;
+  -webkit-transform: translate(152px, 32px);
+  transform: translate(152px, 32px);
 }
 
 .page-link__text::before {
@@ -666,8 +667,59 @@ button {
   }
 }
 
-.page-link:hover {
-  opacity: 0.6;
+@media (min-width: 1000px) {
+  .page-link2 {
+    display: none;
+  }
+}
+
+.page-link2__outer {
+  padding: 37px 31px;
+}
+
+.page-link2__text {
+  font-size: 3rem;
+  text-align-last: right;
+}
+
+.page-link2__text::before {
+  content: "";
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 31px;
+  /*画像の幅*/
+  height: 47px;
+  /*画像の高さ*/
+  background-image: url(../images/stepman_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 760px) {
+  .page-link2__text::before {
+    /*忘れずに！*/
+    width: 40px;
+    /*画像の幅*/
+    height: 61px;
+  }
+}
+
+.page-link2__text::after {
+  content: "\f105";
+  font-family: FontAwesome;
+  position: relative;
+  left: 3px;
+  font-weight: 500;
+}
+
+.page-link2__caption {
+  text-align-last: right;
+  padding-top: 7px;
+}
+
+.page-goods {
+  padding: 20px;
 }
 
 .page-goods__wrapper {
@@ -727,8 +779,9 @@ button {
 
 .page-goods__text {
   margin-bottom: 41px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 5px;
+  padding-top: 10px;
 }
 
 @media (min-width: 760px) {
@@ -740,7 +793,7 @@ button {
 
 @media (min-width: 1000px) {
   .page-goods__text {
-    margin-bottom: 42px;
+    margin-bottom: 25px;
   }
 }
 
@@ -780,6 +833,99 @@ button {
   box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
 }
 
+.page-history {
+  padding: 30px 20px;
+}
+
+.page-history__title {
+  font-family: 'Cormorant Garamond', serif;
+  color: #343434;
+}
+
+.page-history__wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: #FFFDE6;
+  -webkit-box-shadow: 0 2.5rem 4rem rgba(52, 52, 52, 0.5);
+  box-shadow: 0 2.5rem 4rem rgba(52, 52, 52, 0.5);
+  padding: 0 44px 26px;
+  overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+  .page-history__wrapper {
+    width: 70%;
+    padding: 26px 44px 26px;
+  }
+}
+
+.page-history__text {
+  -webkit-transform: translate(29px, 32px);
+  transform: translate(29px, 32px);
+}
+
+@media (min-width: 760px) {
+  .page-history__text {
+    font-size: 2.5rem;
+    -webkit-transform: translate(82px, 32px);
+    transform: translate(82px, 32px);
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-history__text {
+    font-size: 3.5rem;
+    -webkit-transform: translate(90px, 32px);
+    transform: translate(90px, 32px);
+  }
+}
+
+.page-history__text::before {
+  content: "";
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 31px;
+  /*画像の幅*/
+  height: 47px;
+  /*画像の高さ*/
+  background-image: url(../images/stepman_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 760px) {
+  .page-history__text::before {
+    /*忘れずに！*/
+    width: 57px;
+    /*画像の幅*/
+    height: 90px;
+  }
+}
+
+.page-history__caption {
+  -webkit-transform: translate(34px, 56px);
+  transform: translate(34px, 56px);
+  font-size: 1rem;
+}
+
+@media (min-width: 760px) {
+  .page-history__caption {
+    -webkit-transform: translate(86px, 106px);
+    transform: translate(86px, 106px);
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-history__caption {
+    -webkit-transform: translate(98px, 43px);
+    transform: translate(98px, 43px);
+    letter-spacing: 2px;
+  }
+}
+
 /* base.css */
 /* common */
 html {
@@ -793,7 +939,7 @@ body {
   -webkit-text-size-adjust: 100%;
   /* Safari: ゴシック体にする */
   font-family: sans-serif;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -819,7 +965,7 @@ img {
 }
 
 .global-wrapper {
-  background-color: #F4F3F2;
+  background-color: #f4f3f2;
 }
 
 .text-center {
@@ -909,7 +1055,7 @@ img {
 }
 
 .page-header__title:before {
-  content: '';
+  content: "";
   /*何も入れない*/
   display: inline-block;
   /*忘れずに！*/
@@ -924,7 +1070,7 @@ img {
 }
 
 .page-header__title2:before {
-  content: '';
+  content: "";
   /*何も入れない*/
   display: inline-block;
   /*忘れずに！*/
@@ -939,7 +1085,7 @@ img {
 }
 
 .page-header__title3:before {
-  content: '';
+  content: "";
   /*何も入れない*/
   display: inline-block;
   /*忘れずに！*/
@@ -1051,8 +1197,34 @@ img {
 }
 
 /* page-link */
+.page-link__title {
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 770px) {
+  .page-link__title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 770px) {
+  .page-link__title {
+    font-size: 2rem;
+  }
+}
+
+.page-link__title::after {
+  content: "\f105";
+  font-family: FontAwesome;
+  position: relative;
+  left: 3px;
+  font-weight: 500;
+}
+
 .page-link__title1:before {
-  content: '';
+  content: "";
   /*何も入れない*/
   display: block;
   /*忘れずに！*/
@@ -1066,7 +1238,7 @@ img {
 }
 
 .page-link__title2:before {
-  content: '';
+  content: "";
   /*何も入れない*/
   display: block;
   /*忘れずに！*/
@@ -1080,7 +1252,7 @@ img {
 }
 
 .page-link__title3:before {
-  content: '';
+  content: "";
   /*何も入れない*/
   display: block;
   /*忘れずに！*/
@@ -1096,20 +1268,20 @@ img {
 .link-active {
   position: relative;
   display: inline-block;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .link-active::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  content: '';
+  content: "";
   width: 0;
   height: 1px;
   background-color: #a83333;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .link-active:hover::after {
@@ -1141,7 +1313,7 @@ img {
 
 /* thumb-nav */
 .thumb-nav {
-  background-color: #F4F3F2;
+  background-color: #f4f3f2;
   padding: 0 4% 0;
 }
 
@@ -1208,8 +1380,8 @@ img {
 }
 
 .thumb-nav__item_img {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .thumb-nav__item_img:hover {
@@ -1222,8 +1394,8 @@ img {
 }
 
 .thumb-nav__icon {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .thumb-nav__icon:hover {
@@ -1243,7 +1415,7 @@ img {
   text-align: center;
   font-size: 1rem;
   font-weight: 500;
-  padding: 10px;
+  padding: 10px 5px;
 }
 
 @media (min-width: 770px) {
@@ -1300,7 +1472,7 @@ img {
 
 @media (min-width: 770px) {
   .page-footer__outer {
-    padding: 40px 50px;
+    padding: 40px 141px;
   }
 }
 
@@ -1405,7 +1577,7 @@ img {
 @media (min-width: 770px) {
   .page-footer__item > li {
     display: inline-block;
-    padding-left: 2%;
+    padding-left: 5%;
   }
 }
 
@@ -1431,9 +1603,205 @@ img {
   color: #a83333;
 }
 
+.page-footer__btn-outer {
+  margin-top: 50px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 56%;
+  flex: 0 0 56%;
+}
+
+@media (max-width: 770px) {
+  .page-footer__btn-outer {
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-footer__btn-outer {
+    display: block;
+  }
+}
+
+.page-footer__btn-text {
+  display: block;
+  text-align: center;
+  font-family: "Nico Moji";
+  background: #fff679;
+  font-size: 2rem;
+  width: 210px;
+  margin: 0 auto;
+  padding: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-bottom: 17px;
+}
+
+@media (max-width: 770px) {
+  .page-footer__btn-text {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-footer__btn-text {
+    font-size: 1.5rem;
+    width: 192px;
+    padding: 17px 1px;
+    margin-bottom: 7px;
+  }
+}
+
+.page-footer__btn-text::before {
+  content: "";
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 24px;
+  /*画像の幅*/
+  height: 14px;
+  /*画像の高さ*/
+  background-image: url(../images/cursor_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.page-footer__btn-text::after {
+  content: "\f105";
+  font-family: FontAwesome;
+  position: relative;
+  left: 1px;
+  font-weight: 500;
+}
+
+.page-footer__btn-text:hover {
+  border: none;
+  background: #ffef13;
+  -webkit-transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
+  box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
+}
+
+.page-footer__btn-text2::before {
+  content: "";
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 20px;
+  /*画像の幅*/
+  height: 26px;
+  /*画像の高さ*/
+  background-image: url(../images/stepman_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.page-footer__btn-text2 {
+  display: block;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  color: #343434;
+  background-color: #fffde6;
+  font-size: 1.7rem;
+  width: 210px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+@media (max-width: 380px) {
+  .page-footer__btn-text2 {
+    font-size: 1.3rem;
+    padding: 15px 0px;
+    width: 192px;
+  }
+}
+
+.page-footer__btn-text2::after {
+  content: "\f105";
+  font-family: FontAwesome;
+  position: relative;
+  left: 8px;
+  font-weight: 500;
+}
+
+.page-footer__btn-text2:hover {
+  border: none;
+  background-color: #fefac7;
+  -webkit-transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
+  box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
+}
+
+@media (max-width: 770px) {
+  .page-footer__btn:last-of-type {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-footer__btn:last-of-type {
+    margin: 0;
+  }
+}
+
+.page-footer__pc-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 770px) {
+  .page-footer__pc-wrapper {
+    display: block;
+  }
+}
+
+.page-footer__sns-outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.page-footer__sns-outer-share {
+  padding: 5px;
+}
+
+.page-footer__sns-outer-share::after {
+  content: "\f105";
+  font-family: FontAwesome;
+  position: relative;
+  left: 5px;
+  font-weight: 500;
+}
+
+.page-footer__sns:hover {
+  color: #cbcbcb;
+}
+
 /* sns icon */
 .sns_icon {
   color: #fff;
+}
+
+.sns_icon__text {
+  color: #fff;
+  padding-right: 10px;
+  padding-top: 5px;
 }
 
 .sns_icon__facebook::before {
@@ -1476,7 +1844,7 @@ img {
 }
 
 .sns_icon:hover {
-  color: #cbcbcb;
+  color: darkgray;
 }
 
 /* step1.css */
@@ -2063,11 +2431,25 @@ img {
   font-family: "Nico Moji";
   background: #fff679;
   font-size: 2rem;
-  width: 200px;
+  width: 210px;
   margin: 0 auto;
-  padding: 4% 2%;
+  padding: 20px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+.page2-section__btn-text::before {
+  content: "";
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 24px;
+  /*画像の幅*/
+  height: 14px;
+  /*画像の高さ*/
+  background-image: url(../images/cursor_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .page2-section__btn-text::after {
@@ -2081,6 +2463,51 @@ img {
 .page2-section__btn-text:hover {
   border: none;
   background: #ffef13;
+  -webkit-transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
+  box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
+}
+
+.page2-section__btn-text2::before {
+  content: "";
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 20px;
+  /*画像の幅*/
+  height: 26px;
+  /*画像の高さ*/
+  background-image: url(../images/stepman_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.page2-section__btn-text2 {
+  display: block;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  color: #343434;
+  background-color: #FFFDE6;
+  font-size: 1.7rem;
+  width: 210px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.page2-section__btn-text2::after {
+  content: "\f105";
+  font-family: FontAwesome;
+  position: relative;
+  left: 8px;
+  font-weight: 500;
+}
+
+.page2-section__btn-text2:hover {
+  border: none;
+  background-color: #fefac7;
   -webkit-transform: translateY(-0.3rem);
   transform: translateY(-0.3rem);
   -webkit-box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
@@ -2196,13 +2623,6 @@ img {
   }
 }
 
-.page3-nav__add-arrow::after {
-  content: "\f105";
-  font-family: FontAwesome;
-  position: relative;
-  left: 8px;
-}
-
 .page3-nav__thumb {
   text-align: center;
 }
@@ -2213,21 +2633,6 @@ img {
     -ms-flex: 0 0 45%;
     flex: 0 0 45%;
   }
-}
-
-.page3-nav__thumb img {
-  width: 95%;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-}
-
-.page3-nav__thumb img:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  -webkit-box-shadow: 0 2.5rem 4rem rgba(52, 52, 52, 0.5);
-  box-shadow: 0 2.5rem 4rem rgba(52, 52, 52, 0.5);
-  z-index: 20;
-  opacity: 0.9;
 }
 
 .page3-nav__thumb_pc-img {
@@ -2281,14 +2686,16 @@ img {
   text-align: center;
   display: block;
   padding: 15px 10px;
-  margin-top: 4%;
-  border: #d5d5d5 solid 1px;
-  color: #858585;
-  font-size: 1.8rem;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  margin-top: 10%;
+  border: none;
+  background-color: #a83333;
+  color: #fff;
+  -webkit-transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
+  box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .page3-nav__btn_text::after {
@@ -2299,13 +2706,12 @@ img {
 }
 
 .page3-nav__btn_text:hover {
-  border: none;
-  background-color: #a83333;
-  color: #fff;
-  -webkit-transform: translateY(-0.3rem);
-  transform: translateY(-0.3rem);
-  -webkit-box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
-  box-shadow: 0 1rem 2rem rgba(52, 52, 52, 0.2);
+  border: #a83333 solid 1px;
+  color: #a83333;
+  background-color: white;
+  font-size: 1.8rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 @media (min-width: 750px) {

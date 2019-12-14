@@ -319,10 +319,24 @@ $themeRed: #a83333;
       font-family: "Nico Moji";
       background: rgb(255, 246, 121);
       font-size: 2rem;
-      width: 200px;
+      width: 210px;
       margin: 0 auto;
-      padding: 4% 2%;
+      padding: 20px;
       transition: all 0.2s;
+    }
+
+    &-text::before {
+      content: "";
+      /*何も入れない*/
+      display: inline-block;
+      /*忘れずに！*/
+      width: 24px;
+      /*画像の幅*/
+      height: 14px;
+      /*画像の高さ*/
+      background-image: url(../images/cursor_icon.png);
+      background-size: contain;
+      background-repeat: no-repeat
     }
 
     &-text::after {
@@ -336,6 +350,49 @@ $themeRed: #a83333;
     &-text:hover {
       border: none;
       background: rgb(255, 239, 19);
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+    }
+
+    &-text2::before {
+      content: "";
+      /*何も入れない*/
+      display: inline-block;
+      /*忘れずに！*/
+      width: 20px;
+      /*画像の幅*/
+      height: 26px;
+      /*画像の高さ*/
+      background-image: url(../images/stepman_icon.png);
+      background-size: contain;
+      background-repeat: no-repeat
+    }
+
+    &-text2 {
+      display: block;
+      text-align: center;
+      font-family: 'Cormorant Garamond',
+        serif;
+      color: #343434;
+      background-color: #FFFDE6;
+      font-size: 1.7rem;
+      width: 210px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      transition: all 0.2s;
+    }
+
+    &-text2::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 8px;
+      font-weight: 500;
+    }
+
+    &-text2:hover {
+      border: none;
+      background-color: rgb(254, 250, 199);
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
     }

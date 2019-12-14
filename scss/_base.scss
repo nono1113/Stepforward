@@ -45,8 +45,7 @@ body {
     padding: 0;
   }
 
-
-  font-family: 'Noto Sans JP',
+  font-family: "Noto Sans JP",
   sans-serif;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
@@ -62,13 +61,12 @@ img {
 }
 
 .global-wrapper {
-  background-color: #F4F3F2;
+  background-color: #f4f3f2;
 }
 
 .text-center {
   text-align: center;
 }
-
 
 .pc_display_none {
   @include pc {
@@ -95,7 +93,7 @@ img {
 /* page-header */
 
 .page-header {
-  box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+  box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
 
   @include pc {
     display: flex;
@@ -124,7 +122,6 @@ img {
       margin-bottom: 50px;
     }
 
-
     @include tablet {
       font-size: 15px;
       padding-bottom: 10px;
@@ -137,7 +134,7 @@ img {
   }
 
   &__title:before {
-    content: '';
+    content: "";
     /*何も入れない*/
     display: inline-block;
     /*忘れずに！*/
@@ -152,7 +149,7 @@ img {
   }
 
   &__title2:before {
-    content: '';
+    content: "";
     /*何も入れない*/
     display: inline-block;
     /*忘れずに！*/
@@ -167,7 +164,7 @@ img {
   }
 
   &__title3:before {
-    content: '';
+    content: "";
     /*何も入れない*/
     display: inline-block;
     /*忘れずに！*/
@@ -243,9 +240,7 @@ img {
       color: rgb(203, 203, 203);
     }
   }
-
 }
-
 
 /* page-top_btn */
 .btn-pageTop {
@@ -260,7 +255,6 @@ img {
 .btn-pageTop:hover {
   opacity: 0.6;
 }
-
 
 .btn-pageTop2 {
   display: block;
@@ -277,33 +271,30 @@ img {
 
 /* page-link */
 .page-link {
-  // &__title {
-  //   font-weight: 500;
-  //   font-size: 1.6rem;
-  //   padding-bottom: 8px;
+  &__title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    padding-bottom: 8px;
 
-  //   @include tablet {
-  //     font-size: 1.6rem;
+    @include tablet {
+      font-size: 1.6rem;
+    }
 
-  //   }
+    @include pc {
+      font-size: 2rem;
+    }
+  }
 
-  //   @include pc {
-  //     font-size: 2rem;
-
-  //   }
-  // }
-
-  // &__title::after {
-  //   content: "\f105";
-  //   font-family: FontAwesome;
-  //   position: relative;
-  //   left: 3px;
-  //   font-weight: 500;
-  // }
-
+  &__title::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    position: relative;
+    left: 3px;
+    font-weight: 500;
+  }
 
   &__title1:before {
-    content: '';
+    content: "";
     /*何も入れない*/
     display: block;
     /*忘れずに！*/
@@ -317,7 +308,7 @@ img {
   }
 
   &__title2:before {
-    content: '';
+    content: "";
     /*何も入れない*/
     display: block;
     /*忘れずに！*/
@@ -331,7 +322,7 @@ img {
   }
 
   &__title3:before {
-    content: '';
+    content: "";
     /*何も入れない*/
     display: block;
     /*忘れずに！*/
@@ -348,24 +339,23 @@ img {
 .link-active {
   position: relative;
   display: inline-block;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .link-active::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  content: '';
+  content: "";
   width: 0;
   height: 1px;
   background-color: $themeRed;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .link-active:hover::after {
   width: 100%;
 }
-
 
 .link-outer {
   padding: 4% 3% 2%;
@@ -388,7 +378,7 @@ img {
 
 /* thumb-nav */
 .thumb-nav {
-  background-color: #F4F3F2;
+  background-color: #f4f3f2;
   padding: 0 4% 0;
 
   @include pc {
@@ -397,7 +387,7 @@ img {
 
   &__wrapper {
     background-color: rgb(237, 237, 237);
-    box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+    box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
     padding: 35px 0 10px;
   }
 
@@ -410,7 +400,6 @@ img {
       margin: 0 auto;
       margin-bottom: 7%;
     }
-
   }
 
   &__item {
@@ -419,7 +408,6 @@ img {
     @include sp {
       flex: 0 0 40%;
     }
-
 
     &_title {
       font-size: 1.6rem;
@@ -436,30 +424,27 @@ img {
     }
 
     &_img {
-      transition: all .2s;
+      transition: all 0.2s;
     }
 
     &_img:hover {
       transform: scale(1.05);
-      box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+      box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
       z-index: 20;
       opacity: 0.9;
     }
-
   }
 
-
   &__icon {
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
   &__icon:hover {
     transform: scale(1.05);
-    box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+    box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
     z-index: 20;
     opacity: 0.9;
   }
-
 
   &__inner {
     text-align: center;
@@ -468,7 +453,7 @@ img {
       text-align: center;
       font-size: 1rem;
       font-weight: 500;
-      padding: 10px;
+      padding: 10px 5px;
 
       // @include tablet {
       //   font-size: 1.9rem;
@@ -482,7 +467,7 @@ img {
 
   &__sub-wrapper {
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 2.5rem 4rem rgba(#343434, .5);
+    box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
     padding: 40px 0 40px;
 
     &_title {
@@ -494,7 +479,6 @@ img {
   }
 }
 
-
 .nav_item__left {
   margin-left: 10px;
 
@@ -502,7 +486,6 @@ img {
     margin-left: 45px;
   }
 }
-
 
 /* footer */
 .page-footer {
@@ -512,8 +495,7 @@ img {
   background-image: url(../images/bg-gra-top.png),
     url(../images/bg-gra-bottom.png);
   background-repeat: repeat-x;
-  background-position: center top,
-    center bottom;
+  background-position: center top, center bottom;
   background-size: auto 48px;
 
   &__outer {
@@ -524,7 +506,7 @@ img {
     }
 
     @include pc {
-      padding: 40px 50px;
+      padding: 40px 141px;
     }
   }
 
@@ -547,8 +529,6 @@ img {
       width: 60%;
     }
 
-
-
     &_item:hover {
       color: rgb(169, 169, 169);
     }
@@ -563,7 +543,6 @@ img {
     >li:first-of-type {
       padding-top: 25px;
     }
-
 
     >li:last-of-type {
       padding-bottom: 25px;
@@ -611,7 +590,7 @@ img {
 
       @include pc {
         display: inline-block;
-        padding-left: 2%;
+        padding-left: 5%;
       }
     }
 
@@ -638,11 +617,177 @@ img {
     color: #a83333;
   }
 
+  &__btn {
+    &-outer {
+      margin-top: 50px;
+      // margin-left: 100px;
+      flex: 0 0 56%;
+
+      @include tablet {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        margin-left: 0;
+      }
+
+      @include sp {
+        display: block;
+      }
+    }
+
+    &-text {
+      display: block;
+      text-align: center;
+      font-family: "Nico Moji";
+      background: rgb(255, 246, 121);
+      font-size: 2rem;
+      width: 210px;
+      margin: 0 auto;
+      padding: 20px;
+      transition: all 0.2s;
+      margin-bottom: 17px;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+
+      @include sp {
+        font-size: 1.5rem;
+        width: 192px;
+        padding: 17px 1px;
+        margin-bottom: 7px;
+      }
+    }
+
+    &-text::before {
+      content: "";
+      /*何も入れない*/
+      display: inline-block;
+      /*忘れずに！*/
+      width: 24px;
+      /*画像の幅*/
+      height: 14px;
+      /*画像の高さ*/
+      background-image: url(../images/cursor_icon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &-text::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 1px;
+      font-weight: 500;
+    }
+
+    &-text:hover {
+      border: none;
+      background: rgb(255, 239, 19);
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+    }
+
+    &-text2::before {
+      content: "";
+      /*何も入れない*/
+      display: inline-block;
+      /*忘れずに！*/
+      width: 20px;
+      /*画像の幅*/
+      height: 26px;
+      /*画像の高さ*/
+      background-image: url(../images/stepman_icon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &-text2 {
+      display: block;
+      text-align: center;
+      font-family: "Cormorant Garamond", serif;
+      color: #343434;
+      background-color: #fffde6;
+      font-size: 1.7rem;
+      width: 210px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      transition: all 0.2s;
+
+      @include sp {
+        font-size: 1.3rem;
+        padding: 15px 0px;
+        width: 192px;
+      }
+    }
+
+    &-text2::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 8px;
+      font-weight: 500;
+    }
+
+    &-text2:hover {
+      border: none;
+      background-color: rgb(254, 250, 199);
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+    }
+  }
+
+  &__btn:last-of-type {
+    @include tablet {
+      margin-left: 20px;
+    }
+
+    @include sp {
+      margin: 0;
+    }
+  }
+
+  &__pc-wrapper {
+    display: flex;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__sns-outer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &-share {
+      padding: 5px;
+    }
+
+    &-share::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 5px;
+      font-weight: 500;
+    }
+  }
+
+  &__sns:hover {
+    color: rgb(203, 203, 203);
+  }
 }
 
 /* sns icon */
 .sns_icon {
   color: #fff;
+
+  &__text {
+    color: #fff;
+    padding-right: 10px;
+    padding-top: 5px;
+  }
 
   &__facebook::before {
     content: "\f082";
@@ -679,5 +824,5 @@ img {
 }
 
 .sns_icon:hover {
-  color: rgb(203, 203, 203);
+  color: rgb(169, 169, 169);
 }

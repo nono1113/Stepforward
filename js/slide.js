@@ -75,9 +75,6 @@ $(function () {
         src: "images/header_step2-4.png"
       },
       {
-        src: "images/header_step2-5.png"
-      },
-      {
         src: "images/header_step2-2.png"
       },
       {

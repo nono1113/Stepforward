@@ -8,6 +8,8 @@
   <meta name="format-detection" content="telephone=no" />
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&display=swap&subset=japanese"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/vegas.min.css" />
   <link rel="apple-touch-icon" href="images/touch-icon.png" />
@@ -50,6 +52,7 @@
               <a class="page-header__sub-nav_list" href="tft.html">KUIS×Table For Two</a></li>
           </ul>
           <ul class="sns_icon__wrapper">
+            <li class="sns_icon__text sns_icon__left">SHARE</li>
             <li><a class="sns_icon sns_icon__facebook" href="http://www.facebook.com/share.php?u=#" target="_blank">
               </a></li>
             <li class="sns_icon__left"><a class="sns_icon sns_icon__twitter" href="https://twitter.com/share?url=#"
@@ -357,33 +360,91 @@
             </li>
           </div>
         </div>
-        <!-- top-btn -->
-        <button class="btn-pageTop">
-          <a href="#" class="pageTop__btn">
-            <img src="images/page-top.svg" alt="ページトップボタン" width="12" height="12" />
-            <span>top</span>
-          </a>
-        </button>
       </ul>
     </nav>
+    <!-- くいすぐっずを探せlink-->
+    <section class="page-goods">
+      <div class="page-goods__wrapper">
+        <div class="page-goods__outer">
+          <p class="page-goods__img">
+            <img src="./images/goodslink-thumb.png" alt="くいちゃんのサムネイル" />
+          </p>
+          <div class="page-goods__paragraph">
+            <p class="page-goods__text">
+              目玉のキャラクター「くいちゃん」が、<br />過去のくいすぐっずを紹介するよ！
+            </p>
+            <p class="page-goods__btn">
+              <a class="page-goods__btn_text" href="kuisgoods.html" target="_blank">
+                くいすぐっずをさがせ！
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- History of Wada Seminar at KUIS-->
+    <section class="page-history">
+      <div class="page-history__wrapper">
+        <a class="page-link__anchor" href="history.html" target="_blank">
+          <p class=" page-history__text">
+            <i class="page-history__title link-active" lang="en">History of Wada Seminar</i> </p>
+          <!-- <h3 class="page-link__title page-section__inner_title ">
+            </h3> -->
+          <p class="page-link__caption page-history__caption">
+            和田ゼミ社会起業研究会の歴史をたどる
+          </p>
+        </a>
+        <p class="page-link__boxOuter">
+          <img src="./images/link_arrowBox.png" alt="リンクの装飾の囲い" />
+        </p>
+      </div>
+    </section>
+    <!-- top-btn -->
+    <button class="btn-pageTop2">
+      <a href="#" class="pageTop__btn">
+        <img src="images/page-top.svg" alt="ページトップボタン" width="12" height="12" />
+        <span>top</span>
+      </a>
+    </button>
     <!-- footer -->
     <footer class="page-footer">
       <nav class="page-footer__outer">
         <h4 class="page-footer__head"><a class="page-footer__head_item" href="./">Step Forward</a></h4>
-        <ul class="page-footer__inner">
-          <li><a class="page-footer__inner_item" href="step1.html">Step1 立ち上がって 手をつなぐ</a></li>
-          <li><a class="page-footer__inner_item" href="step2.html">Step2 アイディアを育み 挑戦する</a></li>
-          <li><a class="page-footer__inner_item" href="step3.html">Step3 社会へ世界へ つながる</a></li>
-          <div class="page-footer__block">
-            <div class="page-footer__item">
-              <li><a class="page-footer__item_project" target="_blank" href="kuisgoods.html">くいすぐっず</a></li>
-              <li><a class="page-footer__item_active" href="makuchari.html">幕チャリ</a></li>
-              <li><a class="page-footer__item_project" href="survival.html">復興支援と防災</a></li>
-              <li><a class="page-footer__item_project" href="baton.html">KUIS ×Stop! AIDS </a></li>
-              <li><a class="page-footer__item_project" href="fairtrade.html">KUIS × Fair Trade </a></li>
-              <li><a class="page-footer__item_project" href="tft.html">KUIS×Table For Two</a></li>
+        <div class="page-footer__pc-wrapper">
+          <ul class="page-footer__inner">
+            <li><a class="page-footer__inner_item" href="step1.html">Step1 立ち上がって 手をつなぐ</a></li>
+            <li><a class="page-footer__inner_item" href="step2.html">Step2 アイディアを育み 挑戦する</a></li>
+            <li><a class="page-footer__inner_item" href="step3.html">Step3 社会へ世界へ つながる</a></li>
+            <div class="page-footer__block">
+              <div class="page-footer__item">
+                <!-- <li><a class="page-footer__item_project" target="_blank" href="kuisgoods.html">くいすぐっず</a></li> -->
+                <li><a class="page-footer__item_active" href="makuchari.html">幕チャリ</a></li>
+                <li><a class="page-footer__item_project" href="survival.html">復興支援と防災</a></li>
+                <li><a class="page-footer__item_project" href="baton.html">KUIS ×Stop! AIDS </a></li>
+                <li><a class="page-footer__item_project" href="fairtrade.html">KUIS × Fair Trade </a></li>
+                <li><a class="page-footer__item_project" href="tft.html">KUIS×Table For Two</a></li>
+              </div>
             </div>
+          </ul>
+          <div class="page-footer__btn-outer">
+            <p class="page-footer__btn">
+              <a class="page-footer__btn-text" href="kuisgoods.html" target="_blank">くいすぐっずをさがせ！
+              </a>
+            </p>
+            <p class="page-footer__btn">
+              <a class="page-footer__btn-text2" href="history.html" target="_blank">History of Wada
+                Seminar</a>
+            </p>
           </div>
+        </div>
+        <ul class="page-footer__sns-outer">
+          <li class="page-footer__sns-outer-share">SHARE</li>
+          <li class="sns_icon__left"><a class="page-footer__sns sns_icon__facebook"
+              href="http://www.facebook.com/share.php?u=#" target="_blank">
+            </a></li>
+          <li class="sns_icon__left"><a class="page-footer__sns sns_icon__twitter"
+              href="https://twitter.com/share?url=#" target="_blank" rel="nofollow">
+            </a></li>
         </ul>
         <p class="text-center">
           <small class="page-footer__copy">&copy; 2019 和田ゼミ社会起業研究会</small>
