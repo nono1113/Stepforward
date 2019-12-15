@@ -3,11 +3,19 @@
 
 //Baton
 $batonRed: #d8222b;
-$batonPink: #ffebeb;
+$batonPink: #FFF3F8;
 $m_Gothic: "M PLUS Rounded 1c",
 sans-serif;
 
 //メディアクエリ
+
+@mixin l_pc {
+  @media (min-width: 1260px) {
+    @content;
+  }
+}
+
+
 @mixin pc {
   @media (min-width: 1000px) {
     @content;
@@ -20,17 +28,33 @@ sans-serif;
   }
 }
 
+@mixin mamorenjya {
+  @media (max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
 @mixin s_sp {
   @media (max-width: 350px) {
     @content;
   }
 }
 
+.pc_display_none {
+  display: none;
+}
+
 .global-division1 {
   background-color: $batonPink;
 
   &__wrapper {
-    padding: 0 4% 17%;
+    padding: 0 4%;
 
     @include tablet {
       padding: 3%;
@@ -40,11 +64,15 @@ sans-serif;
   &__outer {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 36px;
-    padding: 35% 6% 1%;
+    padding: 10px 6% 1%;
 
     @include tablet {
-      padding: 100px 6% 1%;
+      padding: 10px 6% 1%;
     }
+  }
+
+  &__img {
+    text-align: center;
   }
 }
 
@@ -59,27 +87,27 @@ sans-serif;
     transform: translate(0, 80px);
   }
 
-  &__head {
-    font-size: 5.2vw;
-    color: #fff;
-    text-shadow: 0 0 1em rgba(237, 237, 237, 0.9);
-    text-align: right;
+  // &__head {
+  //   font-size: 5.2vw;
+  //   color: #fff;
+  //   text-shadow: 0 0 1em rgba(237, 237, 237, 0.9);
+  //   text-align: right;
 
-    @include tablet {
-      font-size: 2.6vw;
-      font-feature-settings: "palt";
-      letter-spacing: 0.07em;
-      line-height: 1.6;
-    }
-  }
+  //   @include tablet {
+  //     font-size: 2.6vw;
+  //     font-feature-settings: "palt";
+  //     letter-spacing: 0.07em;
+  //     line-height: 1.6;
+  //   }
+  // }
 }
 
 .project2-article {
   &__head {
     text-align: center;
-    font-size: 5vw;
+    font-size: 4vw;
     line-height: 1.6;
-    margin-bottom: 4%;
+    margin-bottom: 1%;
 
     @include tablet {
       font-size: 2.5rem;
@@ -104,14 +132,14 @@ sans-serif;
     padding: 10% 18%;
 
     @include tablet {
-      width: 270px;
-      margin: 0 auto 30px;
+      width: 160px;
+      margin: -26px auto 8px;
       padding: 0;
     }
   }
 
   &__block {
-    margin-bottom: 20%;
+    margin-bottom: 2%;
 
     @include tablet {
       margin-bottom: 5%;
@@ -119,11 +147,11 @@ sans-serif;
   }
 
   &__block:last-child {
-    margin-bottom: 17%;
+    margin-bottom: 4%;
   }
 
   &__paragraph {
-    margin-bottom: 7%;
+    // margin-bottom: 7%;
     padding: 2%;
     line-height: 1.6;
 
@@ -154,6 +182,7 @@ sans-serif;
     font-size: 0.8em;
     line-height: 1.6;
     padding: 2%;
+    text-align: center;
 
     &_bold {
       font-weight: 500;
@@ -203,7 +232,7 @@ sans-serif;
   }
 
   &__block {
-    padding-bottom: 5%;
+    padding-bottom: 3%;
 
     // @include tablet {
     //   padding: 2%;
@@ -212,14 +241,14 @@ sans-serif;
 
   &__head {
     text-align: center;
-    font-size: 5vw;
+    font-size: 3.6vw;
     line-height: 1.6;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 
     @include tablet {
       padding: 0 2%;
-      font-size: 3rem;
-      margin: 3%;
+      font-size: 2rem;
+      // margin: 3%;
     }
 
     &_huge {
@@ -237,12 +266,13 @@ sans-serif;
 
     &_small {
       padding: 2%;
-      font-size: 4.8vw;
+      font-size: 2rem;
       font-weight: 400;
+      text-align: center;
 
       @include tablet {
         padding: 0 2%;
-        font-size: 3rem;
+        font-size: 2rem;
         max-width: 750px;
         margin: 20px auto 0;
         text-align: center;
@@ -252,13 +282,14 @@ sans-serif;
 
   &__paragraph {
     margin-bottom: 6%;
-    padding: 2%;
-    line-height: 1.6;
+    // padding: 2%;
+    line-height: 1.9;
 
     @include tablet {
-      max-width: 750px;
+      max-width: 850px;
       margin: 0 auto;
       padding: 1%;
+      font-size: 1.4rem;
     }
 
   }
@@ -292,6 +323,10 @@ sans-serif;
     }
   }
 
+  &__img-outer {
+    padding: 30px 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: center;
@@ -304,18 +339,138 @@ sans-serif;
     &_stretch {
       display: flex;
       justify-content: center;
+      padding: 47px 0 70px;
+
+      @include sp {
+        padding: 0;
+      }
     }
   }
+
+
 
   &__subText {
     font-size: 0.8em;
     line-height: 1.6;
     padding: 2%;
+    text-align: center;
 
     @include tablet {
       max-width: 750px;
       margin: 0 auto;
       padding: 1%;
     }
+  }
+
+  &__pamph {
+    max-width: 370px;
+    margin: 0 auto;
+  }
+}
+
+.renjya {
+  position: relative;
+
+  &__yellow {
+    position: absolute;
+    right: 15px;
+
+    @include l_pc {
+      right: 180px;
+    }
+
+    @include sp {
+      display: none;
+    }
+  }
+
+  &__green {
+    position: absolute;
+    left: 60px;
+    top: -58px;
+
+
+    @include l_pc {
+      left: 240px;
+      top: -78px;
+    }
+
+
+    @include mamorenjya {
+      display: none;
+    }
+  }
+
+  &__pink {
+    position: absolute;
+    right: 60px;
+    top: -58px;
+
+    @include l_pc {
+      right: 240px;
+      top: -78px;
+    }
+
+
+    @include mamorenjya {
+      display: none;
+    }
+  }
+
+  &__blue {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    @include l_pc {
+      right: 170px;
+      top: -213px;
+    }
+
+
+    @include mamorenjya {
+      display: none;
+    }
+  }
+
+  &__red {
+    position: absolute;
+    right: 0px;
+    top: 300px;
+
+    @include l_pc {
+      right: 115px;
+      top: 380px;
+    }
+
+
+    @include mamorenjya {
+      display: none;
+    }
+  }
+}
+
+// ふわふわアニメーション
+.img_box {
+  animation: img_box_fuwafuwa 3s linear infinite;
+  transform-origin: 50% 50%;
+  margin: 1rem 0;
+}
+
+@keyframes img_box_fuwafuwa {
+  0% {
+    transform: translateY(0)
+  }
+
+  33.33333% {
+    transform: translateY(-10px)
+  }
+
+  66.66667% {
+    transform: translateY(0)
+  }
+
+  100% {
+    transform: translateY(0)
   }
 }

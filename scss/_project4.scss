@@ -34,17 +34,13 @@ sans-serif;
   @include tablet {
     padding-top: 3%;
   }
-}
 
-.project4-header-img {
-  margin-bottom: 7%;
-
-  @include tablet {
-    padding: 0 2%;
-    max-width: 1000px;
+  &__header-img {
+    width: 90%;
     margin: 0 auto;
   }
 }
+
 
 .project4-section {
   padding: 0 7% 5%;
