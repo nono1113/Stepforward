@@ -1,0 +1,136 @@
+/* animation */
+@charset "utf-8";
+
+.box {
+  opacity: 0;
+}
+
+// 効果
+
+// ふわっと上あがる
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeLeft {
+  animation-name: fadeLeftAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// 遅延時間
+.delay-time05 {
+  animation-duration: 0.5s;
+}
+
+.delay-time1 {
+  animation-duration: 1s;
+}
+
+.delay-time15 {
+  animation-duration: 1.5s;
+}
+
+.delay-time2 {
+  animation-duration: 2s;
+}
+
+.delay-time25 {
+  animation-duration: 2.5s;
+}
+
+.delay-time3 {
+  animation-duration: 3s;
+}
+
+.delay-time3 {
+  animation-duration: 3.5s;
+}
+
+
+.delay-time4 {
+  animation-duration: 4s;
+}
+
+.delay-time5 {
+  animation-duration: 5s;
+}
+
+.delay-time6 {
+  animation-duration: 6s;
+}
+
+
+// ローディング
+
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgb(255, 234, 234);
+  z-index: 1;
+}
+
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #a83333;
+  z-index: 2;
+}
+
+.loading-text {
+  font-size: 2rem;
+  padding-top: 25px;
+}
+
+.loading-text::before {
+  content: "";
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 31px;
+  /*画像の幅*/
+  height: 47px;
+  /*画像の高さ*/
+  background-image: url(../images/stepman_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

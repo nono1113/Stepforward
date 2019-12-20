@@ -114,7 +114,7 @@ sans-serif;
 }
 
 .project5-section {
-  &__block:nth-child(2) {
+  &__bgi2 {
     background: url(../images/project5-bgi_2.png);
     background-size: cover;
     background-position: center center;
@@ -241,5 +241,10 @@ sans-serif;
       margin-left: 5px;
       margin-right: 6px;
     }
+  }
+
+  &__pdf-outer {
+    width: 60%;
+    margin: 0 auto;
   }
 }

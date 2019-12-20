@@ -11,14 +11,17 @@ $themeRed: #a83333;
   }
 }
 
-
 @mixin s_sp {
   @media (max-width: 350px) {
     @content;
   }
 }
 
-
+@mixin pc-1000 {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
 
 .page1-section {
 
@@ -58,7 +61,7 @@ $themeRed: #a83333;
 
   &__title {
     text-align: center;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     line-height: 1.6;
     padding: 10px 0 22px 0;
 
@@ -79,9 +82,13 @@ $themeRed: #a83333;
         line-height: 1.4;
         font-size: 3rem;
         margin-top: 80px;
-        margin-left: 68px;
+        margin-left: 17px;
         display: grid;
         grid-auto-flow: column;
+      }
+
+      @include pc-1000 {
+        margin-left: 68px;
       }
     }
 

@@ -160,9 +160,11 @@ $themeRed: #a83333;
       margin: 30px 0 80px 0;
       border: rgb(213, 213, 213) solid 1px;
       color: rgb(133, 133, 133);
-      font-size: 1.8rem;
-      transition: all 0.2s;
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+      transition: all 0.5s;
       backface-visibility: hidden;
+      font-size: 1.8rem;
     }
 
     &_text::after {
@@ -176,8 +178,9 @@ $themeRed: #a83333;
       border: none;
       background-color: $themeRed;
       color: #fff;
-      transform: translateY(-0.3rem);
-      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+
+      // transform: translateY(-0.3rem);
+      // box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
     }
   }
 }
@@ -352,10 +355,11 @@ $themeRed: #a83333;
       padding: 15px 10px;
       margin-top: 8%;
       background-color: $themeRed;
-      // border: rgb(213, 213, 213) solid 0.6px;
       color: rgb(255, 255, 255);
-      font-size: 1.8rem;
-      transition: all 0.2s;
+
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+      transition: all 0.5s;
       backface-visibility: hidden;
     }
 
@@ -364,6 +368,14 @@ $themeRed: #a83333;
       font-family: FontAwesome;
       position: relative;
       left: 16px;
+    }
+
+    &_text:hover {
+      border: $themeRed solid 1px;
+      color: $themeRed;
+      background-color: rgb(255, 255, 255);
+      font-size: 1.8rem;
+      backface-visibility: hidden;
     }
   }
 }
@@ -456,18 +468,25 @@ $themeRed: #a83333;
 }
 
 .page-link2 {
-
-  @include pc {
-    display: none;
-  }
-
   &__outer {
     padding: 37px 31px;
   }
 
   &__text {
-    font-size: 3rem;
+    font-size: 4.2rem;
     text-align-last: right;
+    transition: all 0.3s ease;
+
+    &_large {
+      font-size: 2.5rem;
+    }
+    &_large::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 3px;
+      font-weight: 500;
+    }
   }
 
   &__text::before {
@@ -491,20 +510,14 @@ $themeRed: #a83333;
     }
   }
 
-  &__text::after {
-    content: "\f105";
-    font-family: FontAwesome;
-    position: relative;
-    left: 3px;
-    font-weight: 500;
+  &__text:hover {
+    color: $themeRed;
   }
 
   &__caption {
     text-align-last: right;
     padding-top: 7px;
   }
-
-
 }
 
 .page-goods {
@@ -556,7 +569,6 @@ $themeRed: #a83333;
     margin-bottom: 5px;
     padding-top: 10px;
 
-
     @include tablet {
       font-size: 1.7rem;
       margin-bottom: 12px;
@@ -605,15 +617,19 @@ $themeRed: #a83333;
   padding: 30px 20px;
 
   &__title {
-    font-family: 'Cormorant Garamond',
-      serif;
+    font-family: "Cormorant Garamond", serif;
     color: #343434;
+    transition: all 0.3s ease;
+  }
+
+  &__title:hover {
+    color: $themeRed;
   }
 
   &__wrapper {
     max-width: 80%;
     margin: 0 auto;
-    background-color: #FFFDE6;
+    background-color: #fffde6;
     box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
     padding: 0 44px 26px;
     overflow: hidden;

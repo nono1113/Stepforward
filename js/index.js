@@ -1,6 +1,6 @@
 //  スライドショー
 $(function () {
-  $(".page-header").vegas({
+  $("#page-header").vegas({
     //背景画像でスライドショーしたい場所の設定
     slides: [{
         src: "images/header_index.png"
@@ -53,15 +53,15 @@ $(".btn-pageTop2>a").on("click", function () {
 $("#trigger-btn").on("click", function () {
   if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
     $("html,body").animate({
-        scrollTop: 1800
+        scrollTop: 1600
       },
-      1000
+      2000
     );
   } else {
     $("html,body").animate({
         scrollTop: 1400
       },
-      1000
+      2000
     );
   }
 });
