@@ -24,7 +24,7 @@ sans-serif;
   background-color: $ftBackground;
   color: $ftBrown;
   font-family: $m_Gothic;
-  padding: 20% 7% 20%;
+  padding: 20% 8% 20%;
 
   @include pc {
     padding: 5% 7% 5%;
@@ -38,12 +38,13 @@ sans-serif;
   }
 
   &__head {
-    font-size: 4.3vw;
+    font-size: 4.2vw;
     line-height: 1.6;
-    margin-bottom: 10%;
+    margin-bottom: 6%;
 
     @include pc {
       font-size: 2rem;
+      margin-bottom: 4%;
     }
 
     &_huge {
@@ -54,6 +55,7 @@ sans-serif;
 
       @include pc {
         font-size: 3rem;
+        margin-bottom: 1%;
       }
     }
 
@@ -69,20 +71,26 @@ sans-serif;
     &_img {
       text-align: center;
       padding: 0 5%;
-      margin-bottom: 8%;
+      margin-bottom: 3%;
+      filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+
+      @include pc {
+        bottom: 4%;
+      }
     }
 
   }
 
   &__paragraph {
     font-size: 4vw;
-    margin-bottom: 18%;
+    margin-bottom: 8%;
     padding: 2%;
     line-height: 1.6;
 
     @include pc {
-      font-size: 2rem;
-      margin-bottom: 0;
+      font-size: 1.6rem;
+      margin-bottom: 23px;
+      padding: 1%;
     }
 
     &_notーbtn-margin {
@@ -91,7 +99,8 @@ sans-serif;
       line-height: 1.6;
 
       @include pc {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        padding: 0;
       }
 
     }
@@ -101,9 +110,11 @@ sans-serif;
     text-align: center;
     padding: 0 10%;
     margin-bottom: 5%;
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
 
     @include pc {
       padding: 0;
+      margin: 0;
     }
 
     &_huge {
@@ -113,9 +124,9 @@ sans-serif;
     }
 
     &_top {
-      @include pc {
-        margin: 100px 0;
-      }
+      // @include pc {
+      //   margin: 100px 0;
+      // }
     }
 
     &_left {
@@ -185,7 +196,7 @@ sans-serif;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding: 5%;
+      padding: 1%;
     }
   }
 

@@ -18,6 +18,6 @@ $(".btn-pageTop2").on("click", function () {
   $("html,body").animate({
       scrollTop: 0
     },
-    1000
+    4000
   );
 });

@@ -42,6 +42,14 @@ $('.btn-pageTop>a').click(function () {
 /*-------------------------
 ページトップボタン
 --------------------------*/
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 400) { // 200pxスクロールしていたら上に戻るボタンを表示
+    $(".btn-pageTop").fadeIn();
+  } else {
+    $(".btn-pageTop").fadeOut();
+  }
+});
 $(".btn-pageTop>a").on("click", function () {
   $("html,body").animate({
       scrollTop: 0
@@ -49,7 +57,6 @@ $(".btn-pageTop>a").on("click", function () {
     2000
   );
 });
-
 
 /*-------------------------
 chartページのグラフ

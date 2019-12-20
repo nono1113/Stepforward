@@ -583,10 +583,13 @@ $gutter-vertical-small: 6rem;
       width: 60%;
     }
 
+    &_item {
+      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+    }
 
 
     &_item:hover {
-      color: rgb(169, 169, 169);
+      opacity: 0.6;
     }
   }
 
@@ -607,10 +610,11 @@ $gutter-vertical-small: 6rem;
 
     &_item {
       color: rgb(66, 66, 66);
+      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
     }
 
     &_item:hover {
-      color: rgb(169, 169, 169);
+      opacity: 0.6;
     }
 
     &_active {
@@ -653,10 +657,11 @@ $gutter-vertical-small: 6rem;
 
     &_project {
       color: rgb(66, 66, 66);
+      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
     }
 
     &_project:hover {
-      color: rgb(169, 169, 169);
+      opacity: 0.6;
     }
 
     &_active {

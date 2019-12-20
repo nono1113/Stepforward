@@ -21,5 +21,31 @@ $(function () {
     $('a').removeClass('history-active');
     $(this).addClass('history-active');
   });
+});
 
+
+// history-navフッターで消える
+window.onscroll = function () {
+  var check = window.pageYOffset; //現在のスクロール地点
+  var docHeight = $(document).height(); //ドキュメントの高さ
+  var dispHeight = $(window).height(); //表示領域の高さ
+
+  if (check > docHeight - dispHeight - 700) { //判別式 500はフッターからの距離です（ここはサイトのフッターに合わせて変更しましょう）
+    $('.history-nav').fadeOut(500); //1000 はフェードアウトの速度です。調整可
+
+  } else {
+    $('.history-nav').fadeIn(500); //1000 はフェードインの速度です。調整可
+  }
+};
+
+/*-------------------------
+ページトップボタン
+--------------------------*/
+// ページトップボタン
+$(".btn-pageTop2").on("click", function () {
+  $("html,body").animate({
+      scrollTop: 0
+    },
+    8000
+  );
 });

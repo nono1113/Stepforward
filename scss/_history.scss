@@ -17,6 +17,12 @@ $themeRed: #a83333;
   }
 }
 
+@mixin nav-none {
+  @media (max-width: 450px) {
+    @content
+  }
+}
+
 @mixin sp {
   @media (max-width: 380px) {
     @content;
@@ -113,17 +119,14 @@ $themeRed: #a83333;
 }
 
 .history-nav {
-  padding: 20px 100px;
+  padding: 0 100px;
   margin-bottom: 50px;
   position: fixed;
   left: 68%;
   z-index: 1;
 
   @include tablet {
-    display: none;
-  }
-
-  @include sp {
+    padding: 0 193px;
     display: none;
   }
 
@@ -133,8 +136,13 @@ $themeRed: #a83333;
     padding-bottom: 10px;
     margin-left: 20px;
 
+    @include tablet {
+      font-size: 1rem;
+      padding-bottom: 6px;
+    }
+
     &_arrow {
-      padding-left: 18px;
+      padding-left: 11px;
     }
 
     >a {
@@ -143,12 +151,6 @@ $themeRed: #a83333;
 
     >a:hover {
       color: rgb(203, 203, 203);
-    }
-  }
-
-  &__topBtn {
-    @include pc {
-      display: none;
     }
   }
 }

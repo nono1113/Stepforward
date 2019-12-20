@@ -76,7 +76,7 @@
 
   &__block {
     margin-bottom: 3%;
-    padding: 7% 7% 7%;
+    padding: 7% 6% 7%;
 
     @include pc {
       padding: 0 3%;
@@ -304,9 +304,10 @@
   }
 
   &__subText {
-    font-size: 0.8em;
+    font-size: 1em;
     line-height: 1.6;
     margin-bottom: 5%;
+    text-align: center;
 
     @include pc {
       margin: 1% 0;
