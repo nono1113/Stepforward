@@ -16,6 +16,18 @@ $themeRed: #a83333;
   }
 }
 
+@mixin tab-770 {
+  @media (max-width: 770px) {
+    @content;
+  }
+}
+
+@mixin menu-890 {
+  @media (max-width: 890px) {
+    @content;
+  }
+}
+
 @mixin sp {
   @media (max-width: 350px) {
     @content;
@@ -52,7 +64,9 @@ $themeRed: #a83333;
     font-size: 5vw;
     padding-left: 8%;
     transform: translate(0, 60px);
-    font-family: "Noto Sans SC", sans-serif;
+    // font-family: "Noto Sans SC", sans-serif;
+    font-family: 'Lato',
+      sans-serif;
     color: rgb(66, 66, 66);
     text-shadow: 0 0.3px #fff;
     border-bottom: solid $themeRed 0.4px;
@@ -73,19 +87,19 @@ $themeRed: #a83333;
   }
 
   &__caption {
-    font-size: 1vw;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.6;
     padding-left: 8%;
-    transform: translate(0, 67px);
+    transform: translate(0, 64px);
 
     @include pc {
-      padding-left: 8%;
+      padding-left: 7.3%;
       font-size: 1.5rem;
       line-height: 1.3;
       font-feature-settings: "palt";
       letter-spacing: 0.09em;
-      transform: translate(0, 88px);
+      transform: translate(0, 96px);
     }
   }
 }
@@ -158,8 +172,9 @@ $themeRed: #a83333;
       width: 200px;
       padding: 15px 10px;
       margin: 30px 0 80px 0;
-      border: rgb(213, 213, 213) solid 1px;
-      color: rgb(133, 133, 133);
+      border: none;
+      background-color: $themeRed;
+      color: #fff;
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
       transition: all 0.5s;
@@ -175,12 +190,11 @@ $themeRed: #a83333;
     }
 
     &_text:hover {
-      border: none;
-      background-color: $themeRed;
-      color: #fff;
-
-      // transform: translateY(-0.3rem);
-      // box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
+      border: $themeRed solid 1px;
+      color: $themeRed;
+      background-color: rgba(255, 255, 255, 0);
+      font-size: 1.8rem;
+      backface-visibility: hidden;
     }
   }
 }
@@ -192,7 +206,7 @@ $themeRed: #a83333;
 .page-section {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 5% 7%;
+  padding: 5% 7% 0%;
 
   @include pc {
     background: url(../images/index_section-bgi_mod.jpg);
@@ -235,7 +249,7 @@ $themeRed: #a83333;
   }
 
   &__item:last-of-type {
-    margin-bottom: 10%;
+    margin-bottom: 0%;
   }
 
   &__inner {
@@ -313,7 +327,6 @@ $themeRed: #a83333;
 
     &_item {
       text-align: center;
-      transition: all 0.2s;
 
       @include pc {
         padding: 0;
@@ -321,28 +334,13 @@ $themeRed: #a83333;
       }
     }
 
-    &_item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
-      z-index: 20;
-      opacity: 0.9;
-    }
 
     &_item2 {
-      transition: all 0.2s;
-
       @include pc {
         text-align: center;
-        transition: all 0.2s;
       }
     }
 
-    &_item2:hover {
-      transform: scale(1.05);
-      box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
-      z-index: 20;
-      opacity: 0.9;
-    }
   }
 
   &__btn {
@@ -380,92 +378,7 @@ $themeRed: #a83333;
   }
 }
 
-.page-link {
-  display: none;
 
-  @include tablet {
-    display: none;
-  }
-
-  @include pc {
-    display: inline-block;
-    overflow: hidden;
-  }
-
-  &__boxOuter {
-    padding: 0 20% 32px 10%;
-    opacity: 0.8;
-  }
-
-  &__text {
-    font-size: 3rem;
-    transform: translate(152px, 32px);
-
-    // @include tablet {
-    //   display: none;
-    //   font-size: 3.5rem;
-    //   transform: translate(258px, 32px);
-    // }
-
-    // @include pc {
-    //   display: none;
-    //   font-size: 3.5rem;
-    //   transform: translate(258px, 32px);
-    // }
-  }
-
-  &__text::before {
-    content: "";
-    /*何も入れない*/
-    display: inline-block;
-    /*忘れずに！*/
-    width: 31px;
-    /*画像の幅*/
-    height: 47px;
-    /*画像の高さ*/
-    background-image: url(../images/stepman_icon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    @include tablet {
-      /*忘れずに！*/
-      width: 57px;
-      /*画像の幅*/
-      height: 90px;
-    }
-  }
-
-  &__title {
-    font-size: 1.6rem;
-    transform: translate(51px, 48px);
-
-    @include tablet {
-      font-size: 3rem;
-      transform: translate(151px, 48px);
-    }
-
-    @include pc {
-      font-size: 3rem;
-      transform: translate(151px, 48px);
-    }
-  }
-
-  &__caption {
-    font-size: 1rem;
-    transform: translate(61px, 56px);
-
-    @include tablet {
-      transform: translate(177px, 106px);
-      font-size: 2rem;
-      letter-spacing: 2px;
-    }
-
-    @include pc {
-      transform: translate(188px, 68px);
-      letter-spacing: 2px;
-    }
-  }
-}
 
 .page-link2 {
   &__outer {
@@ -474,12 +387,17 @@ $themeRed: #a83333;
 
   &__text {
     font-size: 4.2rem;
-    text-align-last: right;
+    text-align: right;
     transition: all 0.3s ease;
+    font-family: 'Lato',
+      sans-serif;
 
     &_large {
       font-size: 2.5rem;
+      font-family: 'Lato',
+        sans-serif;
     }
+
     &_large::after {
       content: "\f105";
       font-family: FontAwesome;
@@ -515,179 +433,341 @@ $themeRed: #a83333;
   }
 
   &__caption {
-    text-align-last: right;
+    text-align: right;
     padding-top: 7px;
   }
 }
 
-.page-goods {
-  padding: 20px;
+
+
+.page-nav {
+  padding: 4px 9px;
+  display: flex;
+
+  &__head {
+    width: 165px;
+
+    &-outer {
+      padding: 4px 4px 4px 20px;
+    }
+  }
+
+  &__subtitle {
+    color: #fff;
+    font-size: 1rem;
+    padding: 15px 30px 7px;
+    display: inline;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    // padding-top: 10px;
+  }
+
+  &__item {
+    font-size: 1.8rem;
+    padding: 30px 7px 0;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+
+    &_goods {
+      padding: 30px 7px 0;
+      font-family: "Nico Moji";
+      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+
+      &_active {
+        padding: 30px 7px 0;
+        font-family: "Nico Moji";
+      }
+    }
+
+    &_history {
+      font-size: 1.4rem;
+      padding: 32px 7px 0;
+      font-family: "Sawarabi Mincho",
+        sans-serif;
+      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+
+      &_active {
+        font-size: 1.4rem;
+        padding: 32px 7px 0;
+        font-family: "Sawarabi Mincho",
+          sans-serif;
+      }
+
+    }
+
+    &_goods::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 4px;
+    }
+
+    &_goods::before {
+      content: "";
+      /*何も入れない*/
+      display: inline-block;
+      /*忘れずに！*/
+      width: 24px;
+      /*画像の幅*/
+      height: 14px;
+      /*画像の高さ*/
+      background-image: url(../images/cursor_icon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &_history::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 5px;
+    }
+
+    &_goods:hover {
+      opacity: 0.6;
+    }
+
+    &_history:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__item:hover {
+    opacity: 0.6;
+  }
+
+  &__active {
+    font-size: 1.8rem;
+    padding: 30px 7px 0;
+    padding-bottom: 2px;
+    cursor: default;
+
+    &_line {
+      border-bottom: $themeRed solid 1px;
+    }
+  }
+
+  &__drop {
+    font-size: 1.8rem;
+    padding: 30px 7px 0;
+    padding-bottom: 2px;
+    position: relative;
+
+    &_arrow::after {
+      content: "\f107";
+      font-family: FontAwesome;
+      position: relative;
+      left: 4px;
+    }
+
+    &_item {
+      padding: 7px 0;
+      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+    }
+
+    &_item:hover {
+      opacity: 0.6;
+    }
+
+    &_active {
+      padding: 5px 0;
+    }
+  }
 
   &__wrapper {
-    max-width: 80%;
-    margin: 0 auto;
-    background-color: #fff679;
-    box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
-    padding: 26px 44px 26px;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 14px;
 
-    @include pc {
-      width: 70%;
+    @include menu-890 {
+      display: none;
+    }
+  }
+
+  &__sub-list {
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    padding: 10px;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.943);
+  }
+}
+
+.page-nav2 {
+  display: none;
+
+  @include menu-890 {
+    display: block;
+    padding: 5px 10px 0;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .16);
+  }
+
+  &__head {
+    @include menu-890 {
+      width: 110px;
+    }
+  }
+
+  &__global-nav {
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    padding-top: 40px;
+    background-color: #fff;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto;
+
+    &_list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &_item {
+      padding: 0 14px 0 53px;
+      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+    }
+
+    &_item:hover {
+      opacity: 0.6;
+    }
+
+    &_line::before {
+      display: inline-block;
+      content: '';
+      width: 12px;
+      height: 1px;
+      position: relative;
+      right: 7px;
+      top: -5px;
+      background-color: #666;
+    }
+
+    &_arrow::before {
+      content: "\f103";
+      font-family: FontAwesome;
+      position: relative;
+      right: 6px;
+      color: #111;
+    }
+
+    &_active {
+      font-weight: 500;
+    }
+
+    &_active::before {
+      display: inline-block;
+      content: '';
+      width: 12px;
+      height: 1px;
+      position: relative;
+      right: 7px;
+      top: -5px;
+      background-color: $themeRed;
+    }
+
+
+    &_item>a {
+      display: inline-block;
+      padding: 8px 0;
+      color: #111;
+    }
+
+    &_item2 {
+      padding: 8px 14px 8px 53px;
+      color: #111;
+    }
+
+    &_title {
+      font-size: 1.2rem;
     }
   }
 
   &__outer {
-    @include tablet {
-      display: flex;
-      justify-content: center;
+    padding: 2px 0 0 14px;
+  }
+
+  &__inner {
+    padding: 21px 0 0 0px;
+  }
+
+  &__hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 300;
+    position: fixed;
+
+    &_line {
+      position: absolute;
+      left: 11px;
+      width: 18px;
+      height: 1px;
+      background-color: #111;
+      transition: all .6s;
+
+      &-1 {
+        top: 17px;
+      }
+
+      &-2 {
+        top: 23px;
+      }
+
+      &-3 {
+        top: 29px;
+      }
     }
   }
 
-  &__img {
-    @include tablet {
-      flex: 0 0 40%;
-    }
-  }
-
-  &__paragraph {
-    text-align: center;
-    line-height: 1.5;
-    margin-top: -28px;
-
-    @include tablet {
-      transform: translateY(30%);
-    }
-
-    @include pc {
-      transform: translateY(32%);
-    }
-  }
-
-  &__text {
-    margin-bottom: 41px;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    padding-top: 10px;
-
-    @include tablet {
-      font-size: 1.7rem;
-      margin-bottom: 12px;
-    }
-
-    @include pc {
-      margin-bottom: 25px;
-    }
-  }
-
-  &__btn {
-    @include tablet {
-      display: block;
-    }
-
-    &_text {
-      display: block;
-      text-align: center;
-      font-family: "Nico Moji";
-      background: rgb(255, 246, 121);
-      font-size: 2rem;
-      width: 200px;
-      margin: 0 auto;
-      padding: 10px;
-      transition: all 0.2s;
-    }
-
-    &_text::after {
-      content: "\f105";
-      font-family: FontAwesome;
-      position: relative;
-      left: 1px;
-      font-weight: 500;
-    }
-
-    &_text:hover {
-      border: none;
-      background: rgb(255, 239, 19);
-      transform: translateY(-0.3rem);
-      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
-    }
+  &__black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
   }
 }
 
-.page-history {
-  padding: 30px 20px;
+/* 表示された時用のCSS */
+.nav-open .page-nav2__global-nav {
+  right: 0;
+}
 
-  &__title {
-    font-family: "Cormorant Garamond", serif;
-    color: #343434;
-    transition: all 0.3s ease;
-  }
+.nav-open .page-nav2__black-bg {
+  opacity: .8;
+  visibility: visible;
+}
 
-  &__title:hover {
-    color: $themeRed;
-  }
+.nav-open .page-nav2__hamburger_line-1 {
+  transform: rotate(405deg);
+  top: 20px;
+}
 
-  &__wrapper {
-    max-width: 80%;
-    margin: 0 auto;
-    background-color: #fffde6;
-    box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
-    padding: 0 44px 26px;
-    overflow: hidden;
+.nav-open .page-nav2__hamburger_line-2 {
+  width: 0;
+  left: 50%;
+}
 
-    @include pc {
-      width: 70%;
-      padding: 26px 44px 26px;
-    }
-  }
-
-  &__text {
-    transform: translate(29px, 32px);
-
-    @include tablet {
-      font-size: 2.5rem;
-      transform: translate(82px, 32px);
-    }
-
-    @include pc {
-      font-size: 3.5rem;
-      transform: translate(90px, 32px);
-    }
-  }
-
-  &__text::before {
-    content: "";
-    /*何も入れない*/
-    display: inline-block;
-    /*忘れずに！*/
-    width: 31px;
-    /*画像の幅*/
-    height: 47px;
-    /*画像の高さ*/
-    background-image: url(../images/stepman_icon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    @include tablet {
-      /*忘れずに！*/
-      width: 57px;
-      /*画像の幅*/
-      height: 90px;
-    }
-  }
-
-  &__caption {
-    transform: translate(34px, 56px);
-    font-size: 1rem;
-
-    @include tablet {
-      transform: translate(86px, 106px);
-      font-size: 2rem;
-      letter-spacing: 2px;
-    }
-
-    @include pc {
-      transform: translate(98px, 43px);
-      letter-spacing: 2px;
-    }
-  }
+.nav-open .page-nav2__hamburger_line-3 {
+  transform: rotate(-405deg);
+  top: 20px;
 }

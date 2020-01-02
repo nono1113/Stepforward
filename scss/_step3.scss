@@ -25,12 +25,12 @@ $themeRed: #a83333;
 }
 
 .page-3-wrapper {
-  padding: 7% 7%;
+  padding: 3% 7%;
   max-width: 850px;
   margin: 0 auto;
 
   @include pc {
-    padding: 7% 7% 0;
+    padding: 2% 7% 0;
   }
 }
 
@@ -91,7 +91,7 @@ $themeRed: #a83333;
   &__title {
     font-size: 1.8rem;
     font-weight: 500;
-    padding: 4% 0;
+    padding: 2% 0;
     margin-left: 10px;
 
     @include pc {
@@ -174,7 +174,7 @@ $themeRed: #a83333;
     &_text:hover {
       border: $themeRed solid 1px;
       color: $themeRed;
-      background-color: rgb(255, 255, 255);
+      background-color: rgba(255, 255, 255, 0);
       font-size: 1.8rem;
       backface-visibility: hidden;
 

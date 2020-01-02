@@ -31,9 +31,8 @@ $themeRed: #a83333;
 
 
 .history__wrapper {
-  padding: 3rem;
 
-  @include sp {
+  @include l-sp {
     padding: 0;
   }
 }
@@ -62,10 +61,12 @@ $themeRed: #a83333;
     border-bottom: solid $themeRed 0.4px;
     padding-bottom: 4px;
     width: 100%;
+    font-family: 'Lato',
+      sans-serif;
 
     @include tablet {
       font-size: 3rem;
-      width: 300px;
+      width: 355px;
     }
 
     @include pc {
@@ -104,6 +105,14 @@ $themeRed: #a83333;
     }
   }
 
+  &__sub-head {
+    font-size: 1.5rem;
+    font-family: "Sawarabi Mincho",
+      sans-serif;
+    display: inline-block;
+    padding-left: 10px;
+  }
+
   &__title {
     padding-top: 15px;
     font-size: 4rem;
@@ -111,7 +120,8 @@ $themeRed: #a83333;
       serif;
     color: #343434;
 
-    @include sp {
+    @include l-sp {
+      font-size: 2.2rem;
       padding-top: 10px;
       font-size: 1.9rem;
     }
@@ -132,7 +142,7 @@ $themeRed: #a83333;
 
   &__item {
     color: $themeRed;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     padding-bottom: 10px;
     margin-left: 20px;
 
@@ -198,7 +208,7 @@ $themeRed: #a83333;
   margin: 2em auto;
   padding-bottom: 2em;
 
-  @include sp {
+  @include l-sp {
     margin: 0 auto;
   }
 }
@@ -226,7 +236,7 @@ $themeRed: #a83333;
   letter-spacing: 3px;
   color: rgba(233, 30, 99, 0.1);
 
-  @include sp {
+  @include l-sp {
     font-size: 5em;
   }
 }
@@ -252,7 +262,7 @@ $themeRed: #a83333;
   color: $themeRed;
   line-height: 1.4;
 
-  @include sp {
+  @include l-sp {
     font-size: 1.2em;
     line-height: 1.2;
     margin-top: -35px;
@@ -271,7 +281,7 @@ $themeRed: #a83333;
   padding-left: 20px;
   border-left: 1px solid $themeRed;
 
-  @include sp {
+  @include l-sp {
     line-height: 20px;
   }
 }
