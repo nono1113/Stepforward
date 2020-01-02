@@ -20,10 +20,10 @@ $themeRed: #a83333;
 .page2-section {
 
   &__global-wrapper {
-    padding: 7% 7% 0;
+    padding: 0% 7% 0;
 
     @include pc {
-      padding: 7% 7% 0;
+      padding: 2% 7% 0;
     }
   }
 
@@ -134,6 +134,12 @@ $themeRed: #a83333;
     @include pc {
       font-size: 1.2rem;
       line-height: 1.6;
+    }
+
+    &_time {
+      @include pc {
+        font-size: 1.1rem;
+      }
     }
   }
 
@@ -292,7 +298,7 @@ $themeRed: #a83333;
   }
 
   &__cover {
-    padding: 6% 10%;
+    padding: 6% 10% 0%;
   }
 
   &__text {

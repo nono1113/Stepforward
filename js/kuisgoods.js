@@ -59,31 +59,34 @@ $(".btn-pageTop>a").on("click", function () {
 });
 
 /*-------------------------
-chartページのグラフ
+// header nav dropボタン
 --------------------------*/
-var ctx = document.getElementById("myChart").getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: ["Tシャツ", "パーカー", "タオル", "マグカップ", "文具", "バッグ", "たべもの"],
-    datasets: [{
-      backgroundColor: [
-        "#FED79D",
-        "#E4E1B7",
-        "#D4D2AA",
-        "#BABD90",
-        "#F5BCBA",
-        "#C04563",
-        "#EC897F"
-      ],
-      data: [42.2, 13.1, 10, 4.2, 9, 18.3, 3.1],
-      borderWidth: 0.6,
-    }]
-  },
-  options: {
-    cutoutPercentage: 40,
-    legend: {
-      display: false,
-    }
-  },
+$(function () {
+  $('.page-nav__drop').hover(function () {
+    $(this).find('.page-nav__sub-list').stop(true).fadeIn(500);
+  }, function () {
+    $(this).find('.page-nav__sub-list').fadeOut(500);
+  });
+  $('.slide > li').hover(function () {
+    $(this).find('.page-nav__sub-list').stop(true).slideDown(500);
+  }, function () {
+    $(this).find('.page-nav__sub-list').slideUp(500);
+  });
 });
+
+/*-------------------------
+// header nav ハンバーガー
+--------------------------*/
+function toggleNav() {
+  var body = document.body;
+  var hamburger = document.getElementById('js-hamburger');
+  var blackBg = document.getElementById('js-black-bg');
+
+  hamburger.addEventListener('click', function () {
+    body.classList.toggle('nav-open');
+  });
+  blackBg.addEventListener('click', function () {
+    body.classList.remove('nav-open');
+  });
+}
+toggleNav();

@@ -24,7 +24,7 @@ sans-serif;
   background-color: $ftBackground;
   color: $ftBrown;
   font-family: $m_Gothic;
-  padding: 20% 8% 20%;
+  padding: 6% 8% 20%;
 
   @include pc {
     padding: 5% 7% 5%;
@@ -45,6 +45,7 @@ sans-serif;
     @include pc {
       font-size: 2rem;
       margin-bottom: 4%;
+      text-align: center;
     }
 
     &_huge {
@@ -56,6 +57,7 @@ sans-serif;
       @include pc {
         font-size: 3rem;
         margin-bottom: 1%;
+        text-align: center;
       }
     }
 
@@ -123,11 +125,6 @@ sans-serif;
       margin-bottom: 5%;
     }
 
-    &_top {
-      // @include pc {
-      //   margin: 100px 0;
-      // }
-    }
 
     &_left {
       @include pc {

@@ -52,7 +52,7 @@ sans-serif;
   }
 
   &__block {
-    padding-bottom: 20%;
+    padding-bottom: 0%;
 
     @include tablet {
       padding-bottom: 5%;
@@ -69,9 +69,9 @@ sans-serif;
 
   &__head {
     text-align: center;
-    font-size: 5.6vw;
+    font-size: 5vw;
     line-height: 1.6;
-    margin-bottom: 2%;
+    margin-bottom: 0%;
     color: $tftWhite;
 
     @include tablet {
@@ -81,8 +81,8 @@ sans-serif;
 
     &_huge {
       text-align: center;
-      font-size: 7vw;
-      margin: 5% 0 4%;
+      font-size: 6vw;
+      margin: 5% 0 0%;
       color: $tftWhite;
 
       @include tablet {
@@ -106,7 +106,7 @@ sans-serif;
 
     &_bottom {
       @include tablet {
-        margin-top: 140px;
+        margin-top: 200px;
       }
     }
   }
@@ -154,10 +154,12 @@ sans-serif;
       color: $tftWhite;
       font-size: 0.9em;
       line-height: 1.6;
-      padding: 0 2% 8%;
+      padding: 4% 2% 8%;
 
       @include tablet {
         padding-bottom: 0;
+        padding: 0% 2% 8%;
+
       }
     }
   }

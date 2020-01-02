@@ -4,6 +4,31 @@
 $themeRed: #a83333;
 
 //メディアクエリ
+
+@mixin l-pc {
+  @media (min-width:1300px) {
+    @content;
+  }
+}
+
+@mixin l-pc-1200 {
+  @media (min-width:1200px) {
+    @content;
+  }
+}
+
+@mixin tab-770 {
+  @media (max-width: 770px) {
+    @content;
+  }
+}
+
+@mixin menu-890 {
+  @media (max-width: 890px) {
+    @content;
+  }
+}
+
 @mixin pc {
   @media (min-width: 770px) {
     @content;
@@ -12,6 +37,12 @@ $themeRed: #a83333;
 
 @mixin tablet {
   @media (max-width: 770px) {
+    @content;
+  }
+}
+
+@mixin l-sp {
+  @media (max-width: 553px) {
     @content;
   }
 }
@@ -37,9 +68,9 @@ body {
   /* Safari: ゴシック体にする */
   font-family: sans-serif;
 
-  @include pc {
-    padding: 3rem;
-  }
+  // @include pc {
+  //   padding: 3rem;
+  // }
 
   @include tablet {
     padding: 0;
@@ -86,6 +117,12 @@ img {
   }
 }
 
+.ls-sp_display_none {
+  @include l-sp {
+    display: none;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -119,6 +156,7 @@ img {
     color: #fff;
 
     @include pc {
+      margin-top: 27px;
       margin-bottom: 50px;
     }
 
@@ -382,7 +420,7 @@ img {
   padding: 0 4% 0;
 
   @include pc {
-    padding: 2% 7%;
+    padding: 8% 7% 0;
   }
 
   &__wrapper {
@@ -415,7 +453,7 @@ img {
       padding: 4% 1%;
 
       @include tablet {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
 
       @include sp {
@@ -455,10 +493,6 @@ img {
       font-weight: 500;
       padding: 10px 5px;
 
-      // @include tablet {
-      //   font-size: 1.9rem;
-      // }
-
       @include pc {
         font-size: 1.8rem;
       }
@@ -466,15 +500,30 @@ img {
   }
 
   &__sub-wrapper {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 2.5rem 4rem rgba(#343434, 0.5);
-    padding: 40px 0 40px;
+    &_head {
+      font-size: 4rem;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 10px;
+
+      @include l-sp {
+        font-size: 3rem;
+        padding-top: 25px;
+      }
+    }
 
     &_title {
       font-size: 2rem;
       text-align: center;
       font-weight: 500;
       margin-bottom: 30px;
+    }
+
+    &_title::after {
+      content: "\f107";
+      font-family: FontAwesome;
+      position: relative;
+      left: 5px;
     }
   }
 }
@@ -501,273 +550,158 @@ img {
   &__outer {
     padding: 1px 10px;
 
-    @include tablet {
-      padding: 1px 25px;
+    @include tab-770 {
+      padding: 40px 6px 6px;
     }
 
-    @include pc {
-      padding: 40px 141px;
-    }
-  }
-
-  &__head {
-    font-size: 2.5rem;
-    padding: 22px 0;
-    border-bottom: solid $themeRed 0.4px;
-    padding-bottom: 3px;
-    width: 40%;
-
-    &_active {
-      color: rgb(66, 66, 66);
+    @include l-pc-1200 {
+      padding: 40px 100px 6px;
     }
 
-    @include pc {
-      width: 50%;
-    }
-
-    @include sp {
-      width: 60%;
-    }
-
-    &_item {
-      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
-    }
-
-    &_item:hover {
-      opacity: 0.6;
+    @include l-pc {
+      padding: 40px 200px 6px;
     }
   }
 
-  &__inner {
-    >li {
-      font-size: 1.5rem;
-      padding: 17px;
+  &__sp-outer {
+    @include l-sp {
+      padding: 40px 30px 7px;
     }
 
-    >li:first-of-type {
-      padding-top: 25px;
-    }
-
-    >li:last-of-type {
-      padding-bottom: 25px;
-    }
-
-    &_item {
-      color: rgb(66, 66, 66);
-      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
-    }
-
-    &_item:hover {
-      opacity: 0.6;
-    }
-
-    &_active {
-      color: rgb(0, 0, 0);
-      font-weight: 500;
-    }
   }
 
   &__block {
-    margin-bottom: 20px;
+    flex: 0 0 30%;
+
+    @include tab-770 {
+      flex: 0 0 32%;
+    }
+
   }
 
-  &__item {
+
+  &__title {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 3%;
+    align-items: center;
+    padding: 8px;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+    font-size: 1.2rem;
 
-    @include pc {
-      display: block;
-    }
-
-    >li {
-      font-size: 1.2rem;
-      padding-left: 5%;
-      flex: 0 0 120px;
-      padding-bottom: 4%;
-
-      @include tablet {
-        font-size: 1.3rem;
-        flex: 0 0 150px;
-      }
-
-      @include pc {
-        display: inline-block;
-        padding-left: 5%;
-      }
-    }
-
-    &_project {
-      color: rgb(66, 66, 66);
-      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
-    }
-
-    &_project:hover {
-      opacity: 0.6;
-    }
-
-    &_active {
-      color: rgb(0, 0, 0);
-      font-weight: 500;
+    @include tab-770 {
+      font-size: 1.1rem;
     }
   }
 
-  &__copy {
-    color: rgb(66, 66, 66);
-    font-size: 1.2rem;
+  &__title::before {
+    display: block;
+    content: '';
+    width: 12px;
+    height: 1px;
+    position: relative;
+    right: 7px;
+    top: 1px;
+    background-color: #666;
+  }
+
+  &__title:hover {
+    opacity: 0.6;
   }
 
   &__active {
-    color: #a83333;
-  }
-
-  &__btn {
-    &-outer {
-      margin-top: 50px;
-      flex: 0 0 56%;
-
-      @include tablet {
-        margin-top: 0;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
-        margin-left: 0;
-      }
-
-      @include sp {
-        display: block;
-      }
-    }
-
-    &-text {
-      display: block;
-      text-align: center;
-      font-family: "Nico Moji";
-      background: rgb(255, 246, 121);
-      font-size: 2rem;
-      width: 210px;
-      margin: 0 auto;
-      padding: 20px;
-      transition: all 0.2s;
-      margin-bottom: 17px;
-
-      @include tablet {
-        margin-bottom: 0;
-      }
-
-      @include sp {
-        font-size: 1.5rem;
-        width: 192px;
-        padding: 17px 1px;
-        margin-bottom: 7px;
-      }
-    }
-
-    &-text::before {
-      content: "";
-      /*何も入れない*/
-      display: inline-block;
-      /*忘れずに！*/
-      width: 24px;
-      /*画像の幅*/
-      height: 14px;
-      /*画像の高さ*/
-      background-image: url(../images/cursor_icon.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    &-text::after {
-      content: "\f105";
-      font-family: FontAwesome;
-      position: relative;
-      left: 1px;
-      font-weight: 500;
-    }
-
-    &-text:hover {
-      border: none;
-      background: rgb(255, 239, 19);
-      transform: translateY(-0.3rem);
-      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
-    }
-
-    &-text2::before {
-      content: "";
-      /*何も入れない*/
-      display: inline-block;
-      /*忘れずに！*/
-      width: 20px;
-      /*画像の幅*/
-      height: 26px;
-      /*画像の高さ*/
-      background-image: url(../images/stepman_icon.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    &-text2 {
-      display: block;
-      text-align: center;
-      font-family: "Cormorant Garamond", serif;
-      color: #343434;
-      background-color: #fffde6;
-      font-size: 1.7rem;
-      width: 210px;
-      margin: 0 auto;
-      padding: 15px 20px;
-      transition: all 0.2s;
-
-      @include sp {
-        font-size: 1.3rem;
-        padding: 15px 0px;
-        width: 192px;
-      }
-    }
-
-    &-text2::after {
-      content: "\f105";
-      font-family: FontAwesome;
-      position: relative;
-      left: 8px;
-      font-weight: 500;
-    }
-
-    &-text2:hover {
-      border: none;
-      background-color: rgb(254, 250, 199);
-      transform: translateY(-0.3rem);
-      box-shadow: 0 1rem 2rem rgba(#343434, 0.2);
-    }
-  }
-
-  &__btn:last-of-type {
-    @include tablet {
-      margin-left: 20px;
-    }
-
-    @include sp {
-      margin: 0;
-    }
-  }
-
-  &__pc-wrapper {
     display: flex;
+    align-items: center;
+    padding: 8px;
+    font-weight: 500;
+    font-size: 1.2rem;
 
-    @include tablet {
-      display: block;
+    @include tab-770 {
+      font-size: 1.1rem;
     }
   }
+
+  &__active::before {
+    display: block;
+    content: '';
+    width: 12px;
+    height: 1px;
+    position: relative;
+    right: 7px;
+    top: 1px;
+    background-color: $themeRed;
+  }
+
+
+  &__subtitle {
+    display: inline-block;
+    padding-left: 10px;
+  }
+
+  &__project {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+  }
+
+  &__project::before {
+    content: "\f103";
+    font-family: FontAwesome;
+    position: relative;
+    top: 2px;
+    right: 5px;
+    color: #111;
+  }
+
+  &__project-outer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5px;
+  }
+
+  &__project-item {
+    flex: 0 0 33%;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+
+    @include l-sp {
+      flex: 0 0 26%;
+    }
+
+    &_active {
+      flex: 0 0 33%;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    &_active>a {
+      border-bottom: $themeRed solid 1px;
+      padding-bottom: 2px;
+    }
+  }
+
+  &__project-item:hover {
+    opacity: 0.6;
+  }
+
 
   &__sns-outer {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+
+    @include l-sp {
+      padding: 10px;
+    }
 
     &-share {
+      font-size: 1.2rem;
       padding: 5px;
+      font-family: 'Lato',
+        sans-serif;
     }
 
     &-share::after {
@@ -775,9 +709,24 @@ img {
       font-family: FontAwesome;
       position: relative;
       left: 5px;
-      font-weight: 500;
     }
   }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+
+    @include l-sp {
+      display: block;
+    }
+  }
+
+  &__link {
+    @include l-sp {
+      padding: 12px;
+    }
+  }
+
 
   &__sns {
     transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
@@ -786,6 +735,22 @@ img {
   &__sns:hover {
     opacity: 0.6;
   }
+
+  &__logo {
+    width: 100px;
+  }
+
+  &__copy {
+    color: rgb(66, 66, 66);
+    font-size: 0.9rem;
+    padding-top: 13px;
+    padding-left: 12px;
+
+    @include l-sp {
+      padding-top: 1px;
+    }
+  }
+
 }
 
 /* sns icon */
@@ -795,26 +760,25 @@ img {
 
   &__text {
     color: #fff;
-    padding-right: 10px;
+    padding-right: 23px;
     padding-top: 5px;
+    font-size: 1.2rem;
   }
 
   &__facebook::before {
     content: "\f082";
     font-family: FontAwesome;
     position: relative;
-    left: 5px;
-    font-weight: 500;
-    font-size: 1.5em;
+    left: -8px;
+    font-size: 1.2em;
   }
 
   &__twitter::before {
     content: "\f099";
     font-family: FontAwesome;
     position: relative;
-    left: 5px;
-    font-weight: 500;
-    font-size: 1.5em;
+    left: -14px;
+    font-size: 1.2em;
   }
 
   &__wrapper {
@@ -823,12 +787,21 @@ img {
 
   &__left {
     padding-left: 20px;
+    font-family: 'Lato',
+      sans-serif;
+
+    &-head::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 5px;
+      font-weight: 500;
+    }
   }
 
   &__outer {
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
+    @include menu-890 {
+      display: none;
     }
   }
 }
@@ -874,4 +847,153 @@ img {
 
 .link-top {
   padding-top: 10px;
+}
+
+
+/* play icon */
+
+.play-list {
+  margin-bottom: 50px;
+
+  &__outer {
+    border: #fff solid 1px;
+    padding: 15px;
+  }
+
+  &__title {
+    padding: 10px;
+    color: rgb(213, 215, 77);
+  }
+
+  &__item {
+    padding: 10px;
+    color: #fff;
+  }
+
+  &__item>a {
+    color: #fff;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+    display: block;
+  }
+
+
+}
+
+
+#play::after {
+  content: "\f04b";
+  font-family: FontAwesome;
+  position: relative;
+  left: 28px;
+  color: #fff;
+}
+
+#play:hover {
+  opacity: 0.6;
+}
+
+#previous::before {
+  content: "\f048 ";
+  font-family: FontAwesome;
+  position: relative;
+  left: 0px;
+  color: #fff;
+}
+
+#previous:hover {
+  opacity: 0.6;
+}
+
+#next::after {
+  content: "\f051";
+  font-family: FontAwesome;
+  position: relative;
+  left: 6px;
+  color: #fff;
+}
+
+#next:hover {
+  opacity: 0.6;
+}
+
+#pause::after {
+  content: "\f04d";
+  font-family: FontAwesome;
+  position: relative;
+  left: 15px;
+  color: #fff;
+}
+
+#pause:hover {
+  opacity: 0.6;
+}
+
+#first::before {
+  content: "\f049";
+  font-family: FontAwesome;
+  position: relative;
+  right: 1px;
+  color: #fff;
+}
+
+#first:hover {
+  opacity: 0.6;
+}
+
+#last::after {
+  content: "\f050";
+  font-family: FontAwesome;
+  position: relative;
+  left: 6px;
+  color: #fff;
+}
+
+#last:hover {
+  opacity: 0.6;
+}
+
+// パンくず
+
+.breadcrumb {
+  padding: 30px;
+
+  &__item {
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+    display: inline-block;
+    padding: 0 4px;
+  }
+
+  &__arrow::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    position: relative;
+    left: 3px;
+  }
+
+  &__item:hover {
+    opacity: 0.6;
+  }
+
+  &__current {
+    display: inline-block;
+    padding: 0 4px 3px 4px;
+    border-bottom: $themeRed solid 1px;
+  }
+}
+
+// arrow
+
+.arrow {
+  transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+}
+
+.arrow::after {
+  content: "\f105";
+  font-family: FontAwesome;
+  position: relative;
+  left: 3px;
+}
+
+.arrow:hover {
+  opacity: 0.6;
 }

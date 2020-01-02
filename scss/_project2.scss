@@ -46,8 +46,18 @@ sans-serif;
   }
 }
 
+@mixin l-sp {
+  @media (max-width: 553px) {
+    @content;
+  }
+}
+
 .pc_display_none {
   display: none;
+
+  @include l-sp {
+    display: block;
+  }
 }
 
 .global-division1 {
@@ -105,6 +115,10 @@ sans-serif;
       font-size: 2.5rem;
       font-feature-settings: "palt";
       letter-spacing: 0.07em;
+    }
+
+    @include l-sp {
+      font-size: 4.5vw;
     }
 
     &_huge {
@@ -225,22 +239,17 @@ sans-serif;
 
   &__block {
     padding-bottom: 3%;
-
-    // @include tablet {
-    //   padding: 2%;
-    // }
   }
 
   &__head {
     text-align: center;
-    font-size: 3.6vw;
+    font-size: 4.5vw;
     line-height: 1.6;
     margin-bottom: 2%;
 
     @include tablet {
       padding: 0 2%;
       font-size: 2rem;
-      // margin: 3%;
     }
 
     &_huge {
@@ -274,7 +283,6 @@ sans-serif;
 
   &__paragraph {
     margin-bottom: 6%;
-    // padding: 2%;
     line-height: 1.9;
 
     @include tablet {
