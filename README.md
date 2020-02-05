@@ -21,8 +21,6 @@
 # URL
 
 - https://stepforward.jp
-- ユーザー名 stepforward.jp
-- パスワード kuis2020
 
 
 # Author
