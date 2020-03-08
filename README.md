@@ -27,5 +27,3 @@
 
 - 作成者: 浜中望帆 Hamanaka Miho
 - Email: 2081050.nono@gmail.com
-
-"Stepforward" is Confidential.
