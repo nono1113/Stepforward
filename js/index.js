@@ -41,7 +41,7 @@ $(function () {
 });
 
 // ページトップボタン
-$(".btn-pageTop2>a").on("click", function () {
+$(".btn-pageTop2>span").on("click", function () {
   $("html,body").animate({
       scrollTop: 0
     },
