@@ -1,0 +1,472 @@
+/* sitemap */
+@charset "utf-8";
+
+@mixin l-sp {
+  @media (max-width: 553px) {
+    @content;
+  }
+}
+
+/* ------------------------------------------------------------
+	General Styles
+------------------------------------------------------------ */
+
+.sitemap {
+  max-width: 1000px;
+  margin: 0 0 2em 0;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include l-sp {
+    padding: 0 40px;
+  }
+
+  &__global-wrapper {
+    background-color: #f4f3f2;
+    position: relative;
+  }
+
+  &__head {
+    font-size: 2.5rem;
+    padding: 30px 0;
+    font-weight: 500;
+
+    @include l-sp {
+      padding: 30px 0 0;
+    }
+  }
+
+  &__head::before {
+    content: "\f0e8";
+    font-family: FontAwesome;
+    position: relative;
+    right: 2px;
+    font-weight: 500;
+  }
+
+  &__title {
+    padding: 30px 0 10px;
+    font-size: 1.9rem;
+    font-weight: 500;
+  }
+
+  &__link {
+    &_item {
+      padding: 5px;
+      transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+
+      @include l-sp {
+        font-size: 1.3rem;
+      }
+
+      &_br {
+        display: none;
+
+        @include l-sp {
+          display: block;
+        }
+      }
+    }
+
+    &_item:hover {
+      opacity: 0.7;
+    }
+
+
+    &_item a::after {
+      content: "\f105";
+      font-family: FontAwesome;
+      position: relative;
+      left: 4px;
+      font-weight: 500;
+
+      @include l-sp {
+        left: 1px;
+      }
+    }
+
+    &_subtext {
+      font-size: 1.2rem;
+      padding: 6px 22px;
+
+      @include l-sp {
+        font-size: 1rem;
+        padding: 2px 22px;
+      }
+    }
+
+    &_inner {
+      padding: 0 5px;
+    }
+  }
+
+  &__kuichan::before {
+    content: "";
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 24px;
+    /*画像の幅*/
+    height: 14px;
+    /*画像の高さ*/
+    background-image: url(../images/cursor_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat
+  }
+}
+
+/* ------------------------------------------------------------
+	Page Styles
+------------------------------------------------------------ */
+
+/* -------- Top Level --------- */
+
+.primaryNav {
+  width: 100%;
+  margin-top: 3em;
+
+  &__outer {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+
+    @include l-sp {
+      padding: 0 29px;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    min-width: 13.5em;
+    padding-right: 1.25em;
+    position: relative;
+    margin-top: 3em;
+
+    @include l-sp {
+      min-width: 10em;
+    }
+  }
+
+  &__item a {
+    margin: 0;
+    padding: .875em .9375em .9375em .9375em;
+    display: block;
+    font-size: .9375em;
+    font-weight: bold;
+    color: white;
+    background: #A83333;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .025);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+  }
+
+  &__item a:hover {
+    opacity: 0.7;
+  }
+
+
+  &__title {
+    color: rgba(255, 255, 255, .75);
+    font-size: .75em;
+    margin-top: .45em;
+  }
+
+  &__title::before {
+    content: "";
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 13px;
+    /*画像の幅*/
+    height: 20px;
+    /*画像の高さ*/
+    background-image: url(../images/stepman_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.primaryNav #home {
+  position: absolute;
+  margin-top: -3em;
+  margin-bottom: 0;
+  min-width: 11.5em;
+  width: 100%;
+}
+
+.primaryNav #home:before {
+  display: none;
+}
+
+/* ------------------------------------------------------------
+	Connecting Lines:
+------------------------------------------------------------ */
+
+.primaryNav ul:before,
+.primaryNav ul:after,
+.primaryNav ul li:before,
+.primaryNav ul li:after {
+  display: block;
+  content: '';
+  position: absolute;
+  border-width: 0;
+  border-color: #e3e3e3;
+  border-style: solid;
+  z-index: -1;
+}
+
+.primaryNav>ul>li:before {
+  height: 1.375em;
+  top: -1.375em;
+  right: calc(50% + .625em);
+  width: calc(100% - 2px);
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.primaryNav>ul>li:first-child+li:before {
+  border-top-width: 0;
+  height: 5em;
+  top: -4em;
+}
+
+
+/* ------------------------------------------------------------
+	Utility Navigation
+------------------------------------------------------------ */
+
+.utilityNav {
+  &__inner {
+    display: flex;
+    justify-content: center;
+
+    @include l-sp {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__outer {
+    padding: 40px 0;
+    display: flex;
+
+    @include l-sp {
+      display: block;
+      text-align: center;
+      padding: 0 0 40px;
+    }
+  }
+
+  &__item {
+    padding: 10px;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+
+    @include l-sp {
+      flex: 0 0 40%;
+    }
+
+    &_title {
+      padding: 0 3px 10px;
+
+      @include l-sp {
+        text-align: center;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__item:hover {
+    opacity: 0.7;
+  }
+
+  &__goods {
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    @include l-sp {
+      margin-right: 0;
+    }
+  }
+
+  &__goods:hover {
+    opacity: 0.7;
+  }
+
+  &__goods a {
+    padding: 20px;
+    font-family: "Nico Moji";
+    display: inline-block;
+    background: rgb(255, 246, 121);
+    border: solid 0.9px rgb(255, 246, 121);
+    font-size: 2rem;
+    width: 210px;
+  }
+
+  &__goods a::before {
+    content: "";
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 24px;
+    /*画像の幅*/
+    height: 14px;
+    /*画像の高さ*/
+    background-image: url(../images/cursor_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat
+  }
+
+  &__goods a::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    position: relative;
+    left: 8px;
+    font-weight: 500;
+  }
+
+  &__history {
+    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+  }
+
+  &__history:hover {
+    opacity: 0.7;
+  }
+
+  &__history a {
+    text-align: center;
+    padding: 17px 20px 17px 8px;
+    font-family: "Sawarabi Mincho",
+      sans-serif;
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    font-size: 1.7rem;
+    width: 210px;
+    border: solid 0.9px #c3c3c3;
+
+    @include l-sp {
+      padding: 17px;
+    }
+  }
+
+  &__history a::before {
+    content: "";
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 20px;
+    /*画像の幅*/
+    height: 24px;
+    /*画像の高さ*/
+    background-image: url(../images/stepman_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat
+  }
+
+  &__history a::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    position: relative;
+    left: 10px;
+    font-weight: 500;
+  }
+
+}
+
+
+/* ------------------------------------------------------------
+	Responsive Styles
+------------------------------------------------------------ */
+
+@media screen and (max-width: 30em) {
+  .primaryNav ul {
+    display: block;
+  }
+
+  .primaryNav li {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .primaryNav #home {
+    width: 100%;
+    position: relative;
+    margin-bottom: -1em;
+    margin-top: 0;
+  }
+
+  .utilityNav {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 2.5em;
+    max-width: 100%;
+  }
+}
+
+/* two column */
+@media screen and (min-width: 30em) {
+  .primaryNav>ul>li {
+    max-width: 50%;
+  }
+}
+
+/* three column */
+@media screen and (min-width: 38.5em) {
+  .primaryNav>ul>li {
+    max-width: 33%;
+  }
+}
+
+/* four column */
+@media screen and (min-width: 50em) {
+  .primaryNav>ul>li {
+    max-width: 25%;
+  }
+}
+
+/* five column */
+@media screen and (min-width: 61em) {
+  .primaryNav>ul>li {
+    max-width: 20%;
+  }
+}
+
+/* six column */
+@media screen and (min-width: 73em) {
+  .primaryNav>ul>li {
+    max-width: 16.66%;
+  }
+}
+
+/* seven column */
+@media screen and (min-width: 84.5em) {
+  .primaryNav>ul>li {
+    max-width: 14.285%;
+  }
+}
+
+/* eight column */
+@media screen and (min-width: 96em) {
+  .primaryNav>ul>li {
+    max-width: 12.5%;
+  }
+}
+
+/* nine column */
+@media screen and (min-width: 107.5em) {
+  .primaryNav>ul>li {
+    max-width: 11.11%;
+  }
+}
+
+/* ten column */
+@media screen and (min-width: 119em) {
+  .primaryNav>ul>li {
+    max-width: 10%;
+  }
+}

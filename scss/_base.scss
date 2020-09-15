@@ -997,3 +997,89 @@ img {
 .arrow:hover {
   opacity: 0.6;
 }
+
+
+// スライドの矢印
+
+.scroll-box {
+
+  @include menu-890 {
+    display: none;
+  }
+
+  &__outer {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__arrowWrap {
+    z-index: 10;
+    position: relative;
+  }
+
+  &__arrow {
+    z-index: 10;
+    width: 15px;
+    margin: 0 auto;
+    animation: arrow 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s infinite alternate;
+
+    &_text {
+      color: #fff;
+      position: absolute;
+      top: -64px;
+      left: -13px;
+      font-family: 'Lato',
+        sans-serif;
+    }
+  }
+
+}
+
+
+.scroll-box .scroll-box__arrow span {
+  position: relative;
+  display: block;
+  left: 50%;
+
+  @include menu-890 {
+    display: none;
+  }
+
+}
+
+.scroll-box__arrow span:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-top: solid 1px #FFF;
+  border-right: solid 1px #fff;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  position: absolute;
+  top: -80px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  box-sizing: border-box;
+
+  @include menu-890 {
+    display: none;
+  }
+
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  100% {
+    opacity: 0.5;
+    -webkit-transform: translate3d(-50%, -8px, 0);
+    transform: translate3d(-50%, -8px, 0);
+  }
+}
