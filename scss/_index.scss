@@ -123,7 +123,7 @@ $themeRed: #a83333;
 
     @include pc {
       font-size: 2.5rem;
-      padding: 90px 0 42px 0;
+      padding: 90px 0 18px 0;
     }
   }
 
@@ -195,6 +195,15 @@ $themeRed: #a83333;
       background-color: rgba(255, 255, 255, 0);
       font-size: 1.8rem;
       backface-visibility: hidden;
+    }
+  }
+
+  &__head {
+    text-align: center;
+    padding-bottom: 20px;
+
+    @include menu-890 {
+      font-size: 1.5rem;
     }
   }
 }
@@ -589,7 +598,7 @@ $themeRed: #a83333;
 
   &__sub-list {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     width: 150px;
     padding: 10px;
     display: none;

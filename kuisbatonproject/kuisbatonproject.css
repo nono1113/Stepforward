@@ -1,0 +1,347 @@
+/* CSS Document*/
+
+.attention {
+	color: #FF6600;
+	font-weight: bold;
+	background-color: yellow;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	background-color: transparent;
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	font-family: Verdana;
+}
+
+#conteiner {
+	width: 800px;
+	height: 100%;
+	margin: auto;
+	margin-top: 0px;
+	background-image: url(../kuisbatonproject/img/bg.gif);
+	background-repeat: repeat-y;
+}
+
+
+a {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF6600;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #990000;
+	text-decoration: underline;
+}
+
+/*ヘッダー*/
+
+#header {
+	font-size: 8px;
+	color: #003300;
+	width: 740px;
+	margin-top: 0px;
+	margin-left: 20px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+
+/* メインコンテンツ　*/
+#body {
+	background-color: #ffe4e1;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+#maincontents {
+	width: 740px;
+	margin-left: 20px;
+}
+
+#title {
+	width: 720px;
+	height: 80px;
+	background-image: url(../kuisbatonproject/img/bg-title.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding-top: 15px;
+	padding-left: 20px;
+}
+
+.visual {
+	margin-top: 10px;
+}
+
+#visual_sub {
+	padding-left: 0px;
+}
+
+.sub {
+	font-family: Verdana, Osaka, "ヒラギノ角ゴ Pro W3";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #FF33CC;
+	line-height: 20px;
+	padding-left: 10px;
+	width: 470px;
+}
+
+h1 {
+	color: #FFFFFF;
+	font-size: 24px;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial Black, Helvetica, sans-serif;
+	margin-top: 25px;
+	margin-left: 10px;
+	margin-bottom: 20x;
+}
+
+h2 {
+	color: #FF0000;
+	font-size: 18px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px;
+	width: 180px;
+}
+
+h3 {
+	color: #FFFFFF;
+	background-color: #FF0000;
+	height: 15px;
+	padding: 10px;
+	width: auto;
+	font-size: 16px;
+	font-family: Verdana, Osaka, "ヒラギノ角ゴ Pro W3";
+	text-align: center;
+}
+
+
+.sub2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF0000;
+	padding-left: 10px;
+	line-height: 160%;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 470px;
+	letter-spacing: 1pt;
+}
+
+#List ul {
+	font-size: 14px;
+	color: #FF0000;
+	font-weight: bold;
+	list-style-type: disc;
+	line-height: 200%;
+	letter-spacing: 1pt;
+}
+
+#List {
+	width: auto;
+	margin-left: 40px;
+	margin-right: auto;
+}
+
+
+#contents {
+	width: 520px;
+	margin: 10px 0 0 0;
+	color: #666666;
+}
+
+.Area1 {
+	width: 520px;
+	margin: 0;
+	float: left;
+}
+
+.Area2 {
+	width: 220px;
+	margin: 10px 0 0 0;
+	float: left;
+}
+
+.text1 {
+	font-size: 12px;
+	color: #666666 padding-left:10px;
+	line-height: 160%;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 470px;
+	text-align: justify;
+	letter-spacing: 1pt;
+}
+
+.text3 {
+	color: #FF0000;
+	font-size: 12px;
+	line-height: 160%;
+	letter-spacing: 1pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+.tdbox {
+	background-image: url(../kuisbatonproject/img/bg_box01.gif);
+	background-repeat: repeat-y;
+	padding: 6px;
+}
+
+.td1 {
+	font-size: 12px;
+	color: #666666;
+	line-height: 160%;
+	letter-spacing: 1pt;
+	background-color: #FF99FF;
+	padding: 5px;
+}
+
+a.tdlink {
+	color: #666666;
+	text-decoration: underline;
+}
+
+a:hover.tdlink {
+	color: #FF0000;
+	text-decoration: none;
+}
+
+
+.td2 {
+	font-size: 12px;
+	color: #666666;
+	line-height: 160%;
+	letter-spacing: 1pt;
+	background-color: #FFCCFF;
+	padding: 5px;
+}
+
+/*バナー*/
+
+.banner {
+	width: 200px;
+	margin: 0;
+	height: 150px;
+	float: right;
+	text-indent: -9999px;
+}
+
+.banner a {
+	display: block;
+	width: 200px;
+	height: 150px;
+	background-image: url(../kuisbatonproject/img/bnr_cl47.gif);
+	background-repeat: no-repeat;
+}
+
+.banner a:hover {
+	background-position: 0 -150px;
+}
+
+
+#banner1 {
+	width: 200px;
+	height: 150px;
+	margin-top: 30px;
+}
+
+#pop {
+	width: 380px;
+	float: left;
+	padding: 10px;
+	background-color: #FFFFFF;
+	border: 3 dashed #666666;
+	height: auto;
+}
+
+#poptitle {
+	color: #FFFFFF;
+	background-color: #FF0000;
+	height: 15px;
+	padding: 10px;
+	width: 380px;
+	font-size: 16px;
+	font-family: Verdana, Osaka, "ヒラギノ角ゴ Pro W3";
+	text-align: center;
+}
+
+.poptext {
+	padding: 10px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #666666;
+	text-align: justify;
+	letter-spacing: 1pt;
+	float: left;
+	margin: 0px auto;
+}
+
+table.pop {
+	border: 0px;
+
+}
+
+.cap1 {
+	color: #666666;
+	background-color: #CCCCCC;
+	padding: 5px;
+	text-align: center;
+}
+
+.cap2 {
+	background-color: #FFFFFF;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.popvisual {
+	text-align: center;
+	margin: 10px auto;
+}
+
+#close {
+	text-align: right;
+	font-size: 12px;
+	margin: 10px;
+}
+
+
+/*フッター*/
+
+.footer {
+	font-family: Verdana, Osaka, "ヒラギノ角ゴ Pro W3";
+	font-size: 10px;
+	color: #FFFFFF;
+	background-color: #FF0000;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 30px;
+}
+
+.footer a,
+.footer a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: #CCCCCC;
+	text-decoration: underline;
+}

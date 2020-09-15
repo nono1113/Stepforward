@@ -50,7 +50,7 @@ $(window).scroll(function () {
     $(".btn-pageTop").fadeOut();
   }
 });
-$(".btn-pageTop>a").on("click", function () {
+$(".btn-pageTop>span").on("click", function () {
   $("html,body").animate({
       scrollTop: 0
     },
