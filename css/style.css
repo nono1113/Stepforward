@@ -2219,6 +2219,19 @@ img {
     .l-sp-block {
       display: block; } }
 
+.project1-section__banner {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.project1-section__banner-item {
+   display: inline-block;
+   transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
+}
+.project1-section__banner-item:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 /* project2.css baton*/
 .pc_display_none {
   display: none; }
