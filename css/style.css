@@ -2227,6 +2227,14 @@ img {
    display: inline-block;
    transition: opacity 0.5s cubic-bezier(0.25, 0.87, 0.41, 1);
 }
+
+@media (max-width: 553px) {
+    .project1-section__banner-item-btm {
+      /* margin-top: 30px; */
+      width: 83%;
+    }
+  }
+
 .project1-section__banner-item:hover {
   opacity: 0.7;
   cursor: pointer;
